@@ -1,9 +1,103 @@
-
 @import 'colors';
 
-// for testing (TODO remove)
 #containerRbb_subHead {
+	background-color: $lightgray;
+	padding: 1em 2em 1em 2em;
+	margin-bottom: 2em;
+}
+
+#headerimage {
+	margin: 10px;
+}
+
+.query {
+	display: none;
+}
+
+.js_input_reset {
+	display: none;
+}
+
+// TODO: check if needed
+.jsb_placeholder {
+	float: right;
+}
+
+.containerNavigationMain {
+	display: flex;
+}
+
+.navigationMain > .level1 {
+	list-style: none;
+}
+
+.navigationMain > ul > li {
+	display: inline-block;
+	text-transform: uppercase;
+	margin-right: 1em;
+	font-weight: bold;
+
+	[title^='Video'] {
+		color: $orange;
+		padding: 0.8em 1.3em 0.8em 1.3em;
+		border-radius: 2px;
+		border: 1px solid $orange;
+	}
+
+	[title^='Events'] {
+		display: none;
+	}
+
+	[title^='Team'] {
+		display: none;
+	}
+}
+
+.livestream {
+	display: flex;
+}
+
+.jetzt {
+	text-transform: uppercase;
+	font-weight: bold;
 	background-color: $orange;
+	color: white;
+	border-radius: 2px;
+	> a {
+		color: white;
+	}
+}
+
+
+.pictsrc {
+	display: none;
+}
+
+.layoutgrey_wetter_short {
+	display: none;
+}
+
+.medienIcon {
+	display: none;
+}
+
+
+
+
+
+
+
+.jetztplaylist > a {
+	color: $orange;
+}
+
+
+.layoutdein_radioeins {
+	background-color: $footergray;
+}
+
+.socialmediabuttons {
+	background-color: $footergray;
 }
 
 .footer {
