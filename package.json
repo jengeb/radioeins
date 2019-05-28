@@ -1,0 +1,29 @@
+{
+  "name": "radioeins",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jengeb/radioeins.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jengeb/radioeins/issues"
+  },
+  "homepage": "https://github.com/jengeb/radioeins#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "eslint": "^5.16.0",
+    "eslint-loader": "^2.1.2",
+    "live-server": "^1.2.1",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
+  }
+}
