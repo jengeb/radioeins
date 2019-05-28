@@ -1,0 +1,23 @@
+// TODO: check if needed
+@font-face {
+	font-family: 'Radioeins';
+	src: url(https://www.radioeins.de/rad/webfont/b850db31-9043-48a9-9105-f6215999635a-3.woff),
+		url(https://www.radioeins.de/rad/webfont/13b703c5-ff8a-44ef-ae25-575d6278de27-3.woff),
+		url(https://www.radioeins.de/rad/webfont/3d6b9143-eb88-4451-80b0-7d05bd58b8a1-3.woff);
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+// TODO: check if needed
+body {
+	font-family: 'Radioeins', sans-serif;
+	margin: 0;
+}
+
+// TODO: remove
+#searchbox_result{
+	visibility: hidden;
+}

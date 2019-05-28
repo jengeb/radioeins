@@ -2,12 +2,14 @@
 
 ## Local development
 
-Run
 ```
-npx live-server
+npm install 
+npm run build
+npm run start
 ```
-or
 
+Let webpack watch for code updates in a new tab
 ```
-python -m SimpleHTTPServer 8000
+npm run watch
 ```
+
