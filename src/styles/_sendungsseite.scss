@@ -1,0 +1,18 @@
+// NOTE: this is added via JS I think?
+#navOverview,
+#responsiveNavigation {
+  display: none
+}
+
+// facebook / twitter / email share buttons
+// TODO: Restore full functionality
+#socialshareprivacy {
+	ul.social_share_privacy_area {
+		list-style: none
+	}
+
+	.info,
+	.switch {
+		display: none
+	}
+}
