@@ -33,13 +33,19 @@
 	padding-right: 10vw;
 }
 
+.navigationMain {
+	max-height: 80px;
+}
+
 .navigationMain > .level1 {
 	list-style: none;
 	padding-inline-start: 0;
-	// margin-left: 10vw;
 	font-size: 28px;
 	display: flex;
 	flex-wrap: wrap;
+	max-height: 80px;
+	margin-block-start: 0em;
+	margin-block-end: 0em;
 }
 
 .navigationMain > ul > li {
@@ -96,7 +102,7 @@
 }
 
 .jetzt:before {
-	// content: url(https://www.radioeins.de/rad/grafik/icons/icon-liveuebertragung.png);
+	// background: url('../../assets/facebook_black.svg');
 }
 
 .manualteaserPicture > img {
