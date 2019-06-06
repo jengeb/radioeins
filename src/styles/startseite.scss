@@ -2,12 +2,12 @@
 
 #containerRbb_subHead {
 	background-color: $lightgray;
-	padding: 1em 2em 1em 2em;
-	margin-bottom: 2em;
+	height: 90px;
 }
 
 #headerimage {
-	margin: 10px;
+	margin-left: 15vw;
+	margin-top: 26px;
 }
 
 .query {
@@ -25,6 +25,7 @@
 
 .containerNavigationMain {
 	display: flex;
+	height: 80px;
 }
 
 .navigationMain > .level1 {
@@ -93,13 +94,13 @@
 
 
 .layoutdein_radioeins {
-	background-color: $footergray;
+	background-color: $gray;
 }
 
 .socialmediabuttons {
-	background-color: $footergray;
+	background-color: $gray;
 }
 
 .footer {
-	background-color: $footergray;
+	background-color: $gray;
 }
