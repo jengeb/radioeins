@@ -59,3 +59,36 @@
 		display: none
 	}
 }
+
+.containerMain {
+  // this is needed for the 100% background of the hero section
+  overflow: hidden;
+}
+
+// hero section (description of show)
+.heroSection {
+  background: $lightgray;
+  position: relative;
+  padding: $gutter-width * 2/3 0;
+
+  // this are the things that paint everything grey left and right
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    background: $lightgray;
+    z-index: -1;
+    top: 0
+  }
+
+  &::before {
+    left: 0;
+  }
+  
+  &::after {
+    right: 0;
+  }
+}
