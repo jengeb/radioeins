@@ -1,15 +1,19 @@
 # radioeins Redesign
 
-## Local development
+## Build commands
+
+At first, make sure to install dependencies:
 
 ```
 npm install 
-npm run build
+```
+
+If you want to start a local development server, run:
+```
 npm run start
 ```
 
-Let webpack watch for code updates in a new tab
+To create an optimized production build, run:
 ```
-npm run watch
+npm run build
 ```
-
