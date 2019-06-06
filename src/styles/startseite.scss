@@ -6,7 +6,7 @@
 }
 
 #headerimage {
-	margin-left: 15vw;
+	margin-left: 10vw;
 	margin-top: 26px;
 }
 
@@ -26,12 +26,13 @@
 .containerNavigationMain {
 	display: flex;
 	height: 80px;
+  align-items: center;
 }
 
 .navigationMain > .level1 {
 	list-style: none;
 	padding-inline-start: 0;
-	margin-left: 15vw;
+	margin-left: 10vw;
 	font-size: 22px;
 }
 
@@ -43,9 +44,10 @@
 
 	[title^='Video'] {
 		color: $orange;
-		padding: 11px 18px;
+		padding: 10px 18px;
 		border-radius: 2px;
 		border: 1px solid $orange;
+		font-size: 20px;
 	}
 
 	[title^='Events'] {
@@ -67,9 +69,20 @@
 	background-color: $orange;
 	color: white;
 	border-radius: 2px;
+
+	display: flex;
+  align-items: center;
+	justify-content: center;
+
 	> a {
 		color: white;
+		padding: 12px 18px;
+		font-size: 20px;
 	}
+}
+
+.jetzt:before {
+	// content: url(https://www.radioeins.de/rad/grafik/icons/icon-liveuebertragung.png);
 }
 
 
@@ -94,6 +107,8 @@
 .jetztplaylist > a {
 	color: $orange;
 	margin-left: 20px;
+	font-size: 10px;
+	line-height: 14px;
 }
 
 
