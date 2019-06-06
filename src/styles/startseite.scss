@@ -2,12 +2,12 @@
 
 #containerRbb_subHead {
 	background-color: $lightgray;
-	padding: 1em 2em 1em 2em;
-	margin-bottom: 2em;
+	height: 90px;
 }
 
 #headerimage {
-	margin: 10px;
+	margin-left: 15vw;
+	margin-top: 26px;
 }
 
 .query {
@@ -25,21 +25,25 @@
 
 .containerNavigationMain {
 	display: flex;
+	height: 80px;
 }
 
 .navigationMain > .level1 {
 	list-style: none;
+	padding-inline-start: 0;
+	margin-left: 15vw;
+	font-size: 22px;
 }
 
 .navigationMain > ul > li {
 	display: inline-block;
 	text-transform: uppercase;
-	margin-right: 1em;
+	margin-right: 35px;
 	font-weight: bold;
 
 	[title^='Video'] {
 		color: $orange;
-		padding: 0.8em 1.3em 0.8em 1.3em;
+		padding: 11px 18px;
 		border-radius: 2px;
 		border: 1px solid $orange;
 	}
@@ -89,17 +93,18 @@
 
 .jetztplaylist > a {
 	color: $orange;
+	margin-left: 20px;
 }
 
 
 .layoutdein_radioeins {
-	background-color: $footergray;
+	background-color: $gray;
 }
 
 .socialmediabuttons {
-	background-color: $footergray;
+	background-color: $gray;
 }
 
 .footer {
-	background-color: $footergray;
+	background-color: $gray;
 }
