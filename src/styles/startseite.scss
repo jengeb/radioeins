@@ -21,6 +21,7 @@
 // TODO: check if needed
 .jsb_placeholder {
 	float: right;
+	display: none; 
 }
 
 .containerNavigationMain {
@@ -34,6 +35,8 @@
 	padding-inline-start: 0;
 	margin-left: 10vw;
 	font-size: 22px;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .navigationMain > ul > li {
@@ -83,6 +86,10 @@
 
 .jetzt:before {
 	// content: url(https://www.radioeins.de/rad/grafik/icons/icon-liveuebertragung.png);
+}
+
+.manualteaserPicture > img {
+	width: 100%;
 }
 
 
