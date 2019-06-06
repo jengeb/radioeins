@@ -30,17 +30,20 @@
 
 .navigationMain > .level1 {
 	list-style: none;
+	padding-inline-start: 0;
+	margin-left: 15vw;
+	font-size: 22px;
 }
 
 .navigationMain > ul > li {
 	display: inline-block;
 	text-transform: uppercase;
-	margin-right: 1em;
+	margin-right: 35px;
 	font-weight: bold;
 
 	[title^='Video'] {
 		color: $orange;
-		padding: 0.8em 1.3em 0.8em 1.3em;
+		padding: 11px 18px;
 		border-radius: 2px;
 		border: 1px solid $orange;
 	}
@@ -90,6 +93,7 @@
 
 .jetztplaylist > a {
 	color: $orange;
+	margin-left: 20px;
 }
 
 
