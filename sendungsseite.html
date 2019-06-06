@@ -384,7 +384,12 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
 </div>
 	<div id="livestream" class="livestream"><div class="jetzt" id="jetzt">
   <!-- hier muß ein Popup-Link rein !!!! -->
-<a href="/livestream/index.html" onclick="window.open('https://www.radioeins.de/livestream/index.html','player','width=270,height=415'); return false; resizable=no; location=no; status=no">Jetzt hören</a>
+				<!-- NOTE: Der Linktext ändert sich -->
+				<!-- <a href="/livestream/index.html"
+					onclick="window.open('https://www.radioeins.de/livestream/index.html','player','width=270,height=415'); return false; resizable=no; location=no; status=no">Jetzt
+					hören</a> -->
+				<a href="/livestream/index.html"
+					onclick="window.open('https://www.radioeins.de/livestream/index.html','player','width=270,height=415'); return false; resizable=no; location=no; status=no">Live</a>
 
 <script type="text/javascript">
 		// nur publish, weil im author sonst jedesmal ein neues Fenster aufgemacht wird !!!
@@ -408,15 +413,10 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
 	
 	
 	    
-	      
-	      <div class="programmnavi">
-	        
-
-
-
+				
+				<!-- NOTE: Remove this -->
+	      <!-- <div class="programmnavi">
 <ul class="navi">
-<!-- class active=heute, selected=ausgewählt -->
-
 
 	<li><a href="/programm/index.htm/from=31-05-2019_05-00/to=01-06-2019_05-00/type=day.html" title="Fr">Fr</a></li>
 
@@ -444,7 +444,7 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
               
             </ul>
           </div>
-        
+         -->
 		<div id="center" class="containerCenter">
 	
 		
@@ -478,9 +478,12 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
   
     
 	
-    
-		<div class="containerIcons"><div class="begin"><span class="weekday">Do</span><span class="datum">06.06.</span></div><div class="timeicon"><span class="zeit">05:00</span><span class="line">&#160;-&#160;</span><span class="zeit">10:00</span></div>
+    <!-- NOTE: Remove this and leave only "begin" --> 
+		<!-- <div class="containerIcons"><div class="begin"><span class="weekday">Do</span><span class="datum">06.06.</span></div><div class="timeicon"><span class="zeit">05:00</span><span class="line">&#160;-&#160;</span><span class="zeit">10:00</span></div> -->
 
+		<!-- NOTE: This is taken out of .containerIcons above -->
+		<!-- TODO: Should this be here? -->
+		<div class="begin"><span class="weekday">Do</span><span class="datum">06.06.</span></div>
 
 
 	<ul class="iconList">
@@ -1164,6 +1167,9 @@ Jürgen König war gestern für radioeins in der Halle dabei. <a href="/programm
 	
 
 </div>
+<!-- NOTE: Remove this -->
+<!-- NOTE: Remove this -->
+<!--
 		<div class="containerRight" id="right">
 			<div id="rightcol" class="column">
 
@@ -1435,6 +1441,7 @@ Jürgen König war gestern für radioeins in der Halle dabei. <a href="/programm
 </div>
 		</div>
 	
+	-->
 	
 	
 	

@@ -1,8 +1,18 @@
 
+// grid variables
+$col-width: 120px;
+$gutter-width: 40px;
+
 // TODO: check if needed
 html {
-	font-family: 'Interstate', Arial, "sans-serif";
+	font-family: 'InterstateLight', Arial, "sans-serif";
+	font-weight: 300;
 	line-height: 1.5;
+}
+
+strong {
+	font-family: 'Interstate', Arial, 'sans-serif';
+	font-weight: 700;
 }
 
 a {
@@ -10,9 +20,13 @@ a {
 	color: inherit;
 }
 
+@mixin grid ($cols: 6) {
+	width: $col-width * $cols + $gutter-width * ($cols - 1);
+}
+
 // basic grid
-.containerMain {
-	width: 918px;
+.containerContent {
+	@include grid(6);
 	position: relative;
 	margin: 0 auto;
 }
