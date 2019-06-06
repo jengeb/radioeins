@@ -20,10 +20,12 @@
 #center {
   @include grid(6);
   margin: 0 auto;
-  display: flex;
+// FIXME: We can't do this because it breaks the start page
+//   display: flex;
 }
 
 .begin {
+  display: none; // NOTE: See above
   flex-grow: 1;
 
   .weekday {
@@ -33,6 +35,7 @@
 
 // recommend / print links
 .iconList {
+  display: none; // NOTE: See above
   list-style: none;
   margin: 0;
   padding: 0;
