@@ -1,8 +1,12 @@
-#containerRbb_subHead {
+.header {
 	background-color: $lightgray;
+}
+
+#containerRbb_subHead {
+	@include grid(6);
+	position: relative;
+	margin: 0 auto;
 	height: 90px;
-	padding-left: 10vw;
-	padding-right: 10vw;
 }
 
 #headerimage {
@@ -24,11 +28,12 @@
 }
 
 .containerNavigationMain {
+	@include grid(6);
+	position: relative;
+	margin: 0 auto;
 	display: flex;
 	height: 80px;
 	align-items: center;
-	padding-left: 10vw;
-	padding-right: 10vw;
 }
 
 .navigationMain {
