@@ -24,18 +24,9 @@
 //   display: flex;
 }
 
-.begin {
-  display: none; // NOTE: See above
-  flex-grow: 1;
-
-  .weekday {
-    margin-right: .3em;
-  }
-}
-
 // recommend / print links
 .iconList {
-  display: none; // NOTE: See above
+  display: none; // NOTE: Remove them maybe?
   list-style: none;
   margin: 0;
   padding: 0;
@@ -69,7 +60,7 @@
 .heroSection {
   background: $lightgray;
   position: relative;
-  padding: $gutter-width * 2/3 0;
+  padding: 56px 0;
 
   // this are the things that paint everything grey left and right
   &::before,
@@ -91,6 +82,39 @@
   &::after {
     right: 0;
   }
+
+  // NOTE: This is specific to a program's detail page while the whole hero 
+  // thingy containing this might not be
+  .containerIcons {
+    color: $orange;
+
+    .begin,
+    .timeicon {
+      display: inline-block;
+    }
+
+    .weekday::after {
+      content: '. '
+    }
+    
+    .begin {
+      margin-right: .6em;
+    }
+
+    + .TitleText {
+      margin-top: 11px;
+    }
+
+  }
+
+  .TitleText {
+    margin: 0;
+  }
+
+  .picture {
+    @include grid(2);
+    height: auto;
+  }
 }
 
 .doctypeteaser {
@@ -100,7 +124,7 @@
   }
 
   .doctypesendeplatz {
-    @include grid-extended(4);
+    @include grid-extended($cols: 4);
     margin: 96px auto;
 
     .containerIcons .zeit {

@@ -22,6 +22,10 @@ $gutter-width: 40px;
 	font-weight: bold;
 }
 
+// you can use this grid mixins like this
+// @include grid(4) <- makes your element use 4 out of 6 available columns
+// you can check out https://projects.invisionapp.com/d/main/default/?origin=v7#/console/16229932/347098337/inspect?requestInspectAccess
+// to see why i picked 6 columns and why the sizes are defined as above
 @mixin grid ($cols: 6) {
 	width: $col-width * $cols + $gutter-width * ($cols - 1);
 }
