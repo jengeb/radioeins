@@ -9,7 +9,7 @@
 	<meta charset="UTF-8">
 	<link href="http://127.0.0.1:8080/dist/main.css" rel="stylesheet" type="text/css" />
 	<!-- /neu -->
-	
+
 		
 		
 		
@@ -508,6 +508,7 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
 <div class="containerContent">	
 	<!-- NOTE: div.heroSection ist neu -->
 <div class="heroSection">
+	<!-- TODO: Das hier ist die falsche Information -->
 	<h3 class="roofLine">mo-fr, 05:00 - 10:00 | sa-so, 06:00 - 09:00</h3>
 <h1 class="jcr:title TitleText">Der schöne Morgen</h1>
 <p class="linkedMods">mit <a href="https://mein.radioeins.de/profile/profileView.xhtml?userId=21162625" title="Moderation" class="cast">Stefan Rupp</a> und <a href="https://mein.radioeins.de/profile/profileView.xhtml?userId=3937156" title="Moderation" class="cast">Christoph Azone</a></p>
@@ -579,6 +580,7 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
 
 
 
+<!-- NOTE: This seems to mark the first article?? -->
 <div class="articlesContList">
   
     
@@ -589,7 +591,7 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
               
 
   <div id="articlesContList_5260_first" class="count1 first last layoutstandard odd textpicture">
-  
+			
 	
 	
 	
@@ -684,6 +686,7 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
     
     
 	
+			<!-- NOTE: This id is reused 25 times, this is a bug -->
       <div id="middleColumnList_23444_teaserList_39120" class="count1 doctypesendeplatz first layout1_1 manualteaser odd">
 	    
 		  
@@ -1776,4 +1779,20 @@ Jürgen König war gestern für radioeins in der Halle dabei. <a href="/programm
 
 
 	</body>
+	<!-- NOTE: This is just to fix words being alone on a line -->
+	<script>
+		(function () {
+			var elementsToFix = [].slice.call(null, document.querySelectorAll(
+				'h1', 'h2', 'p', 'a'
+			))
+			elementsToFix.forEach(function (element) {
+				if (element.children.length) return
+
+				element.innerHTML = element.innerHTML.trim().replace(/([^\s]+)\s+([^\s]+)[.!?]?$/g, '$1&nbsp;$2')
+				console.log(element.innerHTML.trim().replace(/([^\s]+)\s+([^\s]+)[.!?]?$/g, '$1&nbsp;$2'))
+			})
+		}())
+	</script>
+	<!-- -->
+	
 </html>

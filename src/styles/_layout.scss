@@ -3,25 +3,46 @@
 $col-width: 120px;
 $gutter-width: 40px;
 
+// some mixins that might keep things more dry
+
+@mixin interstate-light () {
+	font-family: 'InterstateLight', Arial, "sans-serif";
+	font-style: normal;
+	font-weight: normal;
+}
+
+@mixin interstate-bold () {
+	font-family: 'Interstate', Arial, 'sans-serif';
+	font-weight: bold;
+}
+
+@mixin interstate-condensed () {
+	font-family: 'InterstateCondensed', Arial, 'sans-serif';
+	font-style: normal;
+	font-weight: bold;
+}
+
+@mixin grid ($cols: 6) {
+	width: $col-width * $cols + $gutter-width * ($cols - 1);
+}
+
+@mixin grid-extended ($cols: 6) {
+	width:  $gutter-width * 2 + $col-width * $cols + $gutter-width * ($cols - 1);
+}
+
 // TODO: check if needed
 html {
-	font-family: 'InterstateLight', Arial, "sans-serif";
-	font-weight: 300;
+	@include interstate-light();
 	line-height: 1.5;
 }
 
 strong {
-	font-family: 'Interstate', Arial, 'sans-serif';
-	font-weight: 700;
+	@include interstate-bold();
 }
 
 a {
 	text-decoration: none;
 	color: inherit;
-}
-
-@mixin grid ($cols: 6) {
-	width: $col-width * $cols + $gutter-width * ($cols - 1);
 }
 
 // basic grid

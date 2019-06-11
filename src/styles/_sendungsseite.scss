@@ -92,3 +92,87 @@
     right: 0;
   }
 }
+
+.doctypeteaser {
+  .containerContent {
+    // this isn't the prettiest solution, but we need to reset this here
+    width: auto;
+  }
+
+  .doctypesendeplatz {
+    @include grid-extended(4);
+    margin: 96px auto;
+
+    .containerIcons .zeit {
+      @include interstate-bold();
+      background: #000;
+      color: #fff;
+      padding: 0 1.3em;
+      line-height: 24px;
+      font-size: 14px;
+      float: left;
+      margin-right: 1.3em;
+      border-radius: 2px;
+    }
+
+    .manualteaserRoofLine {
+      @include interstate-light();
+      color: $orange;
+      line-height: 24px;
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+
+    .manualteaserTitle {
+      @include interstate-bold();
+      position: relative;
+      font-size: 38px;
+      line-height: 44px;
+      display: inline;
+
+      + .manualteaserSubTitle {
+        // NOTE: In the invision preview this is rendered on the same line as
+        // the previous headline; this isn't trivially possible
+        @include interstate-light();
+        font-size: 38px;
+        line-height: 44px;
+        display: inline;
+      }
+
+      :before {
+        // NOTE: This is the currently playing icon
+        content: '?';
+        color: #fff;
+        text-align: center;
+        display: inline-block;
+        background: $orange;
+        // this is actually 44 * 44
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        margin-top: 6px;
+        margin-right: 8px;
+        border-radius: 2px;
+      }
+    }
+
+    .manualteaserPicture {
+      // TODO: Fix this once we have real images
+      margin-top: 24px;
+      overflow: hidden;
+      width: 100%;
+      height: 340px;
+      background: $gray;
+
+      img {
+        width: 100%;
+        height: 340px;
+        filter: blur(48px);
+      }
+    }
+
+    .playerdownload .manualteaserpicture {
+      margin-top: 24px;
+    }
+  }
+}
