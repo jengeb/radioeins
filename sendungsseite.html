@@ -1779,20 +1779,4 @@ Jürgen König war gestern für radioeins in der Halle dabei. <a href="/programm
 
 
 	</body>
-	<!-- NOTE: This is just to fix words being alone on a line -->
-	<script>
-		(function () {
-			var elementsToFix = [].slice.call(null, document.querySelectorAll(
-				'h1', 'h2', 'p', 'a'
-			))
-			elementsToFix.forEach(function (element) {
-				if (element.children.length) return
-
-				element.innerHTML = element.innerHTML.trim().replace(/([^\s]+)\s+([^\s]+)[.!?]?$/g, '$1&nbsp;$2')
-				console.log(element.innerHTML.trim().replace(/([^\s]+)\s+([^\s]+)[.!?]?$/g, '$1&nbsp;$2'))
-			})
-		}())
-	</script>
-	<!-- -->
-	
 </html>
