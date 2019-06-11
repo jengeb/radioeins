@@ -73,7 +73,7 @@
 
 	[title^='Video'] {
 		color: $orange;
-		padding: 10px 18px;
+		padding: 16px 18px 11px;
 		border-radius: 2px;
 		border: 1px solid $orange;
 		font-size: 20px;
@@ -81,7 +81,7 @@
 
 	[title^='Podcast'] {
 		color: $orange;
-		padding: 10px 18px;
+		padding: 16px 18px 11px;
 		border-radius: 2px;
 		border: 1px solid $orange;
 		font-size: 20px;
@@ -113,7 +113,7 @@
 
 	> a {
 		color: white;
-		padding: 12px 18px;
+		padding: 11px 18px 12px;
 		font-size: 20px;
 	}
 }
@@ -144,15 +144,18 @@
 	position: relative;
 	margin-left: -50vw;
 	left: 50%;
+
+	.manualteaserPicture:first-of-type img {
+		max-height: 360px;
+		object-fit: cover; // TODO: not supported by IE11
+	}
 }
 
 .layouttopteaser_textbild > .boxhead {
 	display: none;
 }
 
-.manualteaserPicture:first-of-type img {
-	max-height: 360px;
-}
+
 
 
 
@@ -170,6 +173,48 @@
 .layoutdein_radioeins {
 	background-color: $gray;
 }
+
+
+.radioeinsnewsletterbanner {
+	color: #2a2a2a;
+	background-color: $orange;
+
+	width: 100vw;
+
+	// TODO: check responsiveness: the following 3 lines are needed for Desktop view
+	position: relative;
+	margin-left: -50vw;
+	left: 50%;
+
+	text-align: center;
+	padding: 4em 0;
+
+	.radioeinsnewslettercontainer {
+		line-height: 44px;
+	}
+
+	.radioeinsnewsletterheadline {
+		font-size: 32px;
+		font-weight: bold;
+	}
+
+	.radioeinsnewsletterbody {
+		color: white;
+		font-size: 32px;
+		margin: 0.1em auto 0.8em auto;
+    max-width: 590px;
+	}
+
+	.radioeinsnewsletterbutton {
+		padding: 13px 20px 11px;
+		border-radius: 4px;
+		background-color: white;
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+}
+
+
 
 .socialmediabuttons {
 	background-color: $gray;
