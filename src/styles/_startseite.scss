@@ -1,8 +1,12 @@
 #containerRbb_subHead {
-	background-color: $lightgray;
 	height: 90px;
-	padding-left: 10vw;
-	padding-right: 10vw;
+	@include grid(6);
+	position: relative;
+	margin: 0 auto;
+}
+
+.header {
+	background-color: $lightgray;
 }
 
 #headerimage {
@@ -20,22 +24,23 @@
 // TODO: check if needed
 .jsb_placeholder {
 	float: right;
-	display: none; 
+	display: none;
 }
 
 .containerNavigationMain {
 	display: flex;
 	height: 80px;
 	align-items: center;
-	padding-left: 10vw;
-	padding-right: 10vw;
+	@include grid(6);
+	position: relative;
+	margin: 0 auto;
 }
 
 .navigationMain {
 	max-height: 80px;
 }
 
-.navigationMain > .level1 {
+.navigationMain>.level1 {
 	list-style: none;
 	padding-inline-start: 0;
 	font-size: 28px;
@@ -46,14 +51,14 @@
 	margin-block-end: 0em;
 }
 
-.navigationMain > ul > li {
+.navigationMain>ul>li {
 	display: inline-block;
 	text-transform: uppercase;
 	margin-right: 35px;
 	font-weight: bold;
 
-  &.selected {
-	  position: relative;
+	&.selected {
+		position: relative;
 		color: $orange;
 
 		// draw the white arrow head
@@ -108,10 +113,10 @@
 	border-radius: 2px;
 
 	display: flex;
-  align-items: center;
+	align-items: center;
 	justify-content: center;
 
-	> a {
+	>a {
 		color: white;
 		padding: 11px 18px 12px;
 		font-size: 20px;
@@ -122,7 +127,7 @@
 	// background: url('../../assets/facebook_black.svg');
 }
 
-.manualteaserPicture > img {
+.manualteaserPicture>img {
 	width: 100%;
 }
 
@@ -151,7 +156,7 @@
 	}
 }
 
-.layouttopteaser_textbild > .boxhead {
+.layouttopteaser_textbild>.boxhead {
 	display: none;
 }
 
@@ -161,7 +166,7 @@
 
 
 
-.jetztplaylist > a {
+.jetztplaylist>a {
 	color: $orange;
 	margin-left: 20px;
 	font-size: 10px;
@@ -179,16 +184,27 @@
 .teaserbox_videos {
 	background-color: #2a2a2a;
 	color: white;
-	// position: relative;
-	// margin-left: -50vw;
-	// left: 50%;
-	// width: 100wv;
 
-	// > * {
-	// 	@include grid(6);
-	// 	position: relative;
-	// 	margin: 0 auto;
-	// }
+	width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+	margin-right: -50vw;
+
+	padding-top: 1.5em;
+	padding-bottom: 3em;
+
+	> * {
+		@include grid(6);
+		position: relative;
+		margin: 0 auto;
+	}
+
+	.boxHeadline {
+		font-size: 36px;
+		text-transform: uppercase;
+	}
 
 	.caption {
 		text-align: left;
@@ -199,6 +215,7 @@
 	}
 
 	.boxlinklist {
+
 		// button
 		.manualteaserTitle {
 			color: white;
@@ -247,7 +264,7 @@
 		.imgIconWrap {
 			order: -1;
 
-			.manualteaserPicture > a > img {
+			.manualteaserPicture>a>img {
 				width: 100vw;
 				object-fit: cover; // TODO: not supported by IE11
 				max-height: 245px;
@@ -261,10 +278,12 @@
 		}
 	}
 
-	.layout4spaltig_4_3:nth-child(4n), .layout4spaltig_4_3:nth-child(5n), .layout4spaltig_4_3:nth-child(6n) {
+	.layout4spaltig_4_3:nth-child(4n),
+	.layout4spaltig_4_3:nth-child(5n),
+	.layout4spaltig_4_3:nth-child(6n) {
 		width: 31%;
 
-		.manualteaserPicture > a > img {
+		.manualteaserPicture>a>img {
 			width: 100vw;
 			object-fit: cover; // TODO: not supported by IE11
 			max-height: 170px;
@@ -286,7 +305,7 @@
 
 	text-align: center;
 	padding: 4em 0;
-	
+
 	// @include grid(6);
 	// position: relative;
 	// margin: 0 auto;
@@ -304,7 +323,7 @@
 		color: white;
 		font-size: 32px;
 		margin: 0.1em auto 0.8em auto;
-    max-width: 590px;
+		max-width: 590px;
 	}
 
 	.radioeinsnewsletterbutton {
