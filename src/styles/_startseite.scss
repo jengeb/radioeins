@@ -40,7 +40,7 @@
 	max-height: 80px;
 }
 
-.navigationMain>.level1 {
+.navigationMain > .level1 {
 	list-style: none;
 	padding-inline-start: 0;
 	font-size: 28px;
@@ -51,7 +51,7 @@
 	margin-block-end: 0em;
 }
 
-.navigationMain>ul>li {
+.navigationMain > ul > li {
 	display: inline-block;
 	text-transform: uppercase;
 	margin-right: 35px;
@@ -116,21 +116,16 @@
 	align-items: center;
 	justify-content: center;
 
-	>a {
+	> a {
 		color: white;
 		padding: 11px 18px 12px;
 		font-size: 20px;
 	}
 }
 
-.jetzt:before {
-	// background: url('../../assets/facebook_black.svg');
-}
-
-.manualteaserPicture>img {
+.manualteaserPicture > img {
 	width: 100%;
 }
-
 
 .pictsrc {
 	display: none;
@@ -152,21 +147,15 @@
 
 	.manualteaserPicture:first-of-type img {
 		max-height: 360px;
-		object-fit: cover; // TODO: not supported by IE11
+		object-fit: cover;
 	}
 }
 
-.layouttopteaser_textbild>.boxhead {
+.layouttopteaser_textbild > .boxhead {
 	display: none;
 }
 
-
-
-
-
-
-
-.jetztplaylist>a {
+.jetztplaylist > a {
 	color: $orange;
 	margin-left: 20px;
 	font-size: 10px;
@@ -174,13 +163,10 @@
 	white-space: nowrap;
 }
 
-
 .layout6spaltig_weisse_buehne {
 	margin: 2em 0 3em;
 	
 }
-
-
 
 .teaserbox_videos {
 	background-color: #2a2a2a;
@@ -279,14 +265,12 @@
 			text-align: center;
 		}
 	}
-
 }
 
 .teaserbox_highlights {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-
 	margin: 2em 0 3em;
 
 	.boxhead {
@@ -308,9 +292,9 @@
 		.imgIconWrap {
 			order: -1;
 
-			.manualteaserPicture>a>img {
+			.manualteaserPicture > a > img {
 				width: 100vw;
-				object-fit: cover; // TODO: not supported by IE11
+				object-fit: cover;
 				max-height: 245px;
 			}
 		}
@@ -327,15 +311,13 @@
 	.layout4spaltig_4_3:nth-child(6n) {
 		width: 31%;
 
-		.manualteaserPicture>a>img {
+		.manualteaserPicture > a > img {
 			width: 100vw;
-			object-fit: cover; // TODO: not supported by IE11
+			object-fit: cover;
 			max-height: 170px;
 		}
-
 	}
 }
-
 
 .radioeinsnewsletterbanner {
 	color: #2a2a2a;
@@ -349,10 +331,6 @@
 
 	text-align: center;
 	padding: 4em 0;
-
-	// @include grid(6);
-	// position: relative;
-	// margin: 0 auto;
 
 	.radioeinsnewslettercontainer {
 		line-height: 44px;
@@ -379,12 +357,10 @@
 	}
 }
 
-
 .layoutdein_radioeins {
 	color: white;
 	background-color: $gray;
 	padding: 2em 0 3em;
-
 
 	width: 100vw;
 	position: relative;
@@ -397,7 +373,6 @@
 		margin: 0 auto;
 	}
 }
-
 
 .socialmediabuttons {
 	background-color: $gray;
@@ -426,5 +401,4 @@
 		color: $orange;
 		text-transform: uppercase;
 	}
-
 }
