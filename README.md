@@ -1,5 +1,7 @@
 # radioeins Redesign
 
+[![Build Status](https://travis-ci.com/jengeb/radioeins.svg?branch=master)](https://travis-ci.com/jengeb/radioeins)
+
 ## Build commands
 
 At first, make sure to install dependencies:
