@@ -1,8 +1,12 @@
 #containerRbb_subHead {
-	background-color: $lightgray;
 	height: 90px;
-	padding-left: 10vw;
-	padding-right: 10vw;
+	@include grid(6);
+	position: relative;
+	margin: 0 auto;
+}
+
+.header {
+	background-color: $lightgray;
 }
 
 #headerimage {
@@ -20,15 +24,16 @@
 // TODO: check if needed
 .jsb_placeholder {
 	float: right;
-	display: none; 
+	display: none;
 }
 
 .containerNavigationMain {
 	display: flex;
 	height: 80px;
 	align-items: center;
-	padding-left: 10vw;
-	padding-right: 10vw;
+	@include grid(6);
+	position: relative;
+	margin: 0 auto;
 }
 
 .navigationMain {
@@ -52,8 +57,8 @@
 	margin-right: 35px;
 	font-weight: bold;
 
-  &.selected {
-	  position: relative;
+	&.selected {
+		position: relative;
 		color: $orange;
 
 		// draw the white arrow head
@@ -73,7 +78,7 @@
 
 	[title^='Video'] {
 		color: $orange;
-		padding: 10px 18px;
+		padding: 16px 18px 11px;
 		border-radius: 2px;
 		border: 1px solid $orange;
 		font-size: 20px;
@@ -81,7 +86,7 @@
 
 	[title^='Podcast'] {
 		color: $orange;
-		padding: 10px 18px;
+		padding: 16px 18px 11px;
 		border-radius: 2px;
 		border: 1px solid $orange;
 		font-size: 20px;
@@ -108,24 +113,19 @@
 	border-radius: 2px;
 
 	display: flex;
-  align-items: center;
+	align-items: center;
 	justify-content: center;
 
 	> a {
 		color: white;
-		padding: 12px 18px;
+		padding: 11px 18px 12px;
 		font-size: 20px;
 	}
-}
-
-.jetzt:before {
-	// background: url('../../assets/facebook_black.svg');
 }
 
 .manualteaserPicture > img {
 	width: 100%;
 }
-
 
 .pictsrc {
 	display: none;
@@ -139,18 +139,21 @@
 	display: none;
 }
 
+.layouttopteaser_textbild {
+	width: 100vw;
+	position: relative;
+	margin-left: -50vw;
+	left: 50%;
+
+	.manualteaserPicture:first-of-type img {
+		max-height: 360px;
+		object-fit: cover;
+	}
+}
 
 .layouttopteaser_textbild > .boxhead {
 	display: none;
 }
-
-.manualteaserPicture:first-of-type img {
-	max-height: 360px;
-}
-
-
-
-
 
 .jetztplaylist > a {
 	color: $orange;
@@ -160,15 +163,242 @@
 	white-space: nowrap;
 }
 
+.layout6spaltig_weisse_buehne {
+	margin: 2em 0 3em;
+	
+}
+
+.teaserbox_videos {
+	background-color: #2a2a2a;
+	color: white;
+
+	width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+	margin-right: -50vw;
+
+	padding-top: 1.5em;
+	padding-bottom: 3em;
+
+	> * {
+		@include grid(6);
+		position: relative;
+		margin: 0 auto;
+	}
+
+	.boxHeadline {
+		font-size: 36px;
+		text-transform: uppercase;
+	}
+
+	.caption {
+		text-align: left;
+
+		.manualteaserSubTitle {
+			margin-top: -0.8em;
+		}
+	}
+
+	.boxlinklist {
+		padding-inline-start: 0;
+
+		// button
+		.manualteaserTitle {
+			color: white;
+			list-style: none;
+			border: 1px solid white;
+			border-radius: 4px;
+			height: 40px;
+			width: 152px;
+			text-transform: uppercase;
+
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+}
+
+.teaserbox_music {
+	background-color: $lightgray;
+	width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+	margin-right: -50vw;
+
+	padding-top: 1.5em;
+	padding-bottom: 3em;
+
+	> * {
+		@include grid(6);
+		position: relative;
+		margin: 0 auto;
+	}
+
+	.boxHeadline {
+		font-size: 36px;
+		text-transform: uppercase;
+	}
+
+	.boxlinklist {
+		padding-inline-start: 0;
+
+		// button
+		.manualteaserTitle {
+			color: white;
+			background-color: $orange;
+			list-style: none;
+			border: 1px solid $orange;
+			border-radius: 4px;
+			height: 40px;
+			width: 152px;
+			text-transform: uppercase;
+
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+}
+
+.teaserbox_highlights {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 2em 0 3em;
+
+	.boxhead {
+		flex: 0 0 100%;
+	}
+
+	.boxHeadline {
+		flex: 1 1 300px;
+		text-transform: uppercase;
+		font-size: 36px;
+	}
+
+	.layout4spaltig_4_3 {
+		width: 48%;
+
+		display: flex;
+		flex-direction: column;
+
+		.imgIconWrap {
+			order: -1;
+
+			.manualteaserPicture > a > img {
+				width: 100vw;
+				object-fit: cover;
+				max-height: 245px;
+			}
+		}
+
+		.manualteaserRoofLine {
+			color: $orange;
+			order: -1;
+			font-size: 14px;
+		}
+	}
+
+	.layout4spaltig_4_3:nth-child(4n),
+	.layout4spaltig_4_3:nth-child(5n),
+	.layout4spaltig_4_3:nth-child(6n) {
+		width: 31%;
+
+		.manualteaserPicture > a > img {
+			width: 100vw;
+			object-fit: cover;
+			max-height: 170px;
+		}
+	}
+}
+
+.radioeinsnewsletterbanner {
+	color: #2a2a2a;
+	background-color: $orange;
+
+	width: 100vw;
+	// // TODO: check responsiveness: the following 3 lines are needed for Desktop view
+	position: relative;
+	margin-left: -50vw;
+	left: 50%;
+
+	text-align: center;
+	padding: 4em 0;
+
+	.radioeinsnewslettercontainer {
+		line-height: 44px;
+	}
+
+	.radioeinsnewsletterheadline {
+		font-size: 32px;
+		font-weight: bold;
+	}
+
+	.radioeinsnewsletterbody {
+		color: white;
+		font-size: 32px;
+		margin: 0.1em auto 0.8em auto;
+		max-width: 590px;
+	}
+
+	.radioeinsnewsletterbutton {
+		padding: 13px 20px 11px;
+		border-radius: 4px;
+		background-color: white;
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+}
 
 .layoutdein_radioeins {
+	color: white;
 	background-color: $gray;
+	padding: 2em 0 3em;
+
+	width: 100vw;
+	position: relative;
+	margin-left: -50vw;
+	left: 50%;
+
+	> * {
+		@include grid(6);
+		position: relative;
+		margin: 0 auto;
+	}
 }
 
 .socialmediabuttons {
 	background-color: $gray;
+	color: white;
+
+	> * {
+		list-style: none;
+		@include grid(6);
+		position: relative;
+		margin: 0 auto;
+	}
 }
 
 .footer {
 	background-color: $gray;
+	color: white;
+	padding: 2em 0 3em;
+
+	div {
+		@include grid(6);
+		position: relative;
+		margin: 0 auto;
+	}
+
+	.boxHeadline {
+		color: $orange;
+		text-transform: uppercase;
+	}
 }
