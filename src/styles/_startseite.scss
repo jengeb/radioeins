@@ -175,8 +175,9 @@
 }
 
 
-.layoutdein_radioeins {
-	background-color: $gray;
+.layout6spaltig_weisse_buehne {
+	margin: 2em 0 3em;
+	
 }
 
 
@@ -215,6 +216,7 @@
 	}
 
 	.boxlinklist {
+		padding-inline-start: 0;
 
 		// button
 		.manualteaserTitle {
@@ -232,18 +234,60 @@
 			text-align: center;
 		}
 	}
-
-
 }
 
 .teaserbox_music {
 	background-color: $lightgray;
+	width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+	margin-right: -50vw;
+
+	padding-top: 1.5em;
+	padding-bottom: 3em;
+
+	> * {
+		@include grid(6);
+		position: relative;
+		margin: 0 auto;
+	}
+
+	.boxHeadline {
+		font-size: 36px;
+		text-transform: uppercase;
+	}
+
+	.boxlinklist {
+		padding-inline-start: 0;
+
+		// button
+		.manualteaserTitle {
+			color: white;
+			background-color: $orange;
+			list-style: none;
+			border: 1px solid $orange;
+			border-radius: 4px;
+			height: 40px;
+			width: 152px;
+			text-transform: uppercase;
+
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+
 }
 
 .teaserbox_highlights {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+
+	margin: 2em 0 3em;
 
 	.boxhead {
 		flex: 0 0 100%;
@@ -336,14 +380,41 @@
 }
 
 
+.layoutdein_radioeins {
+	color: white;
+	background-color: $gray;
+	padding: 2em 0 3em;
+
+
+	width: 100vw;
+	position: relative;
+	margin-left: -50vw;
+	left: 50%;
+
+	> * {
+		@include grid(6);
+		position: relative;
+		margin: 0 auto;
+	}
+}
+
 
 .socialmediabuttons {
 	background-color: $gray;
+	color: white;
+
+	> * {
+		list-style: none;
+		@include grid(6);
+		position: relative;
+		margin: 0 auto;
+	}
 }
 
 .footer {
 	background-color: $gray;
 	color: white;
+	padding: 2em 0 3em;
 
 	div {
 		@include grid(6);
