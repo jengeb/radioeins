@@ -178,6 +178,45 @@
 
 .teaserbox_videos {
 	background-color: #2a2a2a;
+	color: white;
+	// position: relative;
+	// margin-left: -50vw;
+	// left: 50%;
+	// width: 100wv;
+
+	// > * {
+	// 	@include grid(6);
+	// 	position: relative;
+	// 	margin: 0 auto;
+	// }
+
+	.caption {
+		text-align: left;
+
+		.manualteaserSubTitle {
+			margin-top: -0.8em;
+		}
+	}
+
+	.boxlinklist {
+		// button
+		.manualteaserTitle {
+			color: white;
+			list-style: none;
+			border: 1px solid white;
+			border-radius: 4px;
+			height: 40px;
+			width: 152px;
+			text-transform: uppercase;
+
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+
+
 }
 
 .teaserbox_music {
@@ -240,14 +279,17 @@
 	background-color: $orange;
 
 	width: 100vw;
-
-	// TODO: check responsiveness: the following 3 lines are needed for Desktop view
+	// // TODO: check responsiveness: the following 3 lines are needed for Desktop view
 	position: relative;
 	margin-left: -50vw;
 	left: 50%;
 
 	text-align: center;
 	padding: 4em 0;
+	
+	// @include grid(6);
+	// position: relative;
+	// margin: 0 auto;
 
 	.radioeinsnewslettercontainer {
 		line-height: 44px;
@@ -282,4 +324,17 @@
 
 .footer {
 	background-color: $gray;
+	color: white;
+
+	div {
+		@include grid(6);
+		position: relative;
+		margin: 0 auto;
+	}
+
+	.boxHeadline {
+		color: $orange;
+		text-transform: uppercase;
+	}
+
 }
