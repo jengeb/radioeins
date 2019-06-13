@@ -15,6 +15,7 @@ install:
 
 script:
   - npm run build
+  - cp *.html ./dist/
 
 deploy:
   provider: pages
