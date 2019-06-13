@@ -222,7 +222,8 @@
 	}
 }
 
-.teaserbox_music {
+
+.teaserbox_music_container {
 	background-color: $lightgray;
 	width: 100vw;
   position: relative;
@@ -234,35 +235,98 @@
 	padding-top: 1.5em;
 	padding-bottom: 3em;
 
-	> * {
+	.teaserbox_music {
 		@include grid(6);
 		position: relative;
 		margin: 0 auto;
-	}
 
-	.boxHeadline {
-		font-size: 36px;
-		text-transform: uppercase;
-	}
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
 
-	.boxlinklist {
-		padding-inline-start: 0;
-
-		// button
-		.manualteaserTitle {
-			color: white;
-			background-color: $orange;
-			list-style: none;
-			border: 1px solid $orange;
-			border-radius: 4px;
-			height: 40px;
-			width: 152px;
-			text-transform: uppercase;
-
+		> div {
 			display: flex;
-			justify-content: center;
 			flex-direction: column;
-			text-align: center;
+			width: 25%;
+
+			> .manualteaserTitle, .manualteaserSubTitle {
+				order: 2;
+			}
+
+			h2.manualteaserTitle {
+				margin-block-end: 0;
+				margin-block-start: 0;
+			}
+
+			h3.manualteaserSubTitle {
+				margin-block-start: 0;
+			}
+
+		}
+
+		.boxhead {
+			flex: 0 0 100%;
+
+			h2 {
+				margin-block-end: 0;
+			}
+		}
+
+		.boxHeadline {
+			font-size: 36px;
+			text-transform: uppercase;
+		}
+
+		.boxlinklist {
+			padding-inline-start: 0;
+
+			// button
+			.manualteaserTitle {
+				color: white;
+				background-color: $orange;
+				list-style: none;
+				border: 1px solid $orange;
+				border-radius: 4px;
+				height: 40px;
+				width: 152px;
+				text-transform: uppercase;
+
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				text-align: center;
+			}
+		}
+
+		.manualteaserTitle {
+			font-size: 18px;
+		}
+
+		.manualteaserSubTitle {
+			font-size: 18px;
+			font-weight: lighter;
+		}
+
+		.manualteaserRoofLine {
+			color: $orange;
+			font-size: 14px;
+			font-weight: lighter;
+			margin-block-end: 0.4em;
+		}
+
+		.iconContainer {
+			.timeicon {
+				font-size: 14px;
+				color: #72716e;
+
+				span + span {
+					margin-left: 5px;
+				}
+			}
+			.rubrikenicon {
+				display: none;
+			}
 		}
 	}
 }
@@ -302,22 +366,6 @@
 		margin-block-start: 0;
 		font-weight: lighter;
 	}
-
-	// .layout4spaltig_4_3 {
-	// 	display: flex;
-	// 	flex-direction: column;
-
-	// 	.imgIconWrap {
-	// 		order: -1;
-	// 	}
-
-	// 	.manualteaserRoofLine {
-	// 		color: $orange;
-	// 		order: -1;
-	// 		font-size: 14px;
-	// 	}
-	// }
-
 
 	.layout2erReihe {
 		margin-bottom: 1em;
@@ -369,7 +417,6 @@
 			font-size: 14px;
 		}
 	}
-
 }
 
 .radioeinsnewsletterbanner {
