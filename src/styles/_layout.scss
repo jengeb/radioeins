@@ -1,7 +1,7 @@
 
 // grid variables
 $col-width: 120px;
-$gutter-width: 40px;
+$col-gap: 40px;
 
 // some mixins that might keep things more dry
 
@@ -27,17 +27,41 @@ $gutter-width: 40px;
 // you can check out https://projects.invisionapp.com/d/main/default/?origin=v7#/console/16229932/347098337/inspect?requestInspectAccess
 // to see why i picked 6 columns and why the sizes are defined as above
 @mixin grid ($cols: 6) {
-	width: $col-width * $cols + $gutter-width * ($cols - 1);
+	width: $col-width * $cols + $col-gap * ($cols - 1);
 }
 
 @mixin grid-extended ($cols: 6) {
-	width:  $gutter-width * 2 + $col-width * $cols + $gutter-width * ($cols - 1);
+	width:  $col-gap * 2 + $col-width * $cols + $col-gap * ($cols - 1);
+}
+
+// reusable for icons / icons with buttons
+.button {
+	height: 44px;
+	line-height: 44px;
+	padding: 0 18px;
+	border-radius: 2px;
+}
+
+.has-icon {
+	&::before {
+		content: '?';
+		padding-right: .3em;
+	}
+}
+
+// TODO: check if needed
+*, *::before, *::after {
+	box-sizing: border-box;
 }
 
 // TODO: check if needed
 html {
 	@include interstate-light();
 	line-height: 1.5;
+}
+
+body {
+	color: $black;
 }
 
 strong {
@@ -97,10 +121,10 @@ img {
 		height: 44px;
 
 		a {
-			display: block;
+			font-size: 30px;
 			height: 44px;
 			line-height: 44px;
-			font-size: 30px;
+			display: block;
 		}
 
 		li {
@@ -135,6 +159,7 @@ img {
 				margin-right: 22px;
 				
 				a {
+					@extend .button;
 					font-size: 20px;
 					padding: 0 18px;
 					color: $orange;
@@ -162,7 +187,7 @@ img {
 	grid-template:
 	 "live playlistLink" 1fr
 	 "live currentSong"   1fr /
-	 1fr   1fr;
+	 1fr   130px;
 	height: 44px;
 
 	.jetzt {
@@ -175,16 +200,8 @@ img {
 			color: white;
 			font-size: 20px;
 			display: block;
-			height: 46px;
-			line-height: 46px;
-			padding: 0 18px;
-			border-radius: 2px;
-
-			&::before {
-				// TODO: Icon missing
-				content: '?';
-				padding-right: .3em;
-			}
+			@extend .button;
+			@extend .has-icon;
 		}
 	}
 
@@ -197,12 +214,12 @@ img {
 			white-space: nowrap;
 			max-width: 100%;
 			text-overflow: ellipsis;
+			overflow: hidden;
 		}
 
 		p {
 			margin: 0;
 		}
-
 	}
 
 	.jetztplaylist {
@@ -221,6 +238,7 @@ img {
 	// TODO: This is added by some script and should probably be removed properly
 	#slideWrapper {
 		transition: none !important;
+		transform: none !important;
 	}
 }
 

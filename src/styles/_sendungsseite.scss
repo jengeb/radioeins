@@ -36,6 +36,7 @@
       display: inline-block;
       margin: 0 .3em;
     }
+
   }
 
   // facebook / twitter / email share buttons
@@ -60,6 +61,7 @@
   // hero section (description of show)
   .heroSection {
     background: $lightgray;
+    color: $gray;
     position: relative;
     padding: 56px 0;
 
@@ -84,10 +86,22 @@
       right: 0;
     }
 
+    $right-col: $col-width * 2 + $col-gap;
+
+    display: grid;
+    grid-template:
+      "date      picture"     0fr
+      "title     picture"     0fr
+      "subtitle  picture"     0fr
+      "buttons   description" 0fr /
+      1fr        $right-col;
+    grid-column-gap: $col-gap;
+
     // NOTE: This is specific to a program's detail page while the whole hero 
     // thingy containing this might not be
     .containerIcons {
       color: $orange;
+      grid-area: date;
 
       .begin,
       .timeicon {
@@ -109,12 +123,62 @@
     }
 
     .TitleText {
+      grid-area: title;
+      padding-top: 10px;
       margin: 0;
+      font-size: 56px;
+      line-height: 64px;
+      @include interstate-bold();
+    }
+
+    .sendeplatzShortText {
+      // TODO: If we're strictly following the layout we need interstate light condensed for this
+      grid-area: subtitle;
+      align-self: end;
+      margin: 0;
+      font-size: 36px;
+      line-height: 42px;
+      @include interstate-light();
     }
 
     .picture {
-      @include grid(2);
-      height: auto;
+      grid-area: picture;
+      align-self: end;
+    }
+
+    .linkedMods {
+      &:first-line {
+        @include interstate-bold;
+      }
+      grid-area: description;
+      padding-top: 10px;
+      margin: 0;
+    }
+
+    .streamfilter {
+      padding-top: 20px;
+      grid-area: buttons;
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        a {
+          @include interstate-condensed;
+          @extend .button;
+          @extend .has-icon;
+          font-size: 20px;
+          text-transform: uppercase;
+          color: $orange;
+          display: inline-block;
+
+          // it looks a bit weird to have space on the left side if we leave out
+          // the button with a solid orange background
+          position: relative;
+          left: -18px;
+        }
+      }
     }
   }
 
@@ -219,6 +283,11 @@
           border-radius: 2px;
           margin-top: 24px;
         }
+      }
+
+      .playerdownload:last-child {
+        // TODO: This needs to be implemented properly
+        display: none;
       }
     }
   }
