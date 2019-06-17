@@ -86,8 +86,7 @@
       right: 0;
     }
 
-    $left-col: $col-width * 4 + $gutter-width * 3;
-    $right-col: $col-width * 2 + $gutter-width;
+    $right-col: $col-width * 2 + $col-gap;
 
     display: grid;
     grid-template:
@@ -96,7 +95,7 @@
       "subtitle  picture"     0fr
       "buttons   description" 0fr /
       1fr        $right-col;
-    grid-column-gap: $gutter-width;
+    grid-column-gap: $col-gap;
 
     // NOTE: This is specific to a program's detail page while the whole hero 
     // thingy containing this might not be

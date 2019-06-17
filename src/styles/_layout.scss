@@ -1,7 +1,7 @@
 
 // grid variables
 $col-width: 120px;
-$gutter-width: 40px;
+$col-gap: 40px;
 
 // some mixins that might keep things more dry
 
@@ -27,11 +27,11 @@ $gutter-width: 40px;
 // you can check out https://projects.invisionapp.com/d/main/default/?origin=v7#/console/16229932/347098337/inspect?requestInspectAccess
 // to see why i picked 6 columns and why the sizes are defined as above
 @mixin grid ($cols: 6) {
-	width: $col-width * $cols + $gutter-width * ($cols - 1);
+	width: $col-width * $cols + $col-gap * ($cols - 1);
 }
 
 @mixin grid-extended ($cols: 6) {
-	width:  $gutter-width * 2 + $col-width * $cols + $gutter-width * ($cols - 1);
+	width:  $col-gap * 2 + $col-width * $cols + $col-gap * ($cols - 1);
 }
 
 // reusable for icons / icons with buttons
