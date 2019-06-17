@@ -442,14 +442,10 @@ img {
 
 .livestream {
   display: grid;
-  height: 44px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr; }
+  grid-template: "live playlistLink" 1fr "live currentSong"   1fr / 1fr   1fr;
+  height: 44px; }
   .livestream .jetzt {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 3; }
+    grid-area: live; }
     .livestream .jetzt a {
       text-transform: uppercase;
       font-weight: bold;
@@ -477,14 +473,12 @@ img {
     .livestream .jetztplaylist p {
       margin: 0; }
   .livestream .jetztplaylist {
-    grid-row-start: 1;
-    grid-row-end: 2; }
+    grid-area: playlistLink; }
     .livestream .jetztplaylist a {
       color: #ff8300;
       line-height: 14px; }
   .livestream .nowonair {
-    grid-column-start: 2;
-    grid-column-end: 3; }
+    grid-area: currentSong; }
   .livestream #slideWrapper {
     transition: none !important; }
 
@@ -527,7 +521,8 @@ img {
   left: 50%; }
   .layouttopteaser_textbild .manualteaserPicture:first-of-type img {
     max-height: 360px;
-    object-fit: cover; }
+    -o-object-fit: cover;
+       object-fit: cover; }
 
 .layouttopteaser_textbild > .boxhead {
   display: none; }
@@ -558,7 +553,8 @@ img {
     .teaserbox_videos .caption .manualteaserSubTitle {
       margin-top: -0.8em; }
   .teaserbox_videos .boxlinklist {
-    padding-inline-start: 0; }
+    -webkit-padding-start: 0;
+            padding-inline-start: 0; }
     .teaserbox_videos .boxlinklist .manualteaserTitle {
       color: white;
       list-style: none;
@@ -597,19 +593,24 @@ img {
       .teaserbox_music_container .teaserbox_music > div > .manualteaserTitle, .teaserbox_music_container .teaserbox_music > div .manualteaserSubTitle {
         order: 2; }
       .teaserbox_music_container .teaserbox_music > div h2.manualteaserTitle {
-        margin-block-end: 0;
-        margin-block-start: 0; }
+        -webkit-margin-after: 0;
+                margin-block-end: 0;
+        -webkit-margin-before: 0;
+                margin-block-start: 0; }
       .teaserbox_music_container .teaserbox_music > div h3.manualteaserSubTitle {
-        margin-block-start: 0; }
+        -webkit-margin-before: 0;
+                margin-block-start: 0; }
     .teaserbox_music_container .teaserbox_music .boxhead {
       flex: 0 0 100%; }
       .teaserbox_music_container .teaserbox_music .boxhead h2 {
-        margin-block-end: 0; }
+        -webkit-margin-after: 0;
+                margin-block-end: 0; }
     .teaserbox_music_container .teaserbox_music .boxHeadline {
       font-size: 36px;
       text-transform: uppercase; }
     .teaserbox_music_container .teaserbox_music .boxlinklist {
-      padding-inline-start: 0; }
+      -webkit-padding-start: 0;
+              padding-inline-start: 0; }
       .teaserbox_music_container .teaserbox_music .boxlinklist .manualteaserTitle {
         color: white;
         background-color: #ff8300;
@@ -632,7 +633,8 @@ img {
       color: #ff8300;
       font-size: 14px;
       font-weight: lighter;
-      margin-block-end: 0.4em; }
+      -webkit-margin-after: 0.4em;
+              margin-block-end: 0.4em; }
     .teaserbox_music_container .teaserbox_music .iconContainer .timeicon {
       font-size: 14px;
       color: #72716e; }
@@ -658,11 +660,14 @@ img {
     .teaserbox_highlights .timeicon span + span {
       margin-left: 5px; }
   .teaserbox_highlights h2.manualteaserTitle {
-    margin-block-end: 0;
-    margin-block-start: 0.3em;
+    -webkit-margin-after: 0;
+            margin-block-end: 0;
+    -webkit-margin-before: 0.3em;
+            margin-block-start: 0.3em;
     line-height: 1.3em; }
   .teaserbox_highlights h3.manualteaserSubTitle {
-    margin-block-start: 0;
+    -webkit-margin-before: 0;
+            margin-block-start: 0;
     font-weight: lighter; }
   .teaserbox_highlights .layout2erReihe {
     margin-bottom: 1em;
@@ -673,10 +678,12 @@ img {
       order: -1; }
     .teaserbox_highlights .layout2erReihe .manualteaserPicture > a > img {
       width: 100vw;
-      object-fit: cover;
+      -o-object-fit: cover;
+         object-fit: cover;
       max-height: 245px; }
     .teaserbox_highlights .layout2erReihe h3.manualteaserRoofLine {
-      margin-block-end: 0.7em;
+      -webkit-margin-after: 0.7em;
+              margin-block-end: 0.7em;
       font-weight: lighter;
       color: #ff8300;
       order: -1;
@@ -689,10 +696,12 @@ img {
       order: -1; }
     .teaserbox_highlights .layout3erReihe .manualteaserPicture > a > img {
       width: 100vw;
-      object-fit: cover;
+      -o-object-fit: cover;
+         object-fit: cover;
       max-height: 245px; }
     .teaserbox_highlights .layout3erReihe h3.manualteaserRoofLine {
-      margin-block-end: 0.7em;
+      -webkit-margin-after: 0.7em;
+              margin-block-end: 0.7em;
       font-weight: lighter;
       color: #ff8300;
       order: -1;
@@ -889,7 +898,8 @@ img {
     .layoutprogramm .doctypeteaser .doctypesendeplatz .playerdownload .manualteaserpicture.video img {
       width: 100%;
       height: 340px;
-      filter: blur(48px); }
+      -webkit-filter: blur(48px);
+              filter: blur(48px); }
   .layoutprogramm .doctypeteaser .doctypesendeplatz .sendeplatz.mehrlink {
     display: block;
     font-size: 0;
