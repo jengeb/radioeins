@@ -16,79 +16,210 @@
   display: none
 }
 
-// date and recommendation links at beginning of page
-#center {
-  @include grid(6);
-  margin: 0 auto;
-// FIXME: We can't do this because it breaks the start page
-//   display: flex;
-}
-
-.begin {
-  display: none; // NOTE: See above
-  flex-grow: 1;
-
-  .weekday {
-    margin-right: .3em;
+.layoutprogramm {
+  // date and recommendation links at beginning of page
+  #center {
+    @include grid(6);
+    margin: 0 auto;
+  // FIXME: We can't do this because it breaks the start page
+  //   display: flex;
   }
-}
 
-// recommend / print links
-.iconList {
-  display: none; // NOTE: See above
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  // recommend / print links
+  .iconList {
+    display: none; // NOTE: Remove them maybe?
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
-  li {
-    display: inline-block;
-    margin: 0 .3em;
+    li {
+      display: inline-block;
+      margin: 0 .3em;
+    }
   }
-}
 
-// facebook / twitter / email share buttons
-// TODO: Move to article list and restore full functionality
-#socialshareprivacy {
-	ul.social_share_privacy_area {
-    display: none;
-		list-style: none
-	}
+  // facebook / twitter / email share buttons
+  // TODO: Move to article list and restore full functionality
+  #socialshareprivacy {
+    ul.social_share_privacy_area {
+      display: none;
+      list-style: none
+    }
 
-	.info,
-	.switch {
-		display: none
-	}
-}
+    .info,
+    .switch {
+      display: none
+    }
+  }
 
-.containerMain {
-  // this is needed for the 100% background of the hero section
-  overflow: hidden;
-}
+  .containerMain {
+    // this is needed for the 100% background of the hero section
+    overflow: hidden;
+  }
 
-// hero section (description of show)
-.heroSection {
-  background: $lightgray;
-  position: relative;
-  padding: $gutter-width * 2/3 0;
-
-  // this are the things that paint everything grey left and right
-  &::before,
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100vw;
-    height: 100%;
+  // hero section (description of show)
+  .heroSection {
     background: $lightgray;
-    z-index: -1;
-    top: 0
+    position: relative;
+    padding: 56px 0;
+
+    // this are the things that paint everything grey left and right
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100vw;
+      height: 100%;
+      background: $lightgray;
+      z-index: -1;
+      top: 0
+    }
+
+    &::before {
+      left: 0;
+    }
+    
+    &::after {
+      right: 0;
+    }
+
+    // NOTE: This is specific to a program's detail page while the whole hero 
+    // thingy containing this might not be
+    .containerIcons {
+      color: $orange;
+
+      .begin,
+      .timeicon {
+        display: inline-block;
+      }
+
+      .weekday::after {
+        content: '. '
+      }
+      
+      .begin {
+        margin-right: .6em;
+      }
+
+      + .TitleText {
+        margin-top: 11px;
+      }
+
+    }
+
+    .TitleText {
+      margin: 0;
+    }
+
+    .picture {
+      @include grid(2);
+      height: auto;
+    }
   }
 
-  &::before {
-    left: 0;
-  }
-  
-  &::after {
-    right: 0;
+  .doctypeteaser {
+    .containerContent {
+      // this isn't the prettiest solution, but we need to reset this here
+      width: auto;
+    }
+
+    .doctypesendeplatz {
+      @include grid-extended($cols: 4);
+      margin: 96px auto;
+
+      .containerIcons .zeit {
+        @include interstate-bold();
+        background: #000;
+        color: #fff;
+        padding: 0 1.3em;
+        line-height: 24px;
+        font-size: 14px;
+        float: left;
+        margin-right: 1.3em;
+        border-radius: 2px;
+      }
+
+      .manualteaserRoofLine {
+        @include interstate-light();
+        color: $orange;
+        line-height: 24px;
+        font-size: 18px;
+        margin-bottom: 24px;
+      }
+
+      .manualteaserTitle {
+        @include interstate-bold();
+        position: relative;
+        font-size: 38px;
+        line-height: 44px;
+        display: inline;
+
+        + .manualteaserSubTitle {
+          // NOTE: In the invision preview this is rendered on the same line as
+          // the previous headline; this isn't trivially possible
+          @include interstate-light();
+          font-size: 38px;
+          line-height: 44px;
+          display: inline;
+        }
+
+        :before {
+          // NOTE: This is the currently playing icon
+          content: '?';
+          color: #fff;
+          text-align: center;
+          display: inline-block;
+          background: $orange;
+          // this is actually 44 * 44
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          margin-top: 6px;
+          margin-right: 8px;
+          border-radius: 2px;
+        }
+      }
+
+      .manualteaserPicture,
+      .playerdownload .manualteaserpicture.video {
+        // TODO: Fix this once we have real images
+        margin: 24px 0;
+        overflow: hidden;
+        width: 100%;
+        height: 680px / (16 / 9);
+        background: $gray;
+
+        img {
+          width: 100%;
+          height: 340px;
+          filter: blur(48px);
+        }
+      }
+
+      .sendeplatz.mehrlink {
+        display: block; // forces line break
+        // hide previous text
+        font-size: 0;
+        width: 20px;
+        color: transparent;
+        white-space: nowrap;
+
+        &::before {
+          // Add 'Zum Beitrag' button
+          @include interstate-bold();
+          content: 'Zum Beitrag';
+          background: $orange;
+          display: inline-block;
+          line-height: 40px;
+          height: 40px;
+          font-size: 20px;
+          padding: 0 24px;
+          color: white;
+          border-radius: 2px;
+          margin-top: 24px;
+        }
+      }
+    }
   }
 }

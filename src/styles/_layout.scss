@@ -3,16 +3,45 @@
 $col-width: 120px;
 $gutter-width: 40px;
 
+// some mixins that might keep things more dry
+
+@mixin interstate-light () {
+	font-family: 'InterstateLight', Arial, "sans-serif";
+	font-style: normal;
+	font-weight: normal;
+}
+
+@mixin interstate-bold () {
+	font-family: 'Interstate', Arial, 'sans-serif';
+	font-weight: bold;
+}
+
+@mixin interstate-condensed () {
+	font-family: 'InterstateCondensed', Arial, 'sans-serif';
+	font-style: normal;
+	font-weight: bold;
+}
+
+// you can use this grid mixins like this
+// @include grid(4) <- makes your element use 4 out of 6 available columns
+// you can check out https://projects.invisionapp.com/d/main/default/?origin=v7#/console/16229932/347098337/inspect?requestInspectAccess
+// to see why i picked 6 columns and why the sizes are defined as above
+@mixin grid ($cols: 6) {
+	width: $col-width * $cols + $gutter-width * ($cols - 1);
+}
+
+@mixin grid-extended ($cols: 6) {
+	width:  $gutter-width * 2 + $col-width * $cols + $gutter-width * ($cols - 1);
+}
+
 // TODO: check if needed
 html {
-	font-family: 'InterstateLight', Arial, "sans-serif";
-	font-weight: 300;
+	@include interstate-light();
 	line-height: 1.5;
 }
 
 strong {
-	font-family: 'Interstate', Arial, 'sans-serif';
-	font-weight: 700;
+	@include interstate-bold();
 }
 
 a {
@@ -20,22 +49,131 @@ a {
 	color: inherit;
 }
 
-@mixin grid ($cols: 6) {
-	width: $col-width * $cols + $gutter-width * ($cols - 1);
-}
-
-// basic grid
-.containerContent {
-	@include grid(6);
-	position: relative;
-	margin: 0 auto;
-}
-
 img {
 	max-width: 100%;
 	height: auto;
 }
 
+// rbb navigation, header and top navigation
+.header {
+	background-color: $lightgray;
+}
+
+#containerRbb_subHead {
+	@include grid(6);
+	position: relative;
+	margin: 0 auto;
+	height: 90px;
+}
+
+#headerimage {
+	margin-top: 26px;
+}
+
+.containerNavigationMain {
+	@include grid(6);
+	position: relative;
+	margin: 0 auto;
+	display: flex;
+	height: 80px;
+	align-items: center;
+}
+
+.navigationMain {
+	max-height: 80px;
+}
+
+.navigationMain > .level1 {
+	list-style: none;
+	padding-inline-start: 0;
+	font-size: 28px;
+	display: flex;
+	flex-wrap: wrap;
+	max-height: 80px;
+	margin-block-start: 0em;
+	margin-block-end: 0em;
+}
+
+.navigationMain > ul > li {
+	display: inline-block;
+	text-transform: uppercase;
+	margin-right: 35px;
+	font-weight: bold;
+
+	&.selected {
+		position: relative;
+		color: $orange;
+
+		// draw the white arrow head
+		&::after {
+			position: absolute;
+			content: '';
+			display: block;
+			width: 20px;
+			height: 20px;
+			background: white;
+			margin-left: 50%;
+			margin-top: 10px;
+			transform: translateX(-50%) rotate(45deg);
+			z-index: 10;
+		}
+	}
+
+	[title^='Video'] {
+		color: $orange;
+		padding: 16px 18px 11px;
+		border-radius: 2px;
+		border: 1px solid $orange;
+		font-size: 20px;
+	}
+
+	[title^='Podcast'] {
+		color: $orange;
+		padding: 16px 18px 11px;
+		border-radius: 2px;
+		border: 1px solid $orange;
+		font-size: 20px;
+	}
+
+	[title^='Events'] {
+		display: none;
+	}
+
+	[title^='Team'] {
+		display: none;
+	}
+}
+
+.livestream {
+	display: flex;
+}
+
+.jetzt {
+	text-transform: uppercase;
+	font-weight: bold;
+	background-color: $orange;
+	color: white;
+	border-radius: 2px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	> a {
+		color: white;
+		padding: 11px 18px 12px;
+		font-size: 20px;
+	}
+}
+
+// main section grid
+.containerContent,
+.doctypesendeplatz.intermediate,
+.doctypeteaser.layoutstandard.intermediate {
+	@include grid(6);
+	position: relative;
+	margin: 0 auto;
+}
 
 // suppresses rbb nav style
 // TODO: remove
