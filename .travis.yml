@@ -15,7 +15,7 @@ install:
 
 script:
   - npm run build
-  - cp *.html ./dist/
+  - for f in *.html; do sed 's|http://localhost:8080|https://jengeb.github.io/radioeins|g' $f > ./dist/"$(basename $f)"; done
 
 deploy:
   provider: pages
