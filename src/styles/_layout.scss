@@ -159,15 +159,14 @@ img {
 // information about current song in top right corner
 .livestream {
 	display: grid;
+	grid-template:
+	 "live playlistLink" 1fr
+	 "live currentSong"   1fr /
+	 1fr   1fr;
 	height: 44px;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
 
 	.jetzt {
-		grid-column-start: 1;
-		grid-column-end:  2;
-		grid-row-start: 1;
-		grid-row-end: 3;
+		grid-area: live;
 
 		a {
 			text-transform: uppercase;
@@ -207,8 +206,7 @@ img {
 	}
 
 	.jetztplaylist {
-		grid-row-start: 1;
-		grid-row-end: 2;
+		grid-area: playlistLink;
 
 		a {
 			color: $orange;
@@ -217,8 +215,7 @@ img {
 	}
 
 	.nowonair {
-		grid-column-start: 2;
-		grid-column-end:  3;
+		grid-area: currentSong;
 	}
 
 	// TODO: This is added by some script and should probably be removed properly
