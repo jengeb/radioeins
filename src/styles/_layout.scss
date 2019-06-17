@@ -80,6 +80,7 @@ img {
 }
 
 .navigationMain {
+	@include interstate-condensed();
 	max-height: 80px;
 }
 
@@ -119,50 +120,52 @@ img {
 		}
 	}
 
-	[title^='Video'] {
-		color: $orange;
-		padding: 16px 18px 11px;
-		border-radius: 2px;
-		border: 1px solid $orange;
-		font-size: 20px;
+	// the last two links are special links; you could also address them with the
+	// title elements, but have different margins and all and that makes it tricky
+	&.intermediate:nth-last-child(1),
+	&.intermediate:nth-last-child(2) {
+		margin-right: 22px;
+		
+		a {
+			color: $orange;
+			padding: 18px;
+			border-radius: 2px;
+			border: 1px solid $orange;
+			font-size: 20px;
+		}
 	}
 
-	[title^='Podcast'] {
-		color: $orange;
-		padding: 16px 18px 11px;
-		border-radius: 2px;
-		border: 1px solid $orange;
-		font-size: 20px;
+	&.intermediate:nth-last-child(3) {
+		// push last two elements to the side
+		flex-grow: 1;
 	}
 
-	[title^='Events'] {
-		display: none;
-	}
-
-	[title^='Team'] {
+	[title='Events'],
+	[title='Team'] {
 		display: none;
 	}
 }
 
+// information about current song in top right corner
 .livestream {
-	display: flex;
-}
+	display: grid;
 
-.jetzt {
-	text-transform: uppercase;
-	font-weight: bold;
-	background-color: $orange;
-	color: white;
-	border-radius: 2px;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	> a {
+	.jetzt {
+		text-transform: uppercase;
+		font-weight: bold;
+		background-color: $orange;
 		color: white;
-		padding: 11px 18px 12px;
-		font-size: 20px;
+		border-radius: 2px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		> a {
+			color: white;
+			padding: 11px 18px 12px;
+			font-size: 20px;
+		}
 	}
 }
 
