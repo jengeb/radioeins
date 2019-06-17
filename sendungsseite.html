@@ -10,7 +10,7 @@
 	<meta charset="UTF-8">
 	<!-- <link href="http://127.0.0.1:8080/dist/index.css" rel="stylesheet" type="text/css" /> -->
 	<!-- /neu -->
-	
+
 		
 		
 		
@@ -75,7 +75,7 @@ Programm  | radioeins</title>
 
 <meta http-equiv="imagetoolbar" content="no" />
 <meta name="viewport" content="width=device-width, user-scalable=yes" />
-<link rel="canonical" href="https://www.radioeins.de/programm/index.htm/psdoc=%21content%21rbb%21rad%21programm%21sendungen%21sendungen%214%211906%21190606_05_00_der_sch_ne_morgen_mo_fr_5260.html"/>
+<link rel="canonical" href="/programm/index.htm/psdoc=%21content%21rbb%21rad%21programm%21sendungen%21sendungen%214%211906%21190606_05_00_der_sch_ne_morgen_mo_fr_5260.html"/>
 
 
 
@@ -403,7 +403,7 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
 <div class="nowonair" id="ds_noa">
 </div>
 <div class="jetztplaylist">
-  <a href="https://www.radioeins.de/musik/playlists.html">Playlist heute</a>
+  <a href="/musik/playlists.html">Playlist heute</a>
 </div>
 </div>
 </div>
@@ -479,23 +479,19 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
   
     
 	
-    <!-- NOTE: Remove this and leave only "begin" --> 
+    <!-- NOTE: Remove this and move it into .heroSection --> 
 		<!-- <div class="containerIcons"><div class="begin"><span class="weekday">Do</span><span class="datum">06.06.</span></div><div class="timeicon"><span class="zeit">05:00</span><span class="line">&#160;-&#160;</span><span class="zeit">10:00</span></div> -->
-
-		<!-- NOTE: This is taken out of .containerIcons above -->
-		<!-- TODO: Should this be here? -->
-		<div class="begin"><span class="weekday">Do</span><span class="datum">06.06.</span></div>
 
 
 	<ul class="iconList">
 		<li class="suggest">
-			<a href="https://www.radioeins.de/programm/sendungen/sendungen/4/1906/190606_05_00_der_sch_ne_morgen_mo_fr_5260.htx/suggestion=true.htx">
+			<a href="/programm/sendungen/sendungen/4/1906/190606_05_00_der_sch_ne_morgen_mo_fr_5260.htx/suggestion=true.htx">
 				
 				Beitrag empfehlen
 			</a>
 		</li>
 		<li class="print">
-			<a href="https://www.radioeins.de/programm/sendungen/sendungen/4/1906/190606_05_00_der_sch_ne_morgen_mo_fr_5260.htm/listall=true/printView=true.html" target="_blank" rel="nofollow">
+			<a href="/programm/sendungen/sendungen/4/1906/190606_05_00_der_sch_ne_morgen_mo_fr_5260.htm/listall=true/printView=true.html" target="_blank" rel="nofollow">
 				
 				
 				
@@ -509,7 +505,13 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
 <div class="containerContent">	
 	<!-- NOTE: div.heroSection ist neu -->
 <div class="heroSection">
-	<h3 class="roofLine">mo-fr, 05:00 - 10:00 | sa-so, 06:00 - 09:00</h3>
+	<!-- NOTE: This is taken from above and moved here -->
+<div class="containerIcons">
+	<div class="begin"><span class="weekday">Do</span><span class="datum">06.06.</span></div>
+	<div class="timeicon">
+		<span class="zeit">05:00</span><span class="line">&#160;-&#160;</span><span class="zeit">10:00</span>
+	</div>
+</div>
 <h1 class="jcr:title TitleText">Der schöne Morgen</h1>
 <p class="linkedMods">mit <a href="https://mein.radioeins.de/profile/profileView.xhtml?userId=21162625" title="Moderation" class="cast">Stefan Rupp</a> und <a href="https://mein.radioeins.de/profile/profileView.xhtml?userId=3937156" title="Moderation" class="cast">Christoph Azone</a></p>
 <p class="sendeplatzShortText">Die radioeins Morgenshow</p>
@@ -580,6 +582,7 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
 
 
 
+<!-- NOTE: This seems to mark the first article?? -->
 <div class="articlesContList">
   
     
@@ -590,7 +593,7 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
               
 
   <div id="articlesContList_5260_first" class="count1 first last layoutstandard odd textpicture">
-  
+			
 	
 	
 	
@@ -685,6 +688,7 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
     
     
 	
+			<!-- NOTE: This id is reused 25 times, this is a bug -->
       <div id="middleColumnList_23444_teaserList_39120" class="count1 doctypesendeplatz first layout1_1 manualteaser odd">
 	    
 		  
@@ -1774,7 +1778,6 @@ Jürgen König war gestern für radioeins in der Halle dabei. <a href="/programm
 <script src="/vorlagen/layout/_jcr_content/properties/49431.js" type="text/javascript"></script>
 
 <!-- Print -->
-
 
 	</body>
 </html>

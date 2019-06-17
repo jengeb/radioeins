@@ -350,58 +350,41 @@ template {
 
 html {
   font-family: 'InterstateLight', Arial, "sans-serif";
-  font-weight: 300;
+  font-style: normal;
+  font-weight: normal;
   line-height: 1.5; }
 
 strong {
   font-family: 'Interstate', Arial, 'sans-serif';
-  font-weight: 700; }
+  font-weight: bold; }
 
 a {
   text-decoration: none;
   color: inherit; }
 
-.containerContent {
-  width: 920px;
-  position: relative;
-  margin: 0 auto; }
-
 img {
   max-width: 100%;
   height: auto; }
 
-#searchbox_result {
-  visibility: hidden; }
-
-#containerRbb_subHead {
-  height: 90px;
-  width: 920px;
-  position: relative;
-  margin: 0 auto; }
-
 .header {
   background-color: #f3f3f2; }
+
+#containerRbb_subHead {
+  width: 920px;
+  position: relative;
+  margin: 0 auto;
+  height: 90px; }
 
 #headerimage {
   margin-top: 26px; }
 
-.query {
-  display: none; }
-
-.js_input_reset {
-  display: none; }
-
-.jsb_placeholder {
-  float: right;
-  display: none; }
-
 .containerNavigationMain {
-  display: flex;
-  height: 80px;
-  align-items: center;
   width: 920px;
   position: relative;
-  margin: 0 auto; }
+  margin: 0 auto;
+  display: flex;
+  height: 80px;
+  align-items: center; }
 
 .navigationMain {
   max-height: 80px; }
@@ -468,6 +451,26 @@ img {
     color: white;
     padding: 11px 18px 12px;
     font-size: 20px; }
+
+.containerContent,
+.doctypesendeplatz.intermediate,
+.doctypeteaser.layoutstandard.intermediate {
+  width: 920px;
+  position: relative;
+  margin: 0 auto; }
+
+#searchbox_result {
+  visibility: hidden; }
+
+.query {
+  display: none; }
+
+.js_input_reset {
+  display: none; }
+
+.jsb_placeholder {
+  float: right;
+  display: none; }
 
 .manualteaserPicture > img {
   width: 100%; }
@@ -737,41 +740,35 @@ img {
 #headerstatus {
   display: none; }
 
-#center {
+.layoutprogramm #center {
   width: 920px;
   margin: 0 auto; }
 
-.begin {
-  display: none;
-  flex-grow: 1; }
-  .begin .weekday {
-    margin-right: .3em; }
-
-.iconList {
+.layoutprogramm .iconList {
   display: none;
   list-style: none;
   margin: 0;
   padding: 0; }
-  .iconList li {
+  .layoutprogramm .iconList li {
     display: inline-block;
     margin: 0 .3em; }
 
-#socialshareprivacy ul.social_share_privacy_area {
+.layoutprogramm #socialshareprivacy ul.social_share_privacy_area {
   display: none;
   list-style: none; }
 
-#socialshareprivacy .info,
-#socialshareprivacy .switch {
+.layoutprogramm #socialshareprivacy .info,
+.layoutprogramm #socialshareprivacy .switch {
   display: none; }
 
-.containerMain {
+.layoutprogramm .containerMain {
   overflow: hidden; }
 
-.heroSection {
+.layoutprogramm .heroSection {
   background: #f3f3f2;
   position: relative;
-  padding: 26.66667px 0; }
-  .heroSection::before, .heroSection::after {
+  padding: 56px 0; }
+  .layoutprogramm .heroSection::before, .layoutprogramm .heroSection::after {
     content: '';
     display: block;
     position: absolute;
@@ -780,8 +777,107 @@ img {
     background: #f3f3f2;
     z-index: -1;
     top: 0; }
-  .heroSection::before {
+  .layoutprogramm .heroSection::before {
     left: 0; }
-  .heroSection::after {
+  .layoutprogramm .heroSection::after {
     right: 0; }
+  .layoutprogramm .heroSection .containerIcons {
+    color: #ff8300; }
+    .layoutprogramm .heroSection .containerIcons .begin,
+    .layoutprogramm .heroSection .containerIcons .timeicon {
+      display: inline-block; }
+    .layoutprogramm .heroSection .containerIcons .weekday::after {
+      content: '. '; }
+    .layoutprogramm .heroSection .containerIcons .begin {
+      margin-right: .6em; }
+    .layoutprogramm .heroSection .containerIcons + .TitleText {
+      margin-top: 11px; }
+  .layoutprogramm .heroSection .TitleText {
+    margin: 0; }
+  .layoutprogramm .heroSection .picture {
+    width: 280px;
+    height: auto; }
+
+.layoutprogramm .doctypeteaser .containerContent {
+  width: auto; }
+
+.layoutprogramm .doctypeteaser .doctypesendeplatz {
+  width: 680px;
+  margin: 96px auto; }
+  .layoutprogramm .doctypeteaser .doctypesendeplatz .containerIcons .zeit {
+    font-family: 'Interstate', Arial, 'sans-serif';
+    font-weight: bold;
+    background: #000;
+    color: #fff;
+    padding: 0 1.3em;
+    line-height: 24px;
+    font-size: 14px;
+    float: left;
+    margin-right: 1.3em;
+    border-radius: 2px; }
+  .layoutprogramm .doctypeteaser .doctypesendeplatz .manualteaserRoofLine {
+    font-family: 'InterstateLight', Arial, "sans-serif";
+    font-style: normal;
+    font-weight: normal;
+    color: #ff8300;
+    line-height: 24px;
+    font-size: 18px;
+    margin-bottom: 24px; }
+  .layoutprogramm .doctypeteaser .doctypesendeplatz .manualteaserTitle {
+    font-family: 'Interstate', Arial, 'sans-serif';
+    font-weight: bold;
+    position: relative;
+    font-size: 38px;
+    line-height: 44px;
+    display: inline; }
+    .layoutprogramm .doctypeteaser .doctypesendeplatz .manualteaserTitle + .manualteaserSubTitle {
+      font-family: 'InterstateLight', Arial, "sans-serif";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 38px;
+      line-height: 44px;
+      display: inline; }
+    .layoutprogramm .doctypeteaser .doctypesendeplatz .manualteaserTitle :before {
+      content: '?';
+      color: #fff;
+      text-align: center;
+      display: inline-block;
+      background: #ff8300;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      margin-top: 6px;
+      margin-right: 8px;
+      border-radius: 2px; }
+  .layoutprogramm .doctypeteaser .doctypesendeplatz .manualteaserPicture,
+  .layoutprogramm .doctypeteaser .doctypesendeplatz .playerdownload .manualteaserpicture.video {
+    margin: 24px 0;
+    overflow: hidden;
+    width: 100%;
+    height: 382.5px;
+    background: #393939; }
+    .layoutprogramm .doctypeteaser .doctypesendeplatz .manualteaserPicture img,
+    .layoutprogramm .doctypeteaser .doctypesendeplatz .playerdownload .manualteaserpicture.video img {
+      width: 100%;
+      height: 340px;
+      filter: blur(48px); }
+  .layoutprogramm .doctypeteaser .doctypesendeplatz .sendeplatz.mehrlink {
+    display: block;
+    font-size: 0;
+    width: 20px;
+    color: transparent;
+    white-space: nowrap; }
+    .layoutprogramm .doctypeteaser .doctypesendeplatz .sendeplatz.mehrlink::before {
+      font-family: 'Interstate', Arial, 'sans-serif';
+      font-weight: bold;
+      content: 'Zum Beitrag';
+      background: #ff8300;
+      display: inline-block;
+      line-height: 40px;
+      height: 40px;
+      font-size: 20px;
+      padding: 0 24px;
+      color: white;
+      border-radius: 2px;
+      margin-top: 24px; }
 
