@@ -20,6 +20,7 @@ module.exports = {
 			use: [
 				MiniCssExtractPlugin.loader,
 				"css-loader", // translates CSS into CommonJS
+				"postcss-loader",
 				"sass-loader" // compiles Sass to CSS, using Node Sass by default
 			]
 		}]
