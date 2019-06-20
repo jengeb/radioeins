@@ -384,17 +384,20 @@
 
 	.boxBody {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		
-		.boxColumn {
-			@include grid(3);
+		.boxRow {
+			// @include grid(3);
 			display: flex;
-			flex-direction: column;
+			flex-direction: row;
 		}
 
 		.boxColumnItem {
+			@include grid(3);
 			display: flex;
 			flex-direction: row;
+			margin-bottom: 2.5em;
+			align-items: center;
 
 			.socialIcon {
 				width: 60px;
@@ -427,10 +430,19 @@
 				content: url('../assets/desktop/ico-footer-apps.svg')
 			}
 
+			.boxColumnItemBody {
+				margin-left: 1em;
+				margin-right: 1em;
+			}
+
 			.socialHeadline {
 				text-transform: uppercase;
 				color: $orange;
 				font-weight: bold;
+			}
+
+			.socialBody {
+				font-size: smaller;
 			}
 		}
 	}

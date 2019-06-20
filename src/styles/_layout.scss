@@ -44,7 +44,7 @@ $col-gap: 40px;
 
 .has-icon {
 	&::before {
-		content: '?';
+		content: url("../assets/desktop/ico-live-nav.svg");
 		padding-right: .3em;
 	}
 }
