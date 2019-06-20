@@ -377,6 +377,65 @@
 	}
 }
 
+.layoutdein_radioeins {
+	.boxHeadline {
+		text-transform: uppercase;
+	}
+
+	.boxBody {
+		display: flex;
+		flex-direction: row;
+		
+		.boxColumn {
+			@include grid(3);
+			display: flex;
+			flex-direction: column;
+		}
+
+		.boxColumnItem {
+			display: flex;
+			flex-direction: row;
+
+			.socialIcon {
+				width: 60px;
+				height: 60px;
+				border-radius: 30px; 
+				background-color: white;
+			}
+
+			.socialIcon.facebook::after {
+				content: url('../assets/desktop/ico-footer-fb.svg')
+			}
+
+			.socialIcon.podcast::after {
+				content: url('../assets/desktop/ico-footer-podcast.svg')
+			}
+
+			.socialIcon.twitter::after {
+				content: url('../assets/desktop/ico-footer-tw.svg')
+			}
+
+			.socialIcon.youtube::after {
+				content: url('../assets/desktop/ico-footer-yt.svg')
+			}
+
+			.socialIcon.instagram::after {
+				content: url('../assets/desktop/ico-footer-insta.svg')
+			}
+
+			.socialIcon.apps::after {
+				content: url('../assets/desktop/ico-footer-apps.svg')
+			}
+
+			.socialHeadline {
+				text-transform: uppercase;
+				color: $orange;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
 .footer {
 	background-color: $gray;
 	color: white;
