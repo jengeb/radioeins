@@ -28,6 +28,13 @@ module.exports = {
         "postcss-loader", // used for autoprefixer
         "sass-loader" // compiles Sass to CSS, using Node Sass by default
       ]
-    }]
+		},
+		{
+			test: /\.svg/,
+			use: {
+				loader: 'svg-url-loader',
+				options: {}
+			}
+		}]
   }
 }

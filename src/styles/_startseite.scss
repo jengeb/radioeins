@@ -318,6 +318,15 @@
 		line-height: 44px;
 	}
 
+	.radioeinsnewslettericon {
+		background: center no-repeat url('../assets/desktop/ico-newsletter.svg');
+		display: inline-block;
+		width: 120px;
+		height: 63px;
+		background-size: contain;
+		margin-bottom: 22px;
+	}
+
 	.radioeinsnewsletterheadline {
 		font-size: 32px;
 		font-weight: bold;
@@ -365,6 +374,77 @@
 		@include grid(6);
 		position: relative;
 		margin: 0 auto;
+	}
+}
+
+.layoutdein_radioeins {
+	.boxHeadline {
+		text-transform: uppercase;
+	}
+
+	.boxBody {
+		display: flex;
+		flex-direction: column;
+		
+		.boxRow {
+			// @include grid(3);
+			display: flex;
+			flex-direction: row;
+		}
+
+		.boxColumnItem {
+			@include grid(3);
+			display: flex;
+			flex-direction: row;
+			margin-bottom: 2.5em;
+			align-items: center;
+
+			.socialIcon {
+				width: 60px;
+				height: 60px;
+				border-radius: 30px; 
+				background-color: white;
+			}
+
+			.socialIcon.facebook::after {
+				content: url('../assets/desktop/ico-footer-fb.svg')
+			}
+
+			.socialIcon.podcast::after {
+				content: url('../assets/desktop/ico-footer-podcast.svg')
+			}
+
+			.socialIcon.twitter::after {
+				content: url('../assets/desktop/ico-footer-tw.svg')
+			}
+
+			.socialIcon.youtube::after {
+				content: url('../assets/desktop/ico-footer-yt.svg')
+			}
+
+			.socialIcon.instagram::after {
+				content: url('../assets/desktop/ico-footer-insta.svg')
+			}
+
+			.socialIcon.apps::after {
+				content: url('../assets/desktop/ico-footer-apps.svg')
+			}
+
+			.boxColumnItemBody {
+				margin-left: 1em;
+				margin-right: 1em;
+			}
+
+			.socialHeadline {
+				text-transform: uppercase;
+				color: $orange;
+				font-weight: bold;
+			}
+
+			.socialBody {
+				font-size: smaller;
+			}
+		}
 	}
 }
 
