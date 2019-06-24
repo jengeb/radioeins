@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>twitter copy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="R1-V4-Desktop-Start-IV" transform="translate(-580.000000, -5724.000000)">
+            <g id="footer" transform="translate(0.000000, 5448.000000)">
+                <g id="twitter-copy" transform="translate(580.000000, 276.000000)">
+                    <circle id="Path" fill="#FF8300FFF" cx="30" cy="30" r="30"></circle>
+                    <path d="M38.6,21 L21.4,21 C18.9699471,21 17,22.9699471 17,25.4 L17,34.6 C17,37.0300529 18.9699471,39 21.4,39 L38.6,39 C41.0300529,39 43,37.0300529 43,34.6 L43,25.4 C43,22.9699471 41.0300529,21 38.6,21 Z M31.1,32 L27.2,34 L27.2,26 L31.1,28 L35,30 L31.1,32 Z" id="Shape" fill="#FF8300" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

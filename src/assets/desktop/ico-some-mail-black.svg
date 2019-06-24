@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="98px" height="100px" viewBox="0 0 98 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>Group 11</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="30" cy="30" r="30"></circle>
+        <filter x="-50.0%" y="-50.0%" width="200.0%" height="200.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.05 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="R1-V4-Desktop-Rubrik-Podcasts-Liste-I" transform="translate(-221.000000, -778.000000)">
+            <g id="teilen" transform="translate(240.000000, 638.000000)">
+                <g id="Group-11" transform="translate(0.000000, 160.000000)">
+                    <g id="Oval-4-Copy-3">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#000000FFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <path d="M30.4582225,33.3786641 L41.8652007,22.0440179 C41.9514151,22.2451547 42,22.469008 42,22.7023266 L42,36.3289849 C42,37.2703048 41.231215,38.0322581 40.285238,38.0322581 L19.7142857,38.0322581 C18.7668797,38.0322581 18,37.2698316 18,36.3289849 L18,22.7023266 C18,22.5546686 18.0504902,22.4235748 18.0838328,22.2868018 L29.2464573,33.3786641 C29.4074545,33.5381537 29.625134,33.6276004 29.8523399,33.6276004 C30.0795459,33.6276004 30.2972254,33.5381537 30.4582225,33.3786641 Z M29.8523399,31.5717464 L19.295598,21.082821 C19.4327789,21.0487461 19.567102,21 19.7142857,21 L40.285238,21 C40.3466836,21 40.3966975,21.0283958 40.4571905,21.0345482 L29.8523399,31.5717464 Z" id="Combined-Shape" fill="#272727" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -10,8 +10,8 @@
                     <g id="icos" transform="translate(0.000000, 202.000000)">
                         <g id="ico-pause">
                             <rect id="Rectangle-14" fill="#F2773E" x="0" y="0" width="44" height="44" rx="2"></rect>
-                            <rect id="Rectangle-14" fill="#FFFFFF" x="16" y="13" width="4" height="18" rx="1"></rect>
-                            <rect id="Rectangle-14" fill="#FFFFFF" x="24" y="13" width="4" height="18" rx="1"></rect>
+                            <rect id="Rectangle-14" fill="#FFFFFFFFF" x="16" y="13" width="4" height="18" rx="1"></rect>
+                            <rect id="Rectangle-14" fill="#FFFFFFFFF" x="24" y="13" width="4" height="18" rx="1"></rect>
                         </g>
                         <g id="ico-video">
                             <rect id="Rectangle-14" fill="#FF8300" x="0" y="0" width="44" height="44" rx="2"></rect>

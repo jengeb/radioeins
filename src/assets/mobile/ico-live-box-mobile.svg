@@ -15,9 +15,9 @@
                             <g id="speaker-ico-2-copy-3" fill="#FF8300">
                                 <rect id="Rectangle-14" x="0" y="0" width="38" height="38" rx="2"></rect>
                             </g>
-                            <g id="noun_live-feed_594409" transform="translate(9.000000, 12.000000)" fill-rule="nonzero" stroke="#FFFFFF">
+                            <g id="noun_live-feed_594409" transform="translate(9.000000, 12.000000)" fill-rule="nonzero" stroke="#FFFFFFFFF">
                                 <g id="Shape">
-                                    <use fill="#FFFFFF" xlink:href="#path-1"></use>
+                                    <use fill="#FFFFFFFFF" xlink:href="#path-1"></use>
                                     <use xlink:href="#path-1"></use>
                                     <use xlink:href="#path-1"></use>
                                     <use xlink:href="#path-1"></use>
