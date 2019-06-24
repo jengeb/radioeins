@@ -9,13 +9,15 @@
 <head>
 	<!-- neu -->
 	<link href="index.css" rel="stylesheet" type="text/css" />
+	<!-- TODO: include in CSS -->
+	<link rel="stylesheet" type="text/css" href="node_modules/slick-carousel/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="node_modules/slick-carousel/slick/slick-theme.css"/>
+
 	<base href="https://www.radioeins.de">
 	<meta charset="UTF-8">
 	<!-- <link href="http://127.0.0.1:8080/dist/index.css" rel="stylesheet" type="text/css" /> -->
 	<!-- <link href="https://jengeb.github.io/radioeins/index.css" rel="stylesheet" type="text/css" /> -->
 	<!-- /neu -->
-
-
 
 
 
@@ -1169,6 +1171,25 @@
 								title="weitere Informationen">Mehr Videos</a></li>
 					</ul>
 				</div>
+
+	<!-- neu -->
+	<!-- TODO move code, remove already included jquery -->
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="http://localhost:8080/node_modules/slick-carousel/slick/slick.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.layout1spaltig_buehne_slider').slick({
+				infinite: true,
+				slidesToShow: 1,
+				dots: true,
+				dotsClass: "slick-custom-dots"
+			});
+		});
+	</script>
+	<!-- /neu -->
+
 
 
 				<section id="middleColumnList_teaserbox_0_teaserList_teasergroup"
