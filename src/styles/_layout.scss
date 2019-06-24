@@ -42,8 +42,15 @@ $col-gap: 40px;
 
 .has-icon {
 	&::before {
-		content: url("../assets/desktop/ico-live-nav.svg");
+		content: '?';
 		padding-right: .3em;
+	}
+}
+
+@mixin icon($icon-name) {
+	@extend .has-icon;
+	&::before {
+		content: url('../assets/#{$icon-name}.svg');
 	}
 }
 
@@ -200,7 +207,7 @@ img {
 			font-size: 20px;
 			display: block;
 			@extend .button;
-			@extend .has-icon;
+			@include icon('desktop/ico-live-nav');
 		}
 	}
 
@@ -391,12 +398,21 @@ img {
 			a {
 				@include interstate-condensed;
 				@extend .button;
-				@extend .has-icon;
 				font-size: 20px;
 				text-transform: uppercase;
 				color: #fff;
 				background-color: $orange;
 				display: inline-block;
+			}
+
+			#wortbeitraege a {
+				// FIXME: Icon missing
+				// @include icon('desktop/ico-playlist-white');
+			}
+
+			#musiktitel a {
+				// FIXME: Icon doesn't have correct position & size
+				// @include icon('desktop/ico-playlist-white');
 			}
 		}
 	}
