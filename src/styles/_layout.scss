@@ -44,6 +44,9 @@ $col-gap: 40px;
 	&::before {
 		content: url("../assets/desktop/ico-live-nav.svg");
 		padding-right: .3em;
+		display: inline-block;
+    vertical-align: middle;
+    line-height: 1em;
 	}
 }
 
@@ -201,6 +204,7 @@ img {
 			display: block;
 			@extend .button;
 			@extend .has-icon;
+			@include interstate-condensed();
 		}
 	}
 
