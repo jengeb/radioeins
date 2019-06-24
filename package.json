@@ -36,6 +36,7 @@
     "webpack-dev-server": "^3.4.1"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "slick-carousel": "^1.8.1"
   }
 }
