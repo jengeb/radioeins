@@ -50,7 +50,8 @@ $col-gap: 40px;
 }
 
 // TODO: check if needed
-*, *::before, *::after {
+*, *::before, *::after,
+:not(.jsb_rbbnav), :not(jsb_rbbnav *), :not(.jsb_rbbnav ::before), :not(.jsb_rbbnav ::after) {
 	box-sizing: border-box;
 }
 
