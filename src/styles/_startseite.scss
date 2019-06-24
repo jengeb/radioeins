@@ -380,13 +380,6 @@
 			margin-bottom: 2.5em;
 			align-items: center;
 
-			.socialIcon {
-				width: 60px;
-				height: 60px;
-				border-radius: 30px; 
-				background-color: white;
-			}
-
 			.socialIcon.facebook::after {
 				content: url('../assets/desktop/ico-footer-fb.svg')
 			}
