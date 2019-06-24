@@ -58,7 +58,7 @@
 	padding-bottom: 3em;
 
 	> * {
-		@include grid(6);
+		width: column-width(6);
 		position: relative;
 		margin: 0 auto;
 	}
@@ -107,7 +107,7 @@
 	padding-bottom: 3em;
 
 	.teaserbox_music {
-		@include grid(6);
+		width: column-width(6);
 		position: relative;
 		margin: 0 auto;
 
@@ -341,7 +341,7 @@
 	position: relative;
 
 	> * {
-		@include grid(6);
+		width: column-width(6);
 		position: relative;
 		margin: 0 auto;
 	}
@@ -353,7 +353,7 @@
 
 	> * {
 		list-style: none;
-		@include grid(6);
+		width: column-width(6);
 		position: relative;
 		margin: 0 auto;
 	}
@@ -374,7 +374,7 @@
 		}
 
 		.boxRowItem {
-			@include grid(3);
+			width: column-width(3);
 			display: flex;
 			flex-direction: row;
 			margin-bottom: 2.5em;
@@ -426,22 +426,5 @@
 				font-size: smaller;
 			}
 		}
-	}
-}
-
-.footer {
-	background-color: $gray;
-	color: white;
-	padding: 2em 0 3em;
-
-	div {
-		@include grid(6);
-		position: relative;
-		margin: 0 auto;
-	}
-
-	.boxHeadline {
-		color: $orange;
-		text-transform: uppercase;
 	}
 }

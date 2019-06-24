@@ -19,7 +19,7 @@
 .layoutprogramm {
   // date and recommendation links at beginning of page
   #center {
-    @include grid(6);
+    width: column-width(6);
     margin: 0 auto;
   // FIXME: We can't do this because it breaks the start page
   //   display: flex;
@@ -65,7 +65,7 @@
     position: relative;
     padding: 56px 0;
 
-    // this are the things that paint everything grey left and right
+    // these are the things that paint everything grey left and right
     &::before,
     &::after {
       content: '';
@@ -189,7 +189,7 @@
     }
 
     .doctypesendeplatz {
-      @include grid-extended($cols: 4);
+      width: column-width-extended(4);
       margin: 96px auto;
 
       .containerIcons .zeit {

@@ -22,16 +22,14 @@ $col-gap: 40px;
 	font-weight: bold;
 }
 
-// you can use this grid mixins like this
-// @include grid(4) <- makes your element use 4 out of 6 available columns
 // you can check out https://projects.invisionapp.com/d/main/default/?origin=v7#/console/16229932/347098337/inspect?requestInspectAccess
 // to see why i picked 6 columns and why the sizes are defined as above
-@mixin grid ($cols: 6) {
-	width: $col-width * $cols + $col-gap * ($cols - 1);
+@function column-width($cols: 6) {
+	@return $col-width * $cols + $col-gap * ($cols - 1);
 }
 
-@mixin grid-extended ($cols: 6) {
-	width:  $col-gap * 2 + $col-width * $cols + $col-gap * ($cols - 1);
+@function column-width-extendend($cols: 6) {
+	@return $col-gap * 2 + $col-width * $cols + $col-gap * ($cols - 1);
 }
 
 // reusable for icons / icons with buttons
@@ -85,7 +83,7 @@ img {
 }
 
 #containerRbb_subHead {
-	@include grid(6);
+	width: column-width(6);
 	position: relative;
 	margin: 0 auto;
 	height: 90px;
@@ -96,7 +94,7 @@ img {
 }
 
 .containerNavigationMain {
-	@include grid(6);
+	width: column-width(6);
 	position: relative;
 	margin: 0 auto;
 	display: flex;
@@ -247,7 +245,7 @@ img {
 .containerContent,
 .doctypesendeplatz.intermediate,
 .doctypeteaser.layoutstandard.intermediate {
-	@include grid(6);
+	width: column-width(6);
 	position: relative;
 	margin: 0 auto;
 }
@@ -256,4 +254,28 @@ img {
 // TODO: remove
 #searchbox_result{
 	visibility: hidden;
+}
+
+.footer {
+	background-color: $gray;
+	color: white;
+	padding: 2em 0 3em;
+
+	.footer-columns {
+		width: column-width(6);
+		position: relative;
+		margin: 0 auto;
+		columns: 4;
+		column-gap: $col-gap;
+
+		.doctypeteaser.layoutstandard.teaserbox {
+			// reset width of each column
+			width: auto
+		}
+	}
+
+	.boxHeadline {
+		color: $orange;
+		text-transform: uppercase;
+	}
 }
