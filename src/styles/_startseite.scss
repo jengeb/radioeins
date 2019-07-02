@@ -98,12 +98,13 @@
 			justify-content: center;
 			flex-direction: column;
 			text-align: center;
+
+			margin: auto;
 		}
 	}
 
-	// TODO: check if hiding is intended
-	.manualteaserSubTitle {
-		display: none;
+	img {
+		width: 100%;
 	}
 }
 

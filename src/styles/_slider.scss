@@ -21,6 +21,5 @@
 }
 
 .slick-prev, .slick-next {
-	// TODO: calc center relative to the corresponding image size
- top: 35% !important;
+	top: calc(50% - 80px) !important;
 }
