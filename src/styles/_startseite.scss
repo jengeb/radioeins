@@ -12,6 +12,11 @@
 	display: none;
 }
 
+// TODO: check if transferable to all boxHeadlines; if yes: move to _layout.scss
+.boxHeadline {
+	@include interstate-light();
+}
+
 
 .manualteaserPicture > img {
 	width: 100%;
@@ -94,6 +99,11 @@
 			flex-direction: column;
 			text-align: center;
 		}
+	}
+
+	// TODO: check if hiding is intended
+	.manualteaserSubTitle {
+		display: none;
 	}
 }
 
