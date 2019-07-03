@@ -147,6 +147,32 @@
 	<link rel="stylesheet" type="text/css" href="/rad/css/radioeins_ie9.css" />
 	<![endif]-->
 
+	<!-- neu -->
+	<!-- TODO move code, remove already included jquery -->
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="http://localhost:8080/node_modules/slick-carousel/slick/slick.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.layout1spaltig_buehne_slider').slick({
+				dots: true,
+				dotsClass: "slick-custom-dots-light",
+				infinite: true,
+				slidesToShow: 1
+			});
+
+			$('.moderatorenSlider').slick({
+				// arrows: false,
+				dots: true,
+				dotsClass: "slick-custom-dots-dark",
+				infinite: true,
+				slidesToShow: 7
+			});
+
+		});
+	</script>
+	<!-- /neu -->
 
 
 	<script type="text/javascript">
@@ -903,7 +929,11 @@
 
 			<div id="middleColumnList_teaserbox_11"
 				class="count4 doctypeteaser even intermediate layoutbuehne_1_1_white teaserbox">
-				<div class="boxhead"></div>
+				<div class="boxhead">
+					<!-- neu -->
+					<h2 class="boxHeadline">Der Tag auf radioeins</h2>
+					<!-- /neu -->
+				</div>
 				<div class="moderatorenSlider">
 					<div id="middleColumnList_teaserbox_11_teaserList_automaticteaser"
 						class="count1 doctypesendeplatz first layout6spaltig_weisse_buehne manualteaser odd">
@@ -1174,25 +1204,6 @@
 								title="weitere Informationen">Alle Videos</a></li>
 					</ul> -->
 				</div>
-
-	<!-- neu -->
-	<!-- TODO move code, remove already included jquery -->
-	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<script type="text/javascript" src="http://localhost:8080/node_modules/slick-carousel/slick/slick.min.js"></script>
-
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$('.layout1spaltig_buehne_slider').slick({
-				infinite: true,
-				slidesToShow: 1,
-				dots: true,
-				dotsClass: "slick-custom-dots"
-			});
-		});
-	</script>
-	<!-- /neu -->
-
 
 
 				<section id="middleColumnList_teaserbox_0_teaserList_teasergroup"
