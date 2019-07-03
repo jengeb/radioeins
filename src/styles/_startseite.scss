@@ -47,10 +47,62 @@
 	display: none;
 }
 
-.layout6spaltig_weisse_buehne {
-	margin: 2em 0 3em;
-	
+
+// Der Tag auf radioeins
+
+.layoutbuehne_1_1_white {
+	// TODO adjust 
+	// width: column-width(6);
+	.moderatorenSlider {
+		width: 90%;
+		position: relative;
+		margin: 0 auto;
+	}
+
+
+	background-color: $lightgray;
+
+	// TODO move into mixin?
+	padding-top: 1.5em;
+	padding-bottom: 3em;
+
+	.layout6spaltig_weisse_buehne {
+		display: flex !important;
+		flex-direction: column;
+	}
+
+	.boxhead {
+		width: column-width(6);
+		position: relative;
+		margin: 0 auto;
+
+		.boxHeadline {
+			@include interstate-light;
+			font-size: 36px;
+			text-transform: uppercase;
+		}
+	}
+
+	.manualteaserTitle {
+		font-size: 18px;
+		// TODO check for better solution (justify-content doesn't work)
+		max-width: 140px;
+	}
+
+	.manualteaserDateTime {
+		order: -1;
+		color: $orange;
+		font-size: 14px;
+		margin-bottom: 8px;
+	}
+
+
+
 }
+
+
+
+
 
 .teaserbox_videos {
 	background-color: #2a2a2a;
