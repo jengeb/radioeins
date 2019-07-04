@@ -288,27 +288,6 @@
 			text-transform: uppercase;
 		}
 
-		.boxlinklist {
-			padding-inline-start: 0;
-
-			// button
-			.manualteaserTitle {
-				color: white;
-				background-color: $orange;
-				list-style: none;
-				border: 1px solid $orange;
-				border-radius: 4px;
-				height: 40px;
-				width: 152px;
-				text-transform: uppercase;
-
-				display: flex;
-				justify-content: center;
-				flex-direction: column;
-				text-align: center;
-			}
-		}
-
 		.manualteaserTitle {
 			font-size: 18px;
 		}
@@ -337,6 +316,28 @@
 			.rubrikenicon {
 				display: none;
 			}
+		}
+	}
+
+	.boxlinklist {
+		padding-inline-start: 0;
+
+		// button
+		.manualteaserTitle {
+			color: white;
+			background-color: $orange;
+			list-style: none;
+			border: 1px solid $orange;
+			border-radius: 4px;
+			height: 40px;
+			width: 152px;
+			text-transform: uppercase;
+
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			text-align: center;
+			margin: auto;
 		}
 	}
 }
