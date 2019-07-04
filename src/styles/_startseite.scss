@@ -12,6 +12,11 @@
 	display: none;
 }
 
+// TODO: check if transferable to all boxHeadlines; if yes: move to _layout.scss
+.boxHeadline {
+	@include interstate-light();
+}
+
 
 .manualteaserPicture > img {
 	width: 100%;
@@ -42,10 +47,131 @@
 	display: none;
 }
 
-.layout6spaltig_weisse_buehne {
-	margin: 2em 0 3em;
-	
+
+.layoutprogrammbuehne {
+	margin-top: 1em;
+
+	.slick-track {
+		margin-top: 2em;
+	}
+
+	.manualteaserTitle {
+		grid-area: program;
+		margin: 0;
+		line-height: 29px;
+	}
+
+	.moderatoren {
+		grid-area: presenter;
+		margin: 0;
+	}
+
+	.moderatorenPicture {
+		grid-area: pic;
+
+		img {
+			float: right;
+		}
+	}
+
+	.imgIconWrap {
+		grid-area: time;
+		font-size: 14px;
+
+		.medienCounter {
+			.today, .now {
+				color: $orange;
+			}
+		}
+	}
+
+	.vorschau, .zursendung {
+		grid-area: vorschau;
+		color: $orange;
+	}
+
+	// grid container
+	.slick-slide {
+		display: grid !important;
+		grid-template: 
+			'pic time'
+			'pic program'
+			'pic presenter'
+			'pic vorschau'
+			'pic .'
+			'pic .';
+		grid-column-gap: 1.5em;
+		margin-right: 3em;
+	}
+
+	.iconContainer {
+		// TODO needed?
+		.onairicon {
+			display: none;
+		}
+	}
+
+	// TODO needed?
+	.nachhoeren {
+		display: none;
+	}
 }
+
+
+// Der Tag auf radioeins
+.layoutbuehne_1_1_white {
+	// TODO adjust 
+	// width: column-width(6);
+	.moderatorenSlider {
+		width: 90%;
+		position: relative;
+		margin: 0 auto;
+	}
+
+	background-color: $lightgray;
+
+	// TODO move into mixin?
+	padding-top: 1.5em;
+	padding-bottom: 3em;
+
+	.layout6spaltig_weisse_buehne {
+		display: flex !important;
+		flex-direction: column;
+	}
+
+	.boxhead {
+		width: column-width(6);
+		position: relative;
+		margin: 0 auto;
+
+		.boxHeadline {
+			@include interstate-light;
+			font-size: 36px;
+			text-transform: uppercase;
+		}
+	}
+
+	.manualteaserTitle {
+		font-size: 18px;
+		// TODO check for better solution (justify-content doesn't work)
+		max-width: 140px;
+		line-height: 26px;
+	}
+
+	.manualteaserDateTime {
+		order: -1;
+		color: $orange;
+		font-size: 14px;
+		margin-bottom: 8px;
+	}
+
+
+
+}
+
+
+
+
 
 .teaserbox_videos {
 	background-color: #2a2a2a;
@@ -70,9 +196,16 @@
 
 	.caption {
 		text-align: left;
+		margin: 1.2em 0 0.5em;
+
+		.manualteaserTitle {
+			display: inline;
+		}
 
 		.manualteaserSubTitle {
-			margin-top: -0.8em;
+			margin-left: 4px;
+			font-size: 1.5em;
+			display: inline;
 		}
 	}
 
@@ -93,7 +226,13 @@
 			justify-content: center;
 			flex-direction: column;
 			text-align: center;
+
+			margin: auto;
 		}
+	}
+
+	img {
+		width: 100%;
 	}
 }
 

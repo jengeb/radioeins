@@ -1,0 +1,116 @@
+// Customize Slick Slider (https://github.com/kenwheeler/slick/)
+
+.slick-custom-dots-light {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding: 1rem 0;
+	list-style-type: none;
+
+		li {
+			margin: 0 10px;
+		}
+
+		li.slick-active button {
+			background-color: $orange;
+		}
+
+		button {
+			display: block;
+			width: 10px;
+			height: 10px;
+			padding: 0;
+			cursor: pointer;
+
+			border: none;
+			border-radius: 100%;
+			background-color: white;
+
+			text-indent: -9999px;
+		}
+}
+
+.slick-custom-dots-dark {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding: 1rem 0;
+	list-style-type: none;
+	margin-top: 3em;
+
+	li {
+		margin: 0 10px;
+	}
+
+	li.slick-active button {
+		background-color: $orange;
+	}
+
+	button {
+		display: block;
+		width: 10px;
+		height: 10px;
+		padding: 0;
+		cursor: pointer;
+
+		border: none;
+		border-radius: 100%;
+		background-color: $black;
+
+		text-indent: -9999px;
+	}
+}
+
+.teaserbox_videos {
+	.slick-prev:before {
+		content: '❬' !important;
+	}
+	
+	.slick-next:before {
+		content: '❭' !important;
+	}
+	
+	.slick-prev:before, .slick-next:before {
+		font-size: 54px !important;
+	}
+	
+	.slick-prev {
+		left: -60px !important;
+	}
+	
+	.slick-next {
+		right: -35px !important;
+	}
+	
+	.slick-prev, .slick-next {
+		top: calc(50% - 80px) !important;
+	}	
+}
+
+// "Der Tag auf Radioeins"
+.layoutbuehne_1_1_white {
+
+	.slick-prev {
+    left: -64px;
+	}
+
+	.slick-next {
+    right: -46px;
+	}
+
+	.slick-prev, .slick-next {
+		top: 10.5%;
+	}
+
+	.slick-prev:before, .slick-next:before {
+		color: black;
+	}
+
+	.slick-prev:before {
+		content: url(../assets/desktop/ico-arrow-bwd.svg);
+	}
+
+	.slick-next:before {
+		content: url(../assets/desktop/ico-arrow-ffwd.svg);
+	}
+}
