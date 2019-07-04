@@ -48,6 +48,26 @@
 }
 
 
+.layoutprogrammbuehne {
+	margin-top: 1em;
+
+	.imgIconWrap {
+		.medienCounter {
+			.today {
+				color: $orange;
+			}
+		}
+	}
+
+	.iconContainer {
+		// TODO needed?
+		.onairicon {
+			display: none;
+		}
+	}
+}
+
+
 // Der Tag auf radioeins
 .layoutbuehne_1_1_white {
 	// TODO adjust 
