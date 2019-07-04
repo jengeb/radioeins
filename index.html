@@ -145,6 +145,41 @@
 	<link rel="stylesheet" type="text/css" href="/rad/css/radioeins_ie9.css" />
 	<![endif]-->
 
+	<!-- neu -->
+	<!-- TODO move code, remove already included jquery -->
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="https://jengeb.github.io/radioeins/node_modules/slick-carousel/slick/slick.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.layout1spaltig_buehne_slider').slick({
+				dots: true,
+				dotsClass: "slick-custom-dots-light",
+				infinite: true,
+				slidesToShow: 1
+			});
+
+			$('.moderatorenSlider').slick({
+				dots: true,
+				dotsClass: "slick-custom-dots-dark",
+				infinite: true,
+				slidesToShow: 7
+			});
+
+			$('.layoutprogrammbuehne .hintergrund .bannerSliderSmall').slick({
+				arrows: false,
+				centerMode: true,
+				dots: true,
+				dotsClass: "slick-custom-dots-dark",
+				infinite: true,
+				// initialSlide: // TODO get number of current element ('now')
+				slidesToShow: 2
+			});
+
+		});
+	</script>
+	<!-- /neu -->
 
 
 	<script type="text/javascript">
@@ -901,7 +936,11 @@
 
 			<div id="middleColumnList_teaserbox_11"
 				class="count4 doctypeteaser even intermediate layoutbuehne_1_1_white teaserbox">
-				<div class="boxhead"></div>
+				<div class="boxhead">
+					<!-- neu -->
+					<h2 class="boxHeadline">Der Tag auf radioeins</h2>
+					<!-- /neu -->
+				</div>
 				<div class="moderatorenSlider">
 					<div id="middleColumnList_teaserbox_11_teaserList_automaticteaser"
 						class="count1 doctypesendeplatz first layout6spaltig_weisse_buehne manualteaser odd">
@@ -1161,13 +1200,16 @@
 
 
 			<!-- neu: CSS class (teaserbox_videos) to distinguish between music and video elements -->
+			<!-- renaming: 1) (boxHeadline) Videos => Video Highlights -->
+			<!-- 2) (manualteaserTitle) Mehr Videos => Alle Videos -->
 			<div id="middleColumnList_teaserbox_0" class="count5 doctypeteaser intermediate layoutblack odd teaserbox teaserbox_videos">
 				<div class="boxhead">
-					<h2 class="boxHeadline">Videos</h2>
-					<ul class="boxlinklist">
+					<h2 class="boxHeadline">Video Highlights</h2>
+					<!-- neu: move under video -->
+					<!-- <ul class="boxlinklist">
 						<li class="manualteaserTitle"><a href="/videos/index.html" class="uebersicht"
-								title="weitere Informationen">Mehr Videos</a></li>
-					</ul>
+								title="weitere Informationen">Alle Videos</a></li>
+					</ul> -->
 				</div>
 
 
@@ -1319,6 +1361,10 @@
 
 				</section>
 
+				<ul class="boxlinklist">
+					<li class="manualteaserTitle"><a href="/videos/index.html" class="uebersicht"
+						title="weitere Informationen">Alle Videos</a></li>
+				</ul>
 
 				<div class="killfloat"></div>
 			</div>
