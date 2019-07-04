@@ -51,12 +51,57 @@
 .layoutprogrammbuehne {
 	margin-top: 1em;
 
+	.slick-track {
+		margin-top: 2em;
+	}
+
+	.manualteaserTitle {
+		grid-area: program;
+		margin: 0;
+		line-height: 29px;
+	}
+
+	.moderatoren {
+		grid-area: presenter;
+		margin: 0;
+	}
+
+	.moderatorenPicture {
+		grid-area: pic;
+
+		img {
+			float: right;
+		}
+	}
+
 	.imgIconWrap {
+		grid-area: time;
+		font-size: 14px;
+
 		.medienCounter {
-			.today {
+			.today, .now {
 				color: $orange;
 			}
 		}
+	}
+
+	.vorschau, .zursendung {
+		grid-area: vorschau;
+		color: $orange;
+	}
+
+	// grid container
+	.slick-slide {
+		display: grid !important;
+		grid-template: 
+			'pic time'
+			'pic program'
+			'pic presenter'
+			'pic vorschau'
+			'pic .'
+			'pic .';
+		grid-column-gap: 1.5em;
+		margin-right: 3em;
 	}
 
 	.iconContainer {
@@ -64,6 +109,11 @@
 		.onairicon {
 			display: none;
 		}
+	}
+
+	// TODO needed?
+	.nachhoeren {
+		display: none;
 	}
 }
 
