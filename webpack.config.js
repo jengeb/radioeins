@@ -35,6 +35,25 @@ module.exports = {
 				loader: 'svg-url-loader',
 				options: {}
 			}
+		},
+		{
+			test: /\.(gif|png|jpe?g)$/i,
+			use: ['file-loader', {
+				loader: 'image-webpack-loader',
+				options: {
+					disable: true, // webpack@2.x and newer
+				},
+			}],
+		},
+		{
+			test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+			use: [{
+				loader: 'file-loader',
+				options: {
+					name: '[name].[ext]',
+					outputPath: 'fonts/'
+				}
+			}]
 		}]
   }
 }
