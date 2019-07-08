@@ -165,8 +165,22 @@
 				dots: true,
 				dotsClass: "slick-custom-dots-dark",
 				infinite: true,
-				slidesToShow: 7
+				slidesToShow: 7,
+				responsive: [{
+					breakpoint: 1200,
+          settings: {
+            slidesToShow: 5
+          }
+        }]
 			});
+
+			let index = 0;
+			// get the index of the div element containing the current show ('.now' element)
+			index = $('.bannerSliderSmall > div').index($('.layout3spaltig_programmbuehne').find('.now').closest('.layout3spaltig_programmbuehne'));
+			// index starts with 0
+			// if the index is odd, the current teaser is located on the right side (assuming 2 'slidesToShow', see below)
+			// in this case we increase the index to display the current show (on the left) as well as the appropriate topics next to each other
+			index = (index % 2 === 0) ? index : index + 1;
 
 			$('.layoutprogrammbuehne .hintergrund .bannerSliderSmall').slick({
 				arrows: false,
@@ -174,7 +188,7 @@
 				dots: true,
 				dotsClass: "slick-custom-dots-dark",
 				infinite: true,
-				// initialSlide: // TODO get number of current element ('now')
+				initialSlide: index,
 				slidesToShow: 2
 			});
 
@@ -749,11 +763,38 @@
 							<div class="iconContainer">
 								<div class="onairicon"><img src="/rad/grafik/icons/icon-liveuebertragung.png" alt="On Air" /></div>
 							</div>
-							<div class="zursendung">Zur Sendung</div>
+							<div class="zursendung">
+								<!-- neu -->
+								<a class="zursendungLink" href="/programm/index.htm/psdoc=%21content%21rbb%21rad%21programm%21sendungen%21sendungen%2156%211905%21190523_16_00_radioeins_mo_do_5095.html" title="Zur Sendung">Zur Sendung</a>
+								<!-- /neu -->
+							</div>
 							<div class="imgIconWrap">
 								<div class="medienCounter"><span class="now">Jetzt / 16:00 - 19:00</span></div>
 							</div>
 						</div>
+
+						<!-- neu: with specific class 'topics' -->
+						<div id="" class="layout3spaltig_programmbuehne manualteaser topics">
+							<div>
+								<span class="manualteaserTitle">Brandenburg:</span>
+								<span class="manualteaserSubTitle">Mörder frei wegen Richtermangel</span>
+							</div>
+
+							<div>
+								<span class="manualteaserTitle">Wissen - Denken - Meinen:</span>
+								<span class="manualteaserSubTitle">Die meistverkauften Alben ...</span>
+							</div>
+
+							<div>
+								<span class="manualteaserTitle">Brexit:</span>
+								<span class="manualteaserSubTitle">May will nachverhandeln</span>
+							</div>
+
+							<div class="zursendung">
+								<a class="zursendungLink" href="/" title="Zur Sendung">Zur Sendung</a>
+							</div>
+						</div>
+						<!-- /neu -->
 
 						<div id="middleColumnList_32418_teaserList_62918"
 							class="count11 doctypesendeplatz last layout3spaltig_programmbuehne manualteaser odd">
@@ -768,7 +809,11 @@
 										alt="Marion Brasch © Hans Panichen" title="Marion Brasch © Hans Panichen"
 										id="middleColumnList_32418_teaserList_62918_1427064417" /></a></div>
 							<div class="iconContainer"></div>
-							<div class="vorschau">Zur Vorschau</div>
+							<div class="vorschau">
+								<!-- neu -->
+								<a class="vorschauLink" href="/programm/index.htm/psdoc=%21content%21rbb%21rad%21programm%21sendungen%21sendungen%217%211905%21190523_19_00_radioeins_mo_fr_5214.html" title="Zur Vorschau">Zur Vorschau</a>
+								<!-- /neu -->
+							</div>
 							<div class="imgIconWrap">
 								<div class="medienCounter"><span class="today">Heute / 19:00 - 20:00</span></div>
 							</div>
