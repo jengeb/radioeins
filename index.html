@@ -165,7 +165,13 @@
 				dots: true,
 				dotsClass: "slick-custom-dots-dark",
 				infinite: true,
-				slidesToShow: 7
+				slidesToShow: 7,
+				responsive: [{
+					breakpoint: 1200,
+          settings: {
+            slidesToShow: 5
+          }
+        }]
 			});
 
 			let index = 0;

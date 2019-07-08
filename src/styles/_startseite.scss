@@ -1,3 +1,8 @@
+// TODO: move to layout file
+body {
+	min-width: 1020px;
+}
+
 .query {
 	display: none;
 }
@@ -131,7 +136,6 @@
 	}
 }
 
-
 // Der Tag auf radioeins
 .layoutbuehne_1_1_white {
 	// TODO adjust 
@@ -178,14 +182,7 @@
 		font-size: 14px;
 		margin-bottom: 8px;
 	}
-
-
-
 }
-
-
-
-
 
 .teaserbox_videos {
 	background-color: #2a2a2a;
@@ -360,7 +357,8 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	margin: 2em 0 3em;
+	padding-top: 1.5em;
+	padding-bottom: 3em;
 
 	.boxhead {
 		flex: 0 0 100%;
