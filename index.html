@@ -168,13 +168,21 @@
 				slidesToShow: 7
 			});
 
+			let index = 0;
+			// get the index of the div element containing the current show ('.now' element)
+			index = $('.bannerSliderSmall > div').index($('.layout3spaltig_programmbuehne').find('.now').closest('.layout3spaltig_programmbuehne'));
+			// index starts with 0
+			// if the index is odd, the current teaser is located on the right side (assuming 2 'slidesToShow', see below)
+			// in this case we increase the index to display the current show (on the left) as well as the appropriate topics next to each other
+			index = (index % 2 === 0) ? index : index + 1;
+
 			$('.layoutprogrammbuehne .hintergrund .bannerSliderSmall').slick({
 				arrows: false,
 				centerMode: true,
 				dots: true,
 				dotsClass: "slick-custom-dots-dark",
 				infinite: true,
-				// initialSlide: // TODO get number of current element ('now')
+				initialSlide: index,
 				slidesToShow: 2
 			});
 
