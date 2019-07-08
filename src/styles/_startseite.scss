@@ -22,7 +22,6 @@ body {
 	@include interstate-light();
 }
 
-
 .manualteaserPicture > img {
 	width: 100%;
 }
@@ -571,5 +570,52 @@ body {
 				font-size: smaller;
 			}
 		}
+	}
+}
+
+
+
+// TODO move to layout file
+@media only screen and (max-width: 679px) {
+	.containerNavigationMain {
+		display: none;
+	}
+
+	.nav-meta-header {
+		background: #e31818;
+		color: white;
+		display: -ms-flexbox;
+		display: flex;
+		height: 31px;
+		-ms-flex-pack: end;
+		justify-content: flex-end;
+		padding: 6px 0 8px;
+		position: relative;
+	}
+
+	.teaserbox_music_container .teaserbox_music{
+		flex-direction: column;
+	}
+
+	.teaserbox_highlights {
+		flex-direction: column;
+	}
+
+	.containerContent, .doctypesendeplatz.intermediate, 
+	.doctypeteaser.layoutstandard.intermediate {
+		margin: unset; 
+	}
+
+	// footer
+	.layoutdein_radioeins .boxBody .boxRow {
+		flex-direction: column;
+	}
+
+	.footer .footer-columns {
+		columns: 1;
+	}
+
+	.teaserbox_videos img {
+		width: unset;
 	}
 }
