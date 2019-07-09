@@ -510,26 +510,52 @@ body {
 	}
 }
 
-.layoutdein_radioeins {
+
+.layoutdein_radioeins.teaserbox {
+	padding-bottom: 4em;
+	
 	.boxHeadline {
 		text-transform: uppercase;
 	}
 
 	.boxBody {
-		display: flex;
-		flex-direction: column;
-		
-		.boxRow {
-			display: flex;
-			flex-direction: row;
-		}
+		display: grid;
+		grid-template: 
+			'boxItem boxItem boxItem'
+			'boxItem boxItem boxItem';
+		grid-row-gap: 2.5em;		
+		grid-column-gap: 2em;
+		grid-template-columns: 1fr 1fr 1fr;
 
-		.boxRowItem {
-			max-width: column-width(3);
-			display: flex;
-			flex-direction: row;
-			margin-bottom: 2.5em;
-			align-items: center;
+		.boxItem {
+			grid-area: 'boxItem';
+
+			display: grid;
+			grid-template: 
+				'socialIcon .'
+				'socialIcon socialHeadline'
+				'socialIcon socialBody';
+			grid-template-columns: 1.3fr 3fr;
+
+			.socialIcon {
+				grid-area: 'socialIcon';
+			}
+
+			.boxItemBody {
+				align-self: center;
+
+				.socialHeadline {
+					grid-area: 'socialHeadline';
+					text-transform: uppercase;
+					color: $orange;
+					font-weight: bold;
+				}
+	
+				.socialBody {
+					grid-area: 'socialBody';
+					font-size: smaller;
+				}
+			}		
 
 			.socialIcon.facebook::after {
 				content: url('../assets/desktop/ico-footer-fb.svg')
@@ -555,21 +581,9 @@ body {
 				content: url('../assets/desktop/ico-footer-apps.svg')
 			}
 
-			.boxRowItemBody {
-				margin-left: 1em;
-				margin-right: 1em;
-			}
-
-			.socialHeadline {
-				text-transform: uppercase;
-				color: $orange;
-				font-weight: bold;
-			}
-
-			.socialBody {
-				font-size: smaller;
+			a {
+				align-self: center;
 			}
 		}
 	}
 }
-
