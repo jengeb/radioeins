@@ -80,11 +80,11 @@
 	
 	.slick-next {
 		// TODO
-		right: 40px;
+		right: 25px;
 	}
 	
 	.slick-prev, .slick-next {
-		top: calc(50% - 80px) !important;
+		top: calc(50% - 80px);
 	}	
 }
 
@@ -113,5 +113,14 @@
 
 	.slick-next:before {
 		content: url(../assets/desktop/ico-arrow-ffwd.svg);
+	}
+}
+
+@media only screen and (max-width: 679px) {
+	.teaserbox_videos {
+		.slick-prev, .slick-next {
+			top: calc(50% - 150px);
+			z-index: 4000;
+		}
 	}
 }
