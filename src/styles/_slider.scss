@@ -75,11 +75,11 @@
 	}
 	
 	.slick-prev {
-		// left: -60px !important;
+		// left: -60px;
 	}
 	
 	.slick-next {
-		// right: -35px !important;
+		// right: -35px;
 	}
 	
 	.slick-prev, .slick-next {
@@ -91,11 +91,11 @@
 .layoutbuehne_1_1_white {
 
 	.slick-prev {
-    // left: -64px;
+    left: 0;
 	}
 
 	.slick-next {
-    // right: -46px;
+  	right: 19px; // equals the width of the arrow element
 	}
 
 	.slick-prev, .slick-next {
