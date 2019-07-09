@@ -85,7 +85,7 @@ img {
 }
 
 #containerRbb_subHead {
-	width: column-width(6);
+	max-width: column-width(6); // replaced 'width' with 'max-width' (see also below)
 	position: relative;
 	margin: 0 auto;
 	height: 90px;
@@ -96,7 +96,7 @@ img {
 }
 
 .containerNavigationMain {
-	width: column-width(6);
+	max-width: column-width(6);
 	position: relative;
 	margin: 0 auto;
 	display: flex;
@@ -248,7 +248,7 @@ img {
 .containerContent,
 .doctypesendeplatz.intermediate,
 .doctypeteaser.layoutstandard.intermediate {
-	width: column-width(6);
+	max-width: column-width(6);
 	position: relative;
 	margin: 0 auto;
 }
@@ -265,7 +265,7 @@ img {
 	padding: 2em 0 3em;
 
 	.footer-columns {
-		width: column-width(6);
+		max-width: column-width(6);
 		position: relative;
 		margin: 0 auto;
 		columns: 4;

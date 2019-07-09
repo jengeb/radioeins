@@ -171,12 +171,21 @@
           settings: {
             slidesToShow: 5
           }
+        },
+				{
+					breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+						arrows: false
+          }
         }]
 			});
 
 			let index = 0;
+			let indexMobile = 0;
 			// get the index of the div element containing the current show ('.now' element)
 			index = $('.bannerSliderSmall > div').index($('.layout3spaltig_programmbuehne').find('.now').closest('.layout3spaltig_programmbuehne'));
+			indexMobile = index
 			// index starts with 0
 			// if the index is odd, the current teaser is located on the right side (assuming 2 'slidesToShow', see below)
 			// in this case we increase the index to display the current show (on the left) as well as the appropriate topics next to each other
@@ -189,7 +198,14 @@
 				dotsClass: "slick-custom-dots-dark",
 				infinite: true,
 				initialSlide: index,
-				slidesToShow: 2
+				slidesToShow: 2,
+				responsive: [{
+					breakpoint: 420,
+          settings: {
+            slidesToShow: 1,
+						initialSlide: indexMobile
+          }
+        }]
 			});
 
 		});
@@ -1710,79 +1726,75 @@
 
 				<!-- neu -->
 				<div class="boxBody">
-					<div class="boxRow">
-						<div class="boxRowItem">
-							<a href="https://www.facebook.com/radioeins" target="_blank"
-								alt="zur radioeins Facebook Seite" title="zur radioeins Facebook Seite"
-							>
-								<div class="socialIcon facebook"></div>
-							</a>
-							<div class="boxRowItemBody">
-								<div class="socialHeadline">Tipps & Stadtleben</div>
-								<div class="socialBody">radioeins auf Facebook folgen!</div>
-							</div>
-						</div>
-
-						<div class="boxRowItem">
-							<a href="https://twitter.com/radioeins" target="_blank"
-								alt="zum radioeins Twitterkanal" title="zum radioeins Twitterkanal"
-							>
-								<div class="socialIcon twitter"></div>
-							</a>
-							<div class="boxRowItemBody">
-								<div class="socialHeadline">Kurzmeldungen</div>
-								<div class="socialBody">radioeins auf Twitter folgen!</div>
-							</div>
-						</div>
-
-						<div class="boxRowItem">
-							<a href="https://www.instagram.com/radioeins/" target="_blank"
-								alt="zum radioeins Instagram-Profil" title="zum radioeins Instagram-Profil"
-							>
-								<div class="socialIcon instagram"></div>
-							</a>
-							<div class="boxRowItemBody">
-								<div class="socialHeadline">Radio im Bild</div>
-								<div class="socialBody">radioeins auf Instagram folgen!</div>
-							</div>
+					<div class="boxItem">
+						<a href="https://www.facebook.com/radioeins" target="_blank"
+							alt="zur radioeins Facebook Seite" title="zur radioeins Facebook Seite"
+						>
+							<div class="socialIcon facebook"></div>
+						</a>
+						<div class="boxItemBody">
+							<div class="socialHeadline">Tipps & Stadtleben</div>
+							<div class="socialBody"> radioeins auf Facebook folgen!</div>
 						</div>
 					</div>
 
-					<div class="boxRow">
-						<div class="boxRowItem">
-							<a href="https://www.radioeins.de/podcast" target="_blank"
-								alt="zu den radioeins Podcasts" title="zu den radioeins Podcasts"
-							>
-								<div class="socialIcon podcast"></div>
-							</a>
-							<div class="boxRowItemBody">
-								<div class="socialHeadline">Radio on demand</div>
-								<div class="socialBody">radioeins Podcast abonnieren</div>
-							</div>
+					<div class="boxItem">
+						<a href="https://twitter.com/radioeins" target="_blank"
+							alt="zum radioeins Twitterkanal" title="zum radioeins Twitterkanal"
+						>
+							<div class="socialIcon twitter"></div>
+						</a>
+						<div class="boxItemBody">
+							<div class="socialHeadline">Kurzmeldungen</div>
+							<div class="socialBody">radioeins auf Twitter folgen!</div>
 						</div>
-					
-						<div class="boxRowItem">
-							<a href="https://www.youtube.com/rbbradioeins" target="_blank"
-								alt="zur radioeins YouTube Seite" title="zur radioeins YouTube Seite"
-							>
-								<div class="socialIcon youtube"></div>
-							</a>
-							<div class="boxRowItemBody">
-								<div class="socialHeadline">radioeins Videos</div>
-								<div class="socialBody">radioeins auf YouTube</div>
-							</div>
-						</div>
+					</div>
 
-						<div class="boxRowItem">
-							<a href="https://www.radioeins.de/apps" target="_blank"
-								alt="zu den radioeins Apps" title="zu den radioeins Apps"
-							>
-								<div class="socialIcon apps"></div>
-							</a>
-							<div class="boxRowItemBody">
-								<div class="socialHeadline">Radio Apps</div>
-								<div class="socialBody">Mobile Apps für iOS & Android</div>
-							</div>
+					<div class="boxItem">
+						<a href="https://www.instagram.com/radioeins/" target="_blank"
+							alt="zum radioeins Instagram-Profil" title="zum radioeins Instagram-Profil"
+						>
+							<div class="socialIcon instagram"></div>
+						</a>
+						<div class="boxItemBody">
+							<div class="socialHeadline">Radio im Bild</div>
+							<div class="socialBody">radioeins auf Instagram folgen!</div>
+						</div>
+					</div>
+
+					<div class="boxItem">
+						<a href="https://www.radioeins.de/podcast" target="_blank"
+							alt="zu den radioeins Podcasts" title="zu den radioeins Podcasts"
+						>
+							<div class="socialIcon podcast"></div>
+						</a>
+						<div class="boxItemBody">
+							<div class="socialHeadline">Radio on demand</div>
+							<div class="socialBody">radioeins Podcast abonnieren</div>
+						</div>
+					</div>
+					
+					<div class="boxItem">
+						<a href="https://www.youtube.com/rbbradioeins" target="_blank"
+							alt="zur radioeins YouTube Seite" title="zur radioeins YouTube Seite"
+						>
+							<div class="socialIcon youtube"></div>
+						</a>
+						<div class="boxItemBody">
+							<div class="socialHeadline">radioeins Videos</div>
+							<div class="socialBody">radioeins auf YouTube</div>
+						</div>
+					</div>
+
+					<div class="boxItem">
+						<a href="https://www.radioeins.de/apps" target="_blank"
+							alt="zu den radioeins Apps" title="zu den radioeins Apps"
+						>
+							<div class="socialIcon apps"></div>
+						</a>
+						<div class="boxItemBody">
+							<div class="socialHeadline">Radio Apps</div>
+							<div class="socialBody">Mobile Apps für iOS & Android</div>
 						</div>
 					</div>
 				</div>
