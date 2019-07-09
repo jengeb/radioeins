@@ -116,7 +116,7 @@ body {
 			}
 		}
 	
-		.vorschau, .zursendung {
+		.vorschau, .zursendung, .nachhoeren {
 			grid-area: vorschau;
 			color: $orange;
 		}
@@ -128,10 +128,6 @@ body {
 			}
 		}
 	
-		// TODO needed?
-		.nachhoeren {
-			display: none;
-		}
 	}
 }
 
