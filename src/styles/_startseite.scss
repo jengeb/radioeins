@@ -513,7 +513,7 @@ body {
 
 .layoutdein_radioeins.teaserbox {
 	padding-bottom: 4em;
-	
+
 	.boxHeadline {
 		text-transform: uppercase;
 	}
@@ -521,7 +521,6 @@ body {
 	.boxBody {
 		display: grid;
 		grid-template: 
-			'boxItem boxItem boxItem'
 			'boxItem boxItem boxItem';
 		grid-row-gap: 2.5em;		
 		grid-column-gap: 2em;
@@ -558,27 +557,27 @@ body {
 			}		
 
 			.socialIcon.facebook::after {
-				content: url('../assets/desktop/ico-footer-fb.svg')
+				content: url('../assets/desktop/ico-footer-fb.svg');
 			}
 
 			.socialIcon.podcast::after {
-				content: url('../assets/desktop/ico-footer-podcast.svg')
+				content: url('../assets/desktop/ico-footer-podcast.svg');
 			}
 
 			.socialIcon.twitter::after {
-				content: url('../assets/desktop/ico-footer-tw.svg')
+				content: url('../assets/desktop/ico-footer-tw.svg');
 			}
 
 			.socialIcon.youtube::after {
-				content: url('../assets/desktop/ico-footer-yt.svg')
+				content: url('../assets/desktop/ico-footer-yt.svg');
 			}
 
 			.socialIcon.instagram::after {
-				content: url('../assets/desktop/ico-footer-insta.svg')
+				content: url('../assets/desktop/ico-footer-insta.svg');
 			}
 
 			.socialIcon.apps::after {
-				content: url('../assets/desktop/ico-footer-apps.svg')
+				content: url('../assets/desktop/ico-footer-apps.svg');
 			}
 
 			a {

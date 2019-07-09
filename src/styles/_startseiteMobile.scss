@@ -90,4 +90,19 @@
 		}
 	}
 
+	.layoutdein_radioeins.teaserbox {
+			
+		.boxBody {
+			grid-template: 
+				'boxItem';
+
+			.boxItem {
+				grid-column-gap: 1em;
+			}
+
+			.socialIcon {
+				text-align: right;
+			}
+		}
+	}
 }
