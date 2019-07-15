@@ -133,4 +133,16 @@
 			width: 100%;
 		}
 	}
+
+	.layoutprogrammbuehne {
+		.hintergrund {
+			.slick-track {
+				// hide redundant element that influeces the height of the slider
+				> div:last-child {
+					display: none !important;
+				}
+			}
+		}
+	}
+	
 }
