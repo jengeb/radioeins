@@ -1,3 +1,8 @@
+// TODO: move to layout file
+body {
+	min-width: 1020px;
+}
+
 .query {
 	display: none;
 }
@@ -12,6 +17,10 @@
 	display: none;
 }
 
+// TODO: check if transferable to all boxHeadlines; if yes: move to _layout.scss
+.boxHeadline {
+	@include interstate-light();
+}
 
 .manualteaserPicture > img {
 	width: 100%;
@@ -42,9 +51,130 @@
 	display: none;
 }
 
-.layout6spaltig_weisse_buehne {
-	margin: 2em 0 3em;
+
+.layoutprogrammbuehne {
+	margin-top: 1em;
+
+	.slick-track {
+		margin-top: 2em;
+	}
+
+	// topics slide
+	.slick-slide {
+		display: grid !important;
+		grid-template-columns: 1;
+		margin-right: 3em;
+	}
+	.manualteaser {
+		.vorschau, .zursendung {
+			color: $orange;
+		}
+	}
+
+	// grid container
+	.slick-slide:not(.topics) {
+		display: grid !important;
+		grid-template: 
+			'pic time'
+			'pic program'
+			'pic presenter'
+			'pic vorschau'
+			'pic .'
+			'pic .';
+		grid-column-gap: 1.5em;
+		margin-right: 3em;
+	}
+
+	.manualteaser:not(.topics) {
+		.manualteaserTitle {
+			grid-area: program;
+			margin: 0;
+			line-height: 29px;
+		}
 	
+		.moderatoren {
+			grid-area: presenter;
+			margin: 0;
+		}
+	
+		.moderatorenPicture {
+			grid-area: pic;
+	
+			img {
+				float: right;
+			}
+		}
+	
+		.imgIconWrap {
+			grid-area: time;
+			font-size: 14px;
+	
+			.medienCounter {
+				.today, .now {
+					color: $orange;
+				}
+			}
+		}
+	
+		.vorschau, .zursendung, .nachhoeren {
+			grid-area: vorschau;
+			color: $orange;
+		}
+	
+		.iconContainer {
+			// TODO needed?
+			.onairicon {
+				display: none;
+			}
+		}
+	
+	}
+}
+
+// Der Tag auf radioeins
+.layoutbuehne_1_1_white {
+	.moderatorenSlider > div {
+		width: 90%;
+		position: relative;
+		margin: 0 auto;
+	}
+
+	background-color: $lightgray;
+
+	// TODO move into mixin?
+	padding-top: 1.5em;
+	padding-bottom: 3em;
+
+	.layout6spaltig_weisse_buehne {
+		display: flex !important;
+		flex-direction: column;
+	}
+
+	.boxhead {
+		max-width: column-width(6);
+		position: relative;
+		margin: 0 auto;
+
+		.boxHeadline {
+			@include interstate-light;
+			font-size: 36px;
+			text-transform: uppercase;
+		}
+	}
+
+	.manualteaserTitle {
+		font-size: 18px;
+		// TODO check for better solution (justify-content doesn't work)
+		max-width: 140px;
+		line-height: 26px;
+	}
+
+	.manualteaserDateTime {
+		order: -1;
+		color: $orange;
+		font-size: 14px;
+		margin-bottom: 8px;
+	}
 }
 
 .teaserbox_videos {
@@ -57,8 +187,8 @@
 	padding-top: 1.5em;
 	padding-bottom: 3em;
 
-	> * {
-		width: column-width(6);
+	> section > div, .boxhead {
+		max-width: column-width(6);
 		position: relative;
 		margin: 0 auto;
 	}
@@ -70,9 +200,16 @@
 
 	.caption {
 		text-align: left;
+		margin: 1.2em 0 0.5em;
+
+		.manualteaserTitle {
+			display: inline;
+		}
 
 		.manualteaserSubTitle {
-			margin-top: -0.8em;
+			margin-left: 4px;
+			font-size: 1.5em;
+			display: inline;
 		}
 	}
 
@@ -93,7 +230,13 @@
 			justify-content: center;
 			flex-direction: column;
 			text-align: center;
+
+			margin: auto;
 		}
+	}
+
+	img {
+		width: 100%;
 	}
 }
 
@@ -107,7 +250,7 @@
 	padding-bottom: 3em;
 
 	.teaserbox_music {
-		width: column-width(6);
+		max-width: column-width(6);
 		position: relative;
 		margin: 0 auto;
 
@@ -119,7 +262,8 @@
 		> div {
 			display: flex;
 			flex-direction: column;
-			width: 25%;
+			margin: unset;
+			width: 23%;
 
 			> .manualteaserTitle, .manualteaserSubTitle {
 				order: 2;
@@ -147,27 +291,6 @@
 		.boxHeadline {
 			font-size: 36px;
 			text-transform: uppercase;
-		}
-
-		.boxlinklist {
-			padding-inline-start: 0;
-
-			// button
-			.manualteaserTitle {
-				color: white;
-				background-color: $orange;
-				list-style: none;
-				border: 1px solid $orange;
-				border-radius: 4px;
-				height: 40px;
-				width: 152px;
-				text-transform: uppercase;
-
-				display: flex;
-				justify-content: center;
-				flex-direction: column;
-				text-align: center;
-			}
 		}
 
 		.manualteaserTitle {
@@ -200,13 +323,36 @@
 			}
 		}
 	}
+
+	.boxlinklist {
+		padding-inline-start: 0;
+
+		// button
+		.manualteaserTitle {
+			color: white;
+			background-color: $orange;
+			list-style: none;
+			border: 1px solid $orange;
+			border-radius: 4px;
+			height: 40px;
+			width: 152px;
+			text-transform: uppercase;
+
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			text-align: center;
+			margin: auto;
+		}
+	}
 }
 
 .teaserbox_highlights {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	margin: 2em 0 3em;
+	padding-top: 1.5em;
+	padding-bottom: 3em;
 
 	.boxhead {
 		flex: 0 0 100%;
@@ -341,7 +487,7 @@
 	position: relative;
 
 	> * {
-		width: column-width(6);
+		max-width: column-width(6);
 		position: relative;
 		margin: 0 auto;
 	}
@@ -353,77 +499,81 @@
 
 	> * {
 		list-style: none;
-		width: column-width(6);
+		max-width: column-width(6);
 		position: relative;
 		margin: 0 auto;
 	}
 }
 
-.layoutdein_radioeins {
+
+.layoutdein_radioeins.teaserbox {
+	padding-bottom: 4em;
+
 	.boxHeadline {
 		text-transform: uppercase;
 	}
 
 	.boxBody {
-		display: flex;
-		flex-direction: column;
-		
-		.boxRow {
-			display: flex;
-			flex-direction: row;
-		}
+		display: grid;
+		grid-row-gap: 2.5em;		
+		grid-column-gap: 2em;
+		grid-template-columns: 1fr 1fr 1fr;
 
-		.boxRowItem {
-			width: column-width(3);
-			display: flex;
-			flex-direction: row;
-			margin-bottom: 2.5em;
-			align-items: center;
+		.boxItem {
+			grid-area: 'boxItem';
+			display: grid;
+			grid-template: 
+				'socialIcon .'
+				'socialIcon socialHeadline'
+				'socialIcon socialBody';
+			grid-template-columns: 1.3fr 3fr;
 
 			.socialIcon {
-				width: 60px;
-				height: 60px;
-				border-radius: 30px; 
-				background-color: white;
+				grid-area: socialIcon;
 			}
 
+			.boxItemBody {
+				align-self: center;
+
+				.socialHeadline {
+					grid-area: socialHeadline;
+					text-transform: uppercase;
+					color: $orange;
+					font-weight: bold;
+				}
+	
+				.socialBody {
+					grid-area: socialBody;
+					font-size: smaller;
+				}
+			}		
+
 			.socialIcon.facebook::after {
-				content: url('../assets/desktop/ico-footer-fb.svg')
+				content: url('../assets/desktop/ico-footer-fb.svg');
 			}
 
 			.socialIcon.podcast::after {
-				content: url('../assets/desktop/ico-footer-podcast.svg')
+				content: url('../assets/desktop/ico-footer-podcast.svg');
 			}
 
 			.socialIcon.twitter::after {
-				content: url('../assets/desktop/ico-footer-tw.svg')
+				content: url('../assets/desktop/ico-footer-tw.svg');
 			}
 
 			.socialIcon.youtube::after {
-				content: url('../assets/desktop/ico-footer-yt.svg')
+				content: url('../assets/desktop/ico-footer-yt.svg');
 			}
 
 			.socialIcon.instagram::after {
-				content: url('../assets/desktop/ico-footer-insta.svg')
+				content: url('../assets/desktop/ico-footer-insta.svg');
 			}
 
 			.socialIcon.apps::after {
-				content: url('../assets/desktop/ico-footer-apps.svg')
+				content: url('../assets/desktop/ico-footer-apps.svg');
 			}
 
-			.boxRowItemBody {
-				margin-left: 1em;
-				margin-right: 1em;
-			}
-
-			.socialHeadline {
-				text-transform: uppercase;
-				color: $orange;
-				font-weight: bold;
-			}
-
-			.socialBody {
-				font-size: smaller;
+			a {
+				align-self: center;
 			}
 		}
 	}

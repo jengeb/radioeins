@@ -1,11 +1,19 @@
 /* autoprefixer grid: autoplace */
 @import "../../node_modules/normalize.css/normalize.css";
 
+/* include default slick-slider styles */
+@import "../../node_modules/slick-carousel/slick/slick.css";
+@import "../../node_modules/slick-carousel/slick/slick-theme.css";
+
 @import 'colors';
 @import 'layout';
+/* add customized slick-slider styles */
+@import 'slider';
 
 // if you want to see if we overwrite some styles by accident, you can comment
 // out the import
 @import 'startseite';
 @import 'sendungsseite';
 @import 'playlist';
+
+@import 'startseiteMobile';
