@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/jengeb/radioeins#readme",
   "devDependencies": {
-    "autoprefixer": "^9.6.0",
+    "autoprefixer": "^9.6.1",
     "css-loader": "^2.1.1",
     "eslint": "^5.16.0",
     "eslint-loader": "^2.1.2",
@@ -33,9 +33,9 @@
     "postcss-loader": "^3.0.0",
     "sass-loader": "^7.1.0",
     "svg-url-loader": "^2.3.3",
-    "webpack": "^4.32.2",
-    "webpack-cli": "^3.3.2",
-    "webpack-dev-server": "^3.4.1"
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
     "normalize.css": "^8.0.1",
