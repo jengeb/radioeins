@@ -104,21 +104,14 @@
           display: inline;
         }
 
-        :before {
-          // NOTE: This is the currently playing icon
-          content: '?';
-          color: #fff;
-          text-align: center;
-          display: inline-block;
-          background: $orange;
-          // this is actually 44 * 44
-          width: 40px;
-          height: 40px;
-          line-height: 40px;
-          margin-top: 6px;
-          margin-right: 8px;
-          border-radius: 2px;
+        .sendeplatz {
+          @include icon('desktop/ico-hoeren-box');
         }
+      }
+
+      &:nth-of-type(1) .manualteaserTitle .sendeplatz {
+        // FIXME: This is just a placeholder to see what an in-progress icon looks like
+        @include icon('desktop/ico-pause-box');
       }
 
       .manualteaserPicture,
