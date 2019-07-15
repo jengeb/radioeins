@@ -515,15 +515,12 @@ body {
 
 	.boxBody {
 		display: grid;
-		grid-template: 
-			'boxItem boxItem boxItem';
 		grid-row-gap: 2.5em;		
 		grid-column-gap: 2em;
 		grid-template-columns: 1fr 1fr 1fr;
 
 		.boxItem {
-			grid-area: boxItem;
-
+			grid-area: 'boxItem';
 			display: grid;
 			grid-template: 
 				'socialIcon .'
