@@ -63,11 +63,11 @@
 
 .teaserbox_videos {
 	.slick-prev:before {
-		content: '❬' !important;
+		content: url('../assets/desktop/slider-arrow-bwd.svg');
 	}
 	
 	.slick-next:before {
-		content: '❭' !important;
+		content: url('../assets/desktop/slider-arrow-fwd.svg');
 	}
 	
 	.slick-prev:before, .slick-next:before {
@@ -79,12 +79,12 @@
 	}
 	
 	.slick-next {
-		// TODO
-		right: 25px;
+		right: 0;
 	}
 	
 	.slick-prev, .slick-next {
 		top: calc(50% - 80px);
+		width: 50px;
 	}	
 }
 
