@@ -515,15 +515,12 @@ body {
 
 	.boxBody {
 		display: grid;
-		grid-template: 
-			'boxItem boxItem boxItem';
 		grid-row-gap: 2.5em;		
 		grid-column-gap: 2em;
 		grid-template-columns: 1fr 1fr 1fr;
 
 		.boxItem {
 			grid-area: 'boxItem';
-
 			display: grid;
 			grid-template: 
 				'socialIcon .'
@@ -532,21 +529,21 @@ body {
 			grid-template-columns: 1.3fr 3fr;
 
 			.socialIcon {
-				grid-area: 'socialIcon';
+				grid-area: socialIcon;
 			}
 
 			.boxItemBody {
 				align-self: center;
 
 				.socialHeadline {
-					grid-area: 'socialHeadline';
+					grid-area: socialHeadline;
 					text-transform: uppercase;
 					color: $orange;
 					font-weight: bold;
 				}
 	
 				.socialBody {
-					grid-area: 'socialBody';
+					grid-area: socialBody;
 					font-size: smaller;
 				}
 			}		
