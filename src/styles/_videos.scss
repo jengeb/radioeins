@@ -16,23 +16,79 @@
 
 	.layout2spaltig_video_playlist {
 		display: grid;
+		grid-template-areas: 
+			'videoElem firstTeaser'
+			'videoElem secondTeaser'
+			'videoElem thirdTeaser'
+			'videoElem .';
 
 		.videoteaser {
 			// address first video element
 			> div:first-child {
-				// TODO
+				grid-area: videoElem;
 			}
 
 			// hide other video elements
 			> div:not(:first-child) {
 				display: none;
 			}
+
+			.caption {
+				text-align: left;
+			}
 		}
 
 		.selectteaser {
+			> div {
+				display: grid;
+				grid-template-areas: 
+					'teaserPic teaserRoofLine'
+					'teaserPic teaserBeitrag'
+					'teaserPic .';
+				grid-column-gap: 1em;
+				
+				.manualteaserPicture {
+					grid-area: teaserPic;
+				}
+
+				.manualteaserRoofLine {
+					grid-area: teaserRoofLine;
+				}
+
+				.manualteaserTitle {
+					grid-area: teaserBeitrag
+				}
+			}
+			
+			> div:first-child {
+				grid-area: firstTeaser;
+				margin-bottom: 1em;
+			}
+
+			> div:nth-child(2) {
+				grid-area: secondTeaser;
+				margin-bottom: 1em;
+			}
+
+			> div:nth-child(3) {
+				grid-area: thirdTeaser;
+			}
+
 			// only show first three elements
 			> div:nth-child(n+4) {
 				display: none;
+			}
+
+			.manualteaserRoofLine {
+				color: $orange;
+				font-size: 14px;
+				font-weight: normal;
+				margin: 0;
+			}
+
+			.manualteaserTitle {
+				font-size: 18px;
+				margin: 0;
 			}
 		}
 	}
