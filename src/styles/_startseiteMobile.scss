@@ -1,5 +1,5 @@
 // TODO move to layout file
-@media only screen and (max-width: 679px) {
+@media only screen and (max-width: 400px) {
 
 	body {
 		min-width: unset;
@@ -105,18 +105,44 @@
 			}
 		}
 	}
-}
 
-.teaserbox_videos {
-	.boxhead {
-		padding-left: 1em;
-		padding-right: 1em;
-	}
 
-	.videoplayer {
-		.caption {
+	.teaserbox_videos {
+		.boxhead {
 			padding-left: 1em;
 			padding-right: 1em;
 		}
+
+		.videoplayer {
+			.caption {
+				padding-left: 1em;
+				padding-right: 1em;
+			}
+		}
 	}
+
+	.teaserbox_highlights .layout2erReihe, 
+	.teaserbox_highlights .layout3erReihe {
+		width: 100%;
+	}
+
+	.teaserbox_music_container .teaserbox_music > div {
+		width: 100%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.layoutprogrammbuehne {
+		.hintergrund {
+			.slick-track {
+				// hide redundant element that influeces the height of the slider
+				> div:last-child {
+					display: none !important;
+				}
+			}
+		}
+	}
+	
 }
