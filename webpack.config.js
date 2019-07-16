@@ -1,6 +1,7 @@
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   cache: false,
@@ -17,7 +18,10 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css'
-    })
+		}),
+		new CopyWebpackPlugin([
+      { from: 'videos', to: 'videos'}
+    ])
   ],
   module: {
     rules: [{
