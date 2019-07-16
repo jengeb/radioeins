@@ -20,7 +20,25 @@
 			'videoElem firstTeaser'
 			'videoElem secondTeaser'
 			'videoElem thirdTeaser'
-			'videoElem .';
+			'videoElem .'
+			'testtest .';
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 3em;
+
+		.caption {
+			text-align: left;
+			margin: 1.2em 0 0.5em;
+	
+			.manualteaserTitle {
+				display: inline;
+			}
+	
+			.manualteaserSubTitle {
+				margin-left: 4px;
+				font-size: 1.5em;
+				display: inline;
+			}
+		}
 
 		.videoteaser {
 			// address first video element
@@ -45,6 +63,7 @@
 					'teaserPic teaserRoofLine'
 					'teaserPic teaserBeitrag'
 					'teaserPic .';
+				grid-template-columns: 1fr 2fr;
 				grid-column-gap: 1em;
 				
 				.manualteaserPicture {
