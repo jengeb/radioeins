@@ -7,3 +7,37 @@
 		margin: 0 auto;
 	}
 }
+
+.intermediate {
+	.boxhead .boxHeadline {
+		font-size: 36px;
+		text-transform: uppercase;
+	}
+
+	.layout2spaltig_video_playlist {
+		display: grid;
+
+		.videoteaser {
+			// address first video element
+			> div:first-child {
+				// TODO
+			}
+
+			// hide other video elements
+			> div:not(:first-child) {
+				display: none;
+			}
+		}
+
+		.selectteaser {
+			// only show first three elements
+			> div:nth-child(n+4) {
+				display: none;
+			}
+		}
+	}
+}
+
+.playerfoot {
+	display: none;
+}
