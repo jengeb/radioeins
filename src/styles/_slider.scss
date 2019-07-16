@@ -92,8 +92,7 @@
 }
 
 // "Der Tag auf Radioeins"
-.layoutbuehne_1_1_white {
-
+.layoutbuehne_1_1_white, .teaserbox_videopage .layout1spaltig_buehne_slider {
 	.slick-prev {
     left: 0;
 	}
@@ -102,20 +101,24 @@
   	right: 19px; // equals the width of the arrow element
 	}
 
-	.slick-prev, .slick-next {
-		top: 10.5%;
-	}
-
-	.slick-prev:before, .slick-next:before {
-		color: black;
-	}
-
 	.slick-prev:before {
 		content: url(../assets/desktop/ico-arrow-bwd.svg);
 	}
 
 	.slick-next:before {
 		content: url(../assets/desktop/ico-arrow-ffwd.svg);
+	}
+}
+
+.layoutbuehne_1_1_white {
+	.slick-prev, .slick-next {
+		top: 10.5%;
+	}
+}
+
+.teaserbox_videopage .layout1spaltig_buehne_slider {
+	.slick-prev, .slick-next {
+		top: 33%;
 	}
 }
 
