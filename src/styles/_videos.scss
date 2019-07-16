@@ -9,9 +9,6 @@
 }
 
 .intermediate.teaserbox {
-	padding-top: 1.5em;
-	padding-bottom: 3em;
-
 	.boxhead .boxHeadline {
 		font-size: 36px;
 		text-transform: uppercase;
@@ -27,6 +24,7 @@
 			'testtest .';
 		grid-template-columns: 1fr 1fr;
 		grid-column-gap: 3em;
+		padding-bottom: 3em;
 
 		.caption {
 			text-align: left;
