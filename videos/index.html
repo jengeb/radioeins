@@ -123,6 +123,25 @@ Videos  | radioeins</title>
 	<link rel="stylesheet" type="text/css" href="/rad/css/radioeins_ie9.css" />
 	<![endif]-->
 
+	<!-- neu -->
+	<!-- TODO move code, remove already included jquery -->
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<!-- TODO -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.0/slick.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.teaserbox_videopage .layout1spaltig_buehne_slider').slick({
+				arrows: false,
+				dots: true,
+				dotsClass: "slick-custom-dots-light",
+				infinite: true,
+				slidesToShow: 1
+			});
+		});
+	</script>
+	<!-- /neu -->
 
 
 <script type="text/javascript">
@@ -439,11 +458,14 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
 	
 	
 		
-			
-		<div id="middleColumnList_teaserbox" class="count2 doctypeteaser even intermediate layoutblack teaserbox"><div class="boxhead"><h2 class="boxHeadline">radioeins Loungekonzerte</h2>
-<ul class="boxlinklist">
+<!-- /neu: add class 'teaserbox_videopage' -->
+		<div id="middleColumnList_teaserbox" class="count2 doctypeteaser even intermediate layoutblack teaserbox teaserbox_videopage"><div class="boxhead"><h2 class="boxHeadline">radioeins Loungekonzerte</h2>
+<!-- neu: move below video section and rename 'Archiv' to 'Alle Videos' -->
+<!-- <ul class="boxlinklist">
 <li class="manualteaserTitle"><a href="/musik/loungekonzerte/index.html" class="uebersicht" title="weitere Informationen">Archiv</a></li>
-</ul></div>
+</ul> -->
+<!-- /neu -->
+</div>
 	
 		
 	<section id="middleColumnList_teaserbox_teaserList_teasergroup_0" class="count1 doctypeteaser first last layout1spaltig_buehne_slider manualteaser odd slides">
@@ -489,6 +511,11 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
 
 </section>
 
+<!-- neu -->
+<ul class="boxlinklist">
+	<li class="manualteaserTitle"><a href="/musik/loungekonzerte/index.html" class="uebersicht" title="weitere Informationen">Alle Videos</a></li>
+</ul>
+<!-- /neu -->
 
 <div class="killfloat"></div></div>
 	
@@ -548,8 +575,8 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
 	
 	
 		
-			
-		<div id="middleColumnList_teaserbox_9" class="count4 doctypeteaser even intermediate layoutblack teaserbox"><div class="boxhead"><h2 class="boxHeadline">Kinotipps mit Knut Elstermann</h2>
+		<!-- neu: add class 'teaserbox_videopage' -->
+		<div id="middleColumnList_teaserbox_9" class="count4 doctypeteaser even intermediate layoutblack teaserbox teaserbox_videopage"><div class="boxhead"><h2 class="boxHeadline">Kinotipps mit Knut Elstermann</h2>
 <ul class="boxlinklist">
 <li class="manualteaserTitle"><a href="/themen/kunst_kultur/filme/index.html" class="uebersicht" title="weitere Informationen">Alle Filme</a></li>
 </ul></div>
