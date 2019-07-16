@@ -132,11 +132,19 @@ Videos  | radioeins</title>
 
 	<script type="text/javascript">
 		$(document).ready(function() {
-			$('.teaserbox_videopage .layout1spaltig_buehne_slider').slick({
+			$('.teaserbox_videos .layout1spaltig_buehne_slider').slick({
 				dots: true,
 				dotsClass: "slick-custom-dots-light",
 				infinite: true,
 				slidesToShow: 1
+			});
+
+			$('.bannerSliderSmall').slick({
+				arrows: false,
+				dots: true,
+				dotsClass: "slick-custom-dots-dark",
+				infinite: true,
+				slidesToShow: 3
 			});
 		});
 	</script>
@@ -456,9 +464,8 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
 	
 	
 	
-		
-<!-- /neu: add class 'teaserbox_videopage' -->
-		<div id="middleColumnList_teaserbox" class="count2 doctypeteaser even intermediate layoutblack teaserbox teaserbox_videopage"><div class="boxhead"><h2 class="boxHeadline">radioeins Loungekonzerte</h2>
+<!-- neu: add CSS class 'teaserbox_videos' -->
+		<div id="middleColumnList_teaserbox" class="count2 doctypeteaser even intermediate layoutblack teaserbox teaserbox_videos"><div class="boxhead"><h2 class="boxHeadline">radioeins Loungekonzerte</h2>
 <!-- neu: move below video section and rename 'Archiv' to 'Alle Videos' -->
 <!-- <ul class="boxlinklist">
 <li class="manualteaserTitle"><a href="/musik/loungekonzerte/index.html" class="uebersicht" title="weitere Informationen">Archiv</a></li>
@@ -573,9 +580,8 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
 	
 	
 	
-		
-		<!-- neu: add class 'teaserbox_videopage' -->
-		<div id="middleColumnList_teaserbox_9" class="count4 doctypeteaser even intermediate layoutblack teaserbox teaserbox_videopage"><div class="boxhead"><h2 class="boxHeadline">Kinotipps mit Knut Elstermann</h2>
+		<!-- neu: add CSS class 'teaserbox_videos' -->
+		<div id="middleColumnList_teaserbox_9" class="count4 doctypeteaser even intermediate layoutblack teaserbox teaserbox_videos"><div class="boxhead"><h2 class="boxHeadline">Kinotipps mit Knut Elstermann</h2>
 			<!-- neu -->
 			<!-- neu: move below videos and rename to 'Alle Videos' -->
 <!-- <ul class="boxlinklist">
@@ -654,9 +660,6 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
 	
 	
 	
-	
-		
-			
 		<div id="middleColumnList_teaserbox_0" class="count5 doctypeteaser intermediate layoutstandard odd teaserbox"><div class="boxhead"><h2 class="boxHeadline">Talk im Tipi</h2>
 <ul class="boxlinklist">
 <li class="manualteaserTitle"><a href="/themen/kommentare_kolumnen/talk_im_tipi/index.html" class="uebersicht" title="weitere Informationen">Archiv</a></li>
