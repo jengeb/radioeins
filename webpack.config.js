@@ -1,6 +1,7 @@
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   cache: false,
@@ -17,7 +18,11 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css'
-    })
+    }),
+    new CopyWebpackPlugin([
+      // here you can configure things that need to be copied explicitly
+      { from: 'img', to: 'img'}
+    ])
   ],
   module: {
     rules: [{
@@ -28,32 +33,32 @@ module.exports = {
         "postcss-loader", // used for autoprefixer
         "sass-loader" // compiles Sass to CSS, using Node Sass by default
       ]
-		},
-		{
-			test: /\.svg/,
-			use: {
-				loader: 'svg-url-loader',
-				options: {}
-			}
-		},
-		{
-			test: /\.(gif|png|jpe?g)$/i,
-			use: ['file-loader', {
-				loader: 'image-webpack-loader',
-				options: {
-					disable: true, // webpack@2.x and newer
-				},
-			}],
-		},
-		{
-			test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
-			use: [{
-				loader: 'file-loader',
-				options: {
-					name: '[name].[ext]',
-					outputPath: 'fonts/'
-				}
-			}]
-		}]
+    },
+    {
+      test: /\.svg/,
+      use: {
+        loader: 'svg-url-loader',
+        options: {}
+      }
+    },
+    {
+      test: /\.(gif|png|jpe?g)$/i,
+      use: ['file-loader', {
+        loader: 'image-webpack-loader',
+        options: {
+          disable: true, // webpack@2.x and newer
+        },
+      }],
+    },
+    {
+      test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+      use: [{
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'fonts/'
+        }
+      }]
+    }]
   }
 }
