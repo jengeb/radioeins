@@ -132,20 +132,29 @@ Videos  | radioeins</title>
 
 	<script type="text/javascript">
 		$(document).ready(function() {
-			$('.teaserbox_videos .layout1spaltig_buehne_slider').slick({
+			$('.layoutblack .layout1spaltig_buehne_slider').slick({
 				dots: true,
 				dotsClass: "slick-custom-dots-light",
 				infinite: true,
 				slidesToShow: 1
-			});
+			});			
 
-			$('.layoutstandard .layout3spaltig_buehne_slider .bannerSliderSmall').slick({
+			$('.teaserbox.layoutstandard .layout3spaltig_buehne_slider .bannerSliderSmall').slick({
 				arrows: false,
 				dots: true,
 				dotsClass: "slick-custom-dots-dark",
 				infinite: true,
 				slidesToShow: 3
 			});
+
+			$('.teaserbox.layoutblack .layout3spaltig_buehne_slider .bannerSliderSmall').slick({
+				arrows: false,
+				dots: true,
+				dotsClass: "slick-custom-dots-light",
+				infinite: true,
+				slidesToShow: 3
+			});
+			
 		});
 	</script>
 	<!-- /neu -->
@@ -464,8 +473,7 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
 	
 	
 	
-<!-- neu: add CSS class 'teaserbox_videos' -->
-		<div id="middleColumnList_teaserbox" class="count2 doctypeteaser even intermediate layoutblack teaserbox teaserbox_videos"><div class="boxhead"><h2 class="boxHeadline">radioeins Loungekonzerte</h2>
+		<div id="middleColumnList_teaserbox" class="count2 doctypeteaser even intermediate layoutblack teaserbox"><div class="boxhead"><h2 class="boxHeadline">radioeins Loungekonzerte</h2>
 <!-- neu: move below video section and rename 'Archiv' to 'Alle Videos' -->
 <!-- <ul class="boxlinklist">
 <li class="manualteaserTitle"><a href="/musik/loungekonzerte/index.html" class="uebersicht" title="weitere Informationen">Archiv</a></li>
