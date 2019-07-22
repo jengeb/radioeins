@@ -107,7 +107,6 @@
 	display: none;
 }
 
-
 .layout3spaltig_buehne_slider {
 	.layout3spaltig_buehne {
 		display: grid;
@@ -118,7 +117,6 @@
 		grid-row-gap: 0.5em;
 
 		grid-template-columns: auto auto auto;
-		grid-column-gap: 1em;
 
 		.manualteaserRoofLine {
 			grid-area: tipiRoofline;
