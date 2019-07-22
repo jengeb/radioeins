@@ -92,10 +92,8 @@
 	}
 
 	.layoutdein_radioeins.teaserbox {
-			
 		.boxBody {
-			grid-template: 
-				'boxItem';
+			grid-template-columns: unset;
 
 			.boxItem {
 				grid-column-gap: 1em;

@@ -519,7 +519,6 @@ body {
 		grid-template-columns: 1fr 1fr 1fr;
 
 		.boxItem {
-			grid-area: 'boxItem';
 			display: grid;
 			grid-template: 
 				'socialIcon .'
