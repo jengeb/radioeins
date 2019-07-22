@@ -76,15 +76,11 @@
 	}
 	
 	.slick-prev {
-		// viewport width minus picture size divided by 2 
-		// then: align to the picture (2/3 margin to the left side)
-		// TODO: adjust
-		// left: calc((100vw - 920px) / 2 * 2/3);
+		left: -75px;
 	}
 	
 	.slick-next {
-		// TODO: adjust
-		// right: calc((100vw - 920px) / 2 * 2/3);
+		right: -75px;
 	}
 	
 	.slick-prev, .slick-next {
@@ -202,7 +198,7 @@
 
 	.layoutblack .layout1spaltig_buehne_slider {
 		.slick-prev, .slick-next {
-			top: calc(50% - 150px);
+			top: calc(50% - 120px);
 		}
 
 		.slick-prev {
