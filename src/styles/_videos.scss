@@ -130,6 +130,10 @@
 			font-size: 14px;
 			font-weight: normal;
 			margin: 0;
+
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: auto;
 		}
 
 		.manualteaserTitle {
