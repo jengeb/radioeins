@@ -144,7 +144,14 @@ Videos  | radioeins</title>
 				dots: true,
 				dotsClass: "slick-custom-dots-dark",
 				infinite: true,
-				slidesToShow: 3
+				slidesToShow: 3,
+				responsive: [{
+					breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+						arrows: false
+          }
+        }]
 			});
 
 			$('.teaserbox.layoutblack .layout3spaltig_buehne_slider .bannerSliderSmall').slick({
@@ -152,7 +159,14 @@ Videos  | radioeins</title>
 				dots: true,
 				dotsClass: "slick-custom-dots-light",
 				infinite: true,
-				slidesToShow: 3
+				slidesToShow: 3,
+				responsive: [{
+					breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+						arrows: false
+          }
+        }]
 			});
 			
 		});
