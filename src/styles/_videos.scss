@@ -164,6 +164,7 @@
 .intermediate.layoutstandard {
 	.boxlinklist {
 		padding-inline-start: 0;
+		margin-bottom: 4em;
 
 		// button
 		.manualteaserTitle {
@@ -185,5 +186,21 @@
 			text-align: center;
 			margin: auto;
 		}
+	}
+}
+
+.intermediate.layoutblack {
+	background-color: $darkgray;
+	color: white;
+	width: 100%;
+  position: relative;
+
+	padding-top: 1.5em;
+	padding-bottom: 3em;
+
+	> div {
+		max-width: column-width(6);
+		position: relative;
+		margin: 0 auto;
 	}
 }
