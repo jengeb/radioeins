@@ -177,15 +177,15 @@ body {
 	}
 }
 
-.teaserbox_videos {
-	background-color: #2a2a2a;
-	color: white;
-
-	width: 100%;
-  position: relative;
-
+.layoutblack {
 	padding-top: 1.5em;
 	padding-bottom: 3em;
+}
+
+.layout1spaltig_buehne_videoplayer, .layout1spaltig_buehne_slider {
+	img {
+		width: 100%;
+	}
 
 	> section > div, .boxhead {
 		max-width: column-width(6);
@@ -212,9 +212,12 @@ body {
 			display: inline;
 		}
 	}
+}
 
+.layoutblack {
 	.boxlinklist {
 		padding-inline-start: 0;
+		padding-top: 30px;
 
 		// button
 		.manualteaserTitle {
@@ -233,10 +236,6 @@ body {
 
 			margin: auto;
 		}
-	}
-
-	img {
-		width: 100%;
 	}
 }
 

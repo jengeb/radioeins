@@ -61,7 +61,7 @@
 	}
 }
 
-.teaserbox_videos {
+.layoutblack .layout1spaltig_buehne_slider {
 	.slick-prev:before {
 		content: url('../assets/desktop/slider-arrow-bwd.svg');
 	}
@@ -76,12 +76,14 @@
 	
 	.slick-prev {
 		// viewport width minus picture size divided by 2 
-		// then: align to the picture (2/3 margin to the left side) 
-		left: calc((100vw - 920px) / 2 * 2/3);
+		// then: align to the picture (2/3 margin to the left side)
+		// TODO: adjust
+		// left: calc((100vw - 920px) / 2 * 2/3);
 	}
 	
 	.slick-next {
-		right: calc((100vw - 920px) / 2 * 2/3);
+		// TODO: adjust
+		// right: calc((100vw - 920px) / 2 * 2/3);
 	}
 	
 	.slick-prev, .slick-next {
@@ -123,7 +125,7 @@
 }
 
 @media only screen and (max-width: 1024px) {
-	.teaserbox_videos {
+	.layoutblack .layout1spaltig_buehne_slider {
 		.slick-prev {
 			left: 1%;
 		}
@@ -135,7 +137,6 @@
 }
 
 @media only screen and (max-width: 400px) {
-
 	.slick-custom-dots-light {
 		display: flex;
 		justify-content: center;
@@ -199,7 +200,7 @@
 	}
 
 
-	.teaserbox_videos {
+	.layoutblack .layout1spaltig_buehne_slider {
 		.slick-prev, .slick-next {
 			top: calc(50% - 150px);
 		}
