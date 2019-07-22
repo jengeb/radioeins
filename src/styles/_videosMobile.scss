@@ -1,6 +1,15 @@
 // TODO move to layout file
 @media only screen and (max-width: 400px) {
 
+	.layout3spaltig_buehne_slider {
+		.layout3spaltig_buehne {
+			grid-template-columns: auto auto;
+			grid-column-gap: 0.5em;
+		}
+	}
 
-	
+	.layoutblack {
+		padding-top: 1em;
+		padding-bottom: 2em;
+	}
 }
