@@ -171,10 +171,13 @@
 			background-color: white;
 			list-style: none;
 			border: 2px solid $darkgray;
+			border-color: rgba(0, 0, 0, 0.35); // set opacity
+			color: rgba(0, 0, 0, 0.35); // set opacity
 			border-radius: 4px;
 			height: 40px;
 			width: 152px;
 			text-transform: uppercase;
+			font-weight: bold;
 
 			display: flex;
 			justify-content: center;
