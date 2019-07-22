@@ -12,4 +12,18 @@
 		padding-top: 1em;
 		padding-bottom: 2em;
 	}
+
+	.intermediate.teaserbox .layout2spaltig_video_playlist,
+	.last.teaserbox .layout2spaltig_video_playlist {
+		display: unset;
+
+		.videoteaser,
+		.selectteaser {
+			margin-bottom: 2em;
+		}
+
+		.selectteaser>div {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
 }
