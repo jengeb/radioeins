@@ -117,3 +117,70 @@
 .playerfoot {
 	display: none;
 }
+
+
+.layout3spaltig_buehne_slider {
+
+	.layout3spaltig_buehne {
+		display: grid;
+		grid-template: 
+			'tipiRoofline'
+			'tipiPlayer'
+			'tipiTitle';
+		grid-row-gap: 0.5em;
+
+		grid-template-columns: auto auto auto;
+		grid-column-gap: 1em;
+
+
+		.manualteaserRoofLine {
+			grid-area: tipiRoofline;
+
+			color: $orange;
+			font-size: 14px;
+			font-weight: normal;
+			margin: 0;
+		}
+
+		.manualteaserTitle {
+			grid-area: tipiTitle;
+
+			margin-block-end: 0;
+			margin-block-start: 0.3em;
+			line-height: 1.3em;
+		}
+
+		.manualteaserSubTitle {
+			display: none;
+		}
+
+		.playerdownload {
+			grid-area: tipiPlayer;
+		}
+	}
+
+}
+
+.intermediate.layoutstandard {
+	.boxlinklist {
+		padding-inline-start: 0;
+
+		// button
+		.manualteaserTitle {
+			color: $darkgray;
+			background-color: white;
+			list-style: none;
+			border: 2px solid $darkgray;
+			border-radius: 4px;
+			height: 40px;
+			width: 152px;
+			text-transform: uppercase;
+
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			text-align: center;
+			margin: auto;
+		}
+	}
+}
