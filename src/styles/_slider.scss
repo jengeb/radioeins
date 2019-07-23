@@ -122,14 +122,9 @@
 }
 
 // see: https://github.com/kenwheeler/slick/issues/582#issuecomment-61882540
-// to add space between slides
-/* the slides */
+// add space between slides
 .layout3spaltig_buehne.slick-slide {
 	margin: 0 20px !important;
-}
-/* the parent */
-.layout3spaltig_buehne.slick-list {
-	margin: 0 -20px !important;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -144,13 +139,8 @@
 	}
 
 	// see: https://github.com/kenwheeler/slick/issues/582#issuecomment-61882540
-	// to add space between slides
-	/* the slides */
+	// add space between slides
 	.layout3spaltig_buehne.slick-slide {
-		margin: unset !important;
-	}
-	/* the parent */
-	.layout3spaltig_buehne.slick-list {
 		margin: unset !important;
 	}
 }
@@ -231,13 +221,8 @@
 	}
 
 	// see: https://github.com/kenwheeler/slick/issues/582#issuecomment-61882540
-	// to add space between slides
-	/* the slides */
+	// add space between slides
 	.layout3spaltig_buehne.slick-slide {
-		margin: unset !important;
-	}
-	/* the parent */
-	.layout3spaltig_buehne.slick-list {
 		margin: unset !important;
 	}
 }
