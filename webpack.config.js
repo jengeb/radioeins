@@ -18,9 +18,11 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css'
-		}),
-		new CopyWebpackPlugin([
-      { from: 'videos', to: 'videos'}
+    }),
+    new CopyWebpackPlugin([
+      // here you can configure things that need to be copied explicitly
+      { from: 'img', to: 'img' },
+      { from: 'videos', to: 'videos' }
     ])
   ],
   module: {
@@ -32,32 +34,32 @@ module.exports = {
         "postcss-loader", // used for autoprefixer
         "sass-loader" // compiles Sass to CSS, using Node Sass by default
       ]
-		},
-		{
-			test: /\.svg/,
-			use: {
-				loader: 'svg-url-loader',
-				options: {}
-			}
-		},
-		{
-			test: /\.(gif|png|jpe?g)$/i,
-			use: ['file-loader', {
-				loader: 'image-webpack-loader',
-				options: {
-					disable: true, // webpack@2.x and newer
-				},
-			}],
-		},
-		{
-			test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
-			use: [{
-				loader: 'file-loader',
-				options: {
-					name: '[name].[ext]',
-					outputPath: 'fonts/'
-				}
-			}]
-		}]
+    },
+    {
+      test: /\.svg/,
+      use: {
+        loader: 'svg-url-loader',
+        options: {}
+      }
+    },
+    {
+      test: /\.(gif|png|jpe?g)$/i,
+      use: ['file-loader', {
+        loader: 'image-webpack-loader',
+        options: {
+          disable: true, // webpack@2.x and newer
+        },
+      }],
+    },
+    {
+      test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+      use: [{
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'fonts/'
+        }
+      }]
+    }]
   }
 }
