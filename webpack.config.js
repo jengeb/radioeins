@@ -21,7 +21,8 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       // here you can configure things that need to be copied explicitly
-      { from: 'img', to: 'img'}
+      { from: 'img', to: 'img' },
+      { from: 'videos', to: 'videos' }
     ])
   ],
   module: {

@@ -123,6 +123,58 @@ Videos  | radioeins</title>
 	<link rel="stylesheet" type="text/css" href="/rad/css/radioeins_ie9.css" />
 	<![endif]-->
 
+	<!-- neu -->
+	<!-- TODO move code, remove already included jquery -->
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<!-- TODO -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.0/slick.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.layoutblack .layout1spaltig_buehne_slider').slick({
+				dots: true,
+				dotsClass: "slick-custom-dots-light",
+				infinite: true,
+				slidesToShow: 1
+			});			
+
+			$('.teaserbox.layoutstandard .layout3spaltig_buehne_slider .bannerSliderSmall').slick({
+				arrows: false,
+				dots: true,
+				dotsClass: "slick-custom-dots-dark",
+				infinite: true,
+				slidesToShow: 3,
+				responsive: [{
+					breakpoint: 600,
+          settings: {
+						centerMode: true,
+            slidesToShow: 1,
+						arrows: false,
+
+          }
+        }]
+			});
+
+			$('.teaserbox.layoutblack .layout3spaltig_buehne_slider .bannerSliderSmall').slick({
+				arrows: false,
+				dots: true,
+				dotsClass: "slick-custom-dots-light",
+				infinite: true,
+				slidesToShow: 3,
+				responsive: [{
+					breakpoint: 600,
+          settings: {
+						centerMode: true,
+            slidesToShow: 1,
+						arrows: false
+          }
+        }]
+			});
+			
+		});
+	</script>
+	<!-- /neu -->
 
 
 <script type="text/javascript">
@@ -438,12 +490,13 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
 	
 	
 	
-		
-			
 		<div id="middleColumnList_teaserbox" class="count2 doctypeteaser even intermediate layoutblack teaserbox"><div class="boxhead"><h2 class="boxHeadline">radioeins Loungekonzerte</h2>
-<ul class="boxlinklist">
+<!-- neu: move below video section and rename 'Archiv' to 'Alle Videos' -->
+<!-- <ul class="boxlinklist">
 <li class="manualteaserTitle"><a href="/musik/loungekonzerte/index.html" class="uebersicht" title="weitere Informationen">Archiv</a></li>
-</ul></div>
+</ul> -->
+<!-- /neu -->
+</div>
 	
 		
 	<section id="middleColumnList_teaserbox_teaserList_teasergroup_0" class="count1 doctypeteaser first last layout1spaltig_buehne_slider manualteaser odd slides">
@@ -489,6 +542,11 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
 
 </section>
 
+<!-- neu -->
+<ul class="boxlinklist">
+	<li class="manualteaserTitle"><a href="/musik/loungekonzerte/index.html" class="uebersicht" title="weitere Informationen">Alle Videos</a></li>
+</ul>
+<!-- /neu -->
 
 <div class="killfloat"></div></div>
 	
@@ -547,12 +605,15 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
 	
 	
 	
-		
-			
-		<div id="middleColumnList_teaserbox_9" class="count4 doctypeteaser even intermediate layoutblack teaserbox"><div class="boxhead"><h2 class="boxHeadline">Kinotipps mit Knut Elstermann</h2>
-<ul class="boxlinklist">
+		<!-- neu: add CSS class 'teaserbox_videos' -->
+		<div id="middleColumnList_teaserbox_9" class="count4 doctypeteaser even intermediate layoutblack teaserbox teaserbox_videos"><div class="boxhead"><h2 class="boxHeadline">Kinotipps mit Knut Elstermann</h2>
+			<!-- neu -->
+			<!-- neu: move below videos and rename to 'Alle Videos' -->
+<!-- <ul class="boxlinklist">
 <li class="manualteaserTitle"><a href="/themen/kunst_kultur/filme/index.html" class="uebersicht" title="weitere Informationen">Alle Filme</a></li>
-</ul></div>
+</ul> -->
+<!-- /neu -->
+</div>
 	
 		
 	<section id="middleColumnList_teaserbox_9_teaserList_teasergroup" class="count1 doctypeteaser first last layout1spaltig_buehne_slider manualteaser odd slides">
@@ -608,6 +669,12 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
 
 </section>
 
+<!-- neu: moved downwards -->
+<ul class="boxlinklist">
+	<li class="manualteaserTitle"><a href="/themen/kunst_kultur/filme/index.html" class="uebersicht" title="weitere Informationen">Alle Videos</a></li>
+</ul>
+<!-- /neu -->
+
 
 <div class="killfloat"></div></div>
 	
@@ -618,13 +685,13 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
 	
 	
 	
-	
-		
-			
 		<div id="middleColumnList_teaserbox_0" class="count5 doctypeteaser intermediate layoutstandard odd teaserbox"><div class="boxhead"><h2 class="boxHeadline">Talk im Tipi</h2>
-<ul class="boxlinklist">
+<!-- neu: move below '.layout3spaltig_buehne_slider' section and rename to 'Alle Videos' -->
+<!-- <ul class="boxlinklist">
 <li class="manualteaserTitle"><a href="/themen/kommentare_kolumnen/talk_im_tipi/index.html" class="uebersicht" title="weitere Informationen">Archiv</a></li>
-</ul></div>
+</ul> -->
+<!-- /neu -->
+</div>
 	
 		
 	<div id="middleColumnList_teaserbox_0_teaserList_teasergroup" class="count1 doctypeteaser first last layout3spaltig_buehne_slider manualteaser odd"><section class="bannerSliderSmall">
@@ -656,7 +723,19 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
 <div class="playerdownload"><div class="videoplayer"><div class="manualteaserpicture player video jsb_ jsb_playerInitialize-video video_customClass" data-jsb='{"config":"/vorlagen/videoplayer/_jcr_content/properties/property_406262186.js.jsn","media":"/videos/index/_jcr_content/middleColumnList/teaserbox_0/teaserList/teasergroup/teaserList/manualteaser_784172859.mediajsn.jsn/layout=middleColumn.3spaltig_16_9/imageref=%21content%21dam%21rbb%21rad%21bilder0%21201810%21tipi169.jpg.jpg%21quality%24205%21size%24300x170.jpg.jsn","analytics":{"rbbtitle":"Talk im Tipi am 30. September 2018","rbbhandle":"/content/rbb/rad/av/tttoolimport/tttoolimport_20181001_TipiTalk_complett","ATIxtn2":"8","chapter":["Programm","importierte sendungen","Sondersendung"],"isTrailer":false,"duration":6822,"termids":["1.2.3.9.1","1.2.3.12.2","1.2.3.6.1","5.2.13.12.1"]}}'><img src="/content/dam/rbb/rad/bilder0/201810/tipi169.jpg.jpg/quality=205/size=300x170.jpg" alt="Marco Seiffert (radioeins) und Mely Kiyak (ZEIT Online) beim Talk im Tipi am 30. September 2018" title="Marco Seiffert (radioeins) und Mely Kiyak (ZEIT Online) beim Talk im Tipi am 30. September 2018"/>
 <div class="pictsrc">radioeins/Nennemann</div></div><div class="playerfoot"><a href="/programm/sendungen/sendungen/369/1809/180930_12_00_sondersendung_tipi.html" class="beitraglink">Zum Beitrag</a></div></div></div></div>
 
-</section></div>
+</section>
+
+</div>
+
+<!-- neu: see above -->
+<ul class="boxlinklist">
+	<li class="manualteaserTitle">
+		<a href="/themen/kommentare_kolumnen/talk_im_tipi/index.html" class="uebersicht" title="weitere Informationen">
+			Alle Videos
+		</a>
+	</li>
+</ul>
+<!-- /neu -->
 
 
 <div class="killfloat"></div></div>
@@ -722,9 +801,12 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
 		
 			
 		<div id="middleColumnList_teaserbox_1897436375" class="count7 doctypeteaser intermediate layoutstandard odd teaserbox"><div class="boxhead"><h2 class="boxHeadline">radioeins Parkfest</h2>
-<ul class="boxlinklist">
+<!-- neu: move below section and rename to 'Alle Videos' -->
+<!-- <ul class="boxlinklist">
 <li class="manualteaserTitle"><a href="/veranstaltungen/radioeins_radio_show/index.html" class="uebersicht" title="weitere Informationen">Archiv</a></li>
-</ul></div>
+</ul> -->
+<!-- /neu -->
+</div>
 	
 		
 	<div id="middleColumnList_teaserbox_1897436375_teaserList_teasergroup" class="count1 doctypesendeplatz first last layout3spaltig_buehne_slider manualteaser odd"><section class="bannerSliderSmall">
@@ -795,6 +877,15 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
 
 </section></div>
 
+<!-- neu -->
+<ul class="boxlinklist">
+	<li class="manualteaserTitle">
+		<a href="/veranstaltungen/radioeins_radio_show/index.html" class="uebersicht" title="weitere Informationen">
+			Alle Videos
+		</a>
+	</li>
+</ul>
+<!-- /neu -->
 
 <div class="killfloat"></div></div>
 	
@@ -867,9 +958,12 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
 		
 			
 		<div id="middleColumnList_teaserbox_3" class="count9 doctypeteaser intermediate layoutstandard odd teaserbox"><div class="boxhead"><h2 class="boxHeadline">Berlinale</h2>
-<ul class="boxlinklist">
+			<!-- neu: remove or move below teasers -->
+<!-- <ul class="boxlinklist">
 <li class="manualteaserTitle"><a href="/themen/kunst_kultur/berlinale/nighttalk.html" class="uebersicht" title="weitere Informationen">Berlinale Nighttalk</a></li>
-</ul></div>
+</ul> -->
+<!-- /neu -->
+</div>
 	
 		
 	<div class="count1 doctypeteaser first last layout2spaltig_video_playlist manualteaser odd"><div class="videoteaser"><div class="active count1 doctypesendeplatz first layout2spaltig_video_neu manualteaser odd"><div class="playerdownload"><div class="videoplayer"><div class="manualteaserpicture player video jsb_ jsb_playerInitialize-video video_customClass" data-jsb='{"config":"/vorlagen/videoplayer/_jcr_content/properties/property_406262186.js.jsn","media":"/videos/index/_jcr_content/middleColumnList/teaserbox_3/teaserList/teasergroup/teaserList/automaticteaser.mediajsn.jsn/layout=middle/path=d0b69fda-adfd-43af-ad5b-a0f8f1343a05/cpp=7e4501fa-2edf-45aa-ab22-2d0af5c298d8/imageref=%21content%21dam%21rbb%21rad%21bilder0%21201902%21gold_synonyms_2_169.png.png%21quality%24160%21size%24460x259.png.jsn","analytics":{"rbbtitle":"Goldener Bär","rbbhandle":"/content/rbb/rad/av/tttoolimport/tttoolimport_20190113_GoldenerBar","ATIxtn2":"8","chapter":["Programm","Berlinale","Berlinale Nighttalk"],"isTrailer":false,"duration":457,"termids":["1.2.3.12.2","1.2.3.6.1","1.2.3.9.1","5.2.13.12.1"]}}'><img src="/content/dam/rbb/rad/bilder0/201902/gold_synonyms_2_169.png.png/quality=160/size=460x259.png" alt="Regisseur Nadav Lapid und Schauspieler Tom Mercier mit dem Goldenen Bären für den Film &quot;Synonyms&quot; © snapshot-photography/T.Seeliger" title="Regisseur Nadav Lapid und Schauspieler Tom Mercier mit dem Goldenen Bären für den Film &quot;Synonyms&quot; © snapshot-photography/T.Seeliger"/>
@@ -958,9 +1052,12 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
 		
 			
 		<div id="middleColumnList_teaserbox_1153345003" class="count10 doctypeteaser even last layoutblack teaserbox"><div class="boxhead"><h2 class="boxHeadline">radioeins - Die Party</h2>
-<ul class="boxlinklist">
+<!-- neu: move below section and rename to 'Alle Videos' -->
+<!-- <ul class="boxlinklist">
 <li class="manualteaserTitle"><a href="/musik/party/index.html" class="uebersicht" title="weitere Informationen">radioeins Die Party</a></li>
-</ul></div>
+</ul> -->
+<!-- /neu -->
+</div>
 	
 		
 	<section id="middleColumnList_teaserbox_1153345003_teaserList_teasergroup" class="count1 doctypeteaser first last layout1spaltig_buehne_slider manualteaser odd slides">
@@ -986,6 +1083,15 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
 
 </section>
 
+<!-- neu -->
+<ul class="boxlinklist">
+	<li class="manualteaserTitle">
+		<a href="/musik/party/index.html" class="uebersicht" title="weitere Informationen">
+			Alle Videos
+		</a>
+	</li>
+</ul>
+<!-- /neu -->
 
 <div class="killfloat"></div></div>
 	
@@ -1008,8 +1114,8 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
 	</div>
 	
 	
-	
-	<div class="killfloat"></div>
+	<!-- neu -->
+	<!-- <div class="killfloat"></div>
 	<div id="socialmediabuttons" class="socialmediabuttons">
 		<ul>
 		<li class="smItem">
@@ -1093,9 +1199,12 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
             </div>
         </li>
         </ul>
-</div>
+</div> -->
+<!-- /neu -->
 	<div id="footer" class="footer">
-
+		<!-- neu -->
+		<div class="footer-columns">
+		<!-- / neu -->
 
 
 	
@@ -1307,7 +1416,9 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
 <div class="killfloat"></div></div>
 	
 	
-
+	<!-- neu, schließt .footer-columns -->
+	</div>
+	<!-- /neu -->
 
 </div>
 </div><!-- /end containerMain -->
@@ -1315,8 +1426,8 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
 	
 
 
-
-	<script src="/vorlagen/slider/_jcr_content/properties/78986.js.js" type="text/javascript"></script>
+<!-- neu -->
+	<!-- <script src="/vorlagen/slider/_jcr_content/properties/78986.js.js" type="text/javascript"></script>
 
 	<script type="text/javascript">
 		var loginUrl = "https://mein.radioeins.de/login.do?action=loginStatus";
@@ -1330,7 +1441,8 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
 
 
 
-<script src="/vorlagen/layout/_jcr_content/properties/49431.js" type="text/javascript"></script>
+<script src="/vorlagen/layout/_jcr_content/properties/49431.js" type="text/javascript"></script> -->
+<!-- /neu -->
 
 <!-- Print -->
 

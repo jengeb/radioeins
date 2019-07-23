@@ -1,0 +1,199 @@
+.intermediate.teaserbox, .last.teaserbox {
+	.boxhead .boxHeadline {
+		font-size: 36px;
+		text-transform: uppercase;
+	}
+
+	.layout2spaltig_video_playlist {
+		display: grid;
+		grid-template-areas: 
+			'videoElem firstTeaser'
+			'videoElem secondTeaser'
+			'videoElem thirdTeaser'
+			'videoElem .';
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 3em;
+		padding-bottom: 3em;
+
+		.caption {
+			text-align: left;
+			margin: 1.2em 0 0.5em;
+	
+			.manualteaserTitle {
+				display: inline;
+			}
+	
+			.manualteaserSubTitle {
+				margin-left: 4px;
+				font-size: 1.5em;
+				display: inline;
+			}
+		}
+
+		.videoteaser {
+			// address first video element
+			> div:first-child {
+				grid-area: videoElem;
+			}
+
+			// hide other video elements
+			> div:not(:first-child) {
+				display: none;
+			}
+
+			.caption {
+				text-align: left;
+			}
+		}
+
+		.selectteaser {
+			> div {
+				display: grid;
+				grid-template-areas: 
+					'teaserPic teaserRoofLine'
+					'teaserPic teaserBeitrag'
+					'teaserPic .';
+				grid-template-columns: 1fr 2fr;
+				grid-column-gap: 1em;
+				
+				.manualteaserPicture {
+					grid-area: teaserPic;
+				}
+
+				.manualteaserRoofLine {
+					grid-area: teaserRoofLine;
+				}
+
+				.manualteaserTitle {
+					grid-area: teaserBeitrag
+				}
+			}
+			
+			> div:first-child {
+				grid-area: firstTeaser;
+				margin-bottom: 1em;
+			}
+
+			> div:nth-child(2) {
+				grid-area: secondTeaser;
+				margin-bottom: 1em;
+			}
+
+			> div:nth-child(3) {
+				grid-area: thirdTeaser;
+			}
+
+			// only show first three elements
+			> div:nth-child(n+4) {
+				display: none;
+			}
+
+			.manualteaserRoofLine {
+				color: $orange;
+				font-size: 14px;
+				font-weight: normal;
+				margin: 0;
+			}
+
+			.manualteaserTitle {
+				font-size: 18px;
+				margin: 0;
+			}
+		}
+	}
+}
+
+.playerfoot {
+	display: none;
+}
+
+.layout3spaltig_buehne_slider {
+	.layout3spaltig_buehne {
+		display: grid;
+		grid-template: 
+			'tipiRoofline' 25px
+			'tipiPlayer'
+			'tipiTitle';
+		grid-row-gap: 0.5em;
+
+		.manualteaserRoofLine {
+			grid-area: tipiRoofline;
+
+			color: $orange;
+			font-size: 14px;
+			font-weight: normal;
+			margin: 0;
+
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+
+		.manualteaserTitle {
+			grid-area: tipiTitle;
+
+			margin-block-end: 0;
+			margin-block-start: 0.3em;
+			line-height: 1.3em;
+
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+
+		.manualteaserSubTitle {
+			display: none;
+		}
+
+		.playerdownload {
+			grid-area: tipiPlayer;
+		}
+	}
+
+}
+
+.teaserbox.layoutstandard {
+	.manualteaserTitle {
+		text-align: left;
+	}
+
+	.boxlinklist {
+		padding-inline-start: 0;
+		padding-bottom: 4em;
+
+		margin-block-start: 0em;
+    margin-block-end: 0em;
+
+		// button
+		.manualteaserTitle {
+			color: $darkgray;
+			background-color: white;
+			list-style: none;
+			border: 2px solid $darkgray;
+			border-color: rgba(0, 0, 0, 0.35); // set opacity
+			color: rgba(0, 0, 0, 0.35); // set opacity
+			border-radius: 4px;
+			height: 40px;
+			width: 152px;
+			text-transform: uppercase;
+			font-weight: bold;
+
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			text-align: center;
+			margin: auto;
+		}
+	}
+}
+
+.containerCenter {
+	.teaserbox.layoutblack.doctypeteaser {
+		background-color: $darkgray;
+		color: white;
+
+		> * {
+			max-width: column-width(6);
+			position: relative;
+			margin: 0 auto;
+		}
+	}
+}

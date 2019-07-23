@@ -155,7 +155,7 @@
 	<script type="text/javascript">
 
 		$(document).ready(function() {
-			$('.layout1spaltig_buehne_slider').slick({
+			$('.layoutblack .layout1spaltig_buehne_slider').slick({
 				dots: true,
 				dotsClass: "slick-custom-dots-light",
 				infinite: true,
@@ -1294,10 +1294,9 @@
 
 
 
-			<!-- neu: CSS class (teaserbox_videos) to distinguish between music and video elements -->
-			<!-- renaming: 1) (boxHeadline) Videos => Video Highlights -->
+			<!-- neu: renaming: 1) (boxHeadline) Videos => Video Highlights -->
 			<!-- 2) (manualteaserTitle) Mehr Videos => Alle Videos -->
-			<div id="middleColumnList_teaserbox_0" class="count5 doctypeteaser intermediate layoutblack odd teaserbox teaserbox_videos">
+			<div id="middleColumnList_teaserbox_0" class="count5 doctypeteaser intermediate odd teaserbox layoutblack">
 				<div class="boxhead">
 					<h2 class="boxHeadline">Video Highlights</h2>
 					<!-- neu: move under video -->
@@ -1456,10 +1455,12 @@
 
 				</section>
 
+				<!-- neu -->
 				<ul class="boxlinklist">
 					<li class="manualteaserTitle"><a href="/videos/index.html" class="uebersicht"
 						title="weitere Informationen">Alle Videos</a></li>
 				</ul>
+				<!-- /neu -->
 
 				<div class="killfloat"></div>
 			</div>
@@ -1611,8 +1612,9 @@
 
 			<!-- neu: CSS class (teaserbox_music) to distinguish between music and video elements -->
 			<!-- neu: CSS class (teaserbox_music_container) -->
+			<!-- neu: remove .layoutblack class -->
 		<div class="teaserbox_music_container">
-			<div id="middleColumnList_teaserbox_1" class="count7 doctypeteaser intermediate layoutblack odd teaserbox teaserbox_music">
+			<div id="middleColumnList_teaserbox_1" class="count7 doctypeteaser intermediate odd teaserbox teaserbox_music">
 				<div class="boxhead">
 					<h2 class="boxHeadline">Musik</h2>
 					<!-- neu -->

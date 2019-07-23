@@ -6,6 +6,7 @@
 	margin: 0;
 	padding: 1rem 0;
 	list-style-type: none;
+	margin-top: 2em;
 
 		li {
 			margin: 0 10px;
@@ -36,7 +37,7 @@
 	margin: 0;
 	padding: 1rem 0;
 	list-style-type: none;
-	margin-top: 3em;
+	margin-top: 2em;
 
 	li {
 		margin: 0 10px;
@@ -61,7 +62,7 @@
 	}
 }
 
-.teaserbox_videos {
+.layoutblack .layout1spaltig_buehne_slider {
 	.slick-prev:before {
 		content: url('../assets/desktop/slider-arrow-bwd.svg');
 	}
@@ -75,13 +76,11 @@
 	}
 	
 	.slick-prev {
-		// viewport width minus picture size divided by 2 
-		// then: align to the picture (2/3 margin to the left side) 
-		left: calc((100vw - 920px) / 2 * 2/3);
+		left: -75px;
 	}
 	
 	.slick-next {
-		right: calc((100vw - 920px) / 2 * 2/3);
+		right: -75px;
 	}
 	
 	.slick-prev, .slick-next {
@@ -92,22 +91,13 @@
 }
 
 // "Der Tag auf Radioeins"
-.layoutbuehne_1_1_white {
-
+.layoutbuehne_1_1_white, .teaserbox_videopage .layout1spaltig_buehne_slider {
 	.slick-prev {
     left: 0;
 	}
 
 	.slick-next {
   	right: 19px; // equals the width of the arrow element
-	}
-
-	.slick-prev, .slick-next {
-		top: 10.5%;
-	}
-
-	.slick-prev:before, .slick-next:before {
-		color: black;
 	}
 
 	.slick-prev:before {
@@ -119,8 +109,31 @@
 	}
 }
 
+.layoutbuehne_1_1_white {
+	.slick-prev, .slick-next {
+		top: 10.5%;
+	}
+}
+
+.teaserbox_videopage .layout1spaltig_buehne_slider {
+	.slick-prev, .slick-next {
+		top: 33%;
+	}
+}
+
+// see: https://github.com/kenwheeler/slick/issues/582#issuecomment-61882540
+// to add space between slides
+/* the slides */
+.slick-slide {
+	margin: 0 20px !important;
+}
+/* the parent */
+.slick-list {
+	margin: 0 -20px !important;
+}
+
 @media only screen and (max-width: 1024px) {
-	.teaserbox_videos {
+	.layoutblack .layout1spaltig_buehne_slider {
 		.slick-prev {
 			left: 1%;
 		}
@@ -129,10 +142,20 @@
 			right: 1%;
 		}
 	}
+
+	// see: https://github.com/kenwheeler/slick/issues/582#issuecomment-61882540
+	// to add space between slides
+	/* the slides */
+	.slick-slide {
+		margin: unset !important;
+	}
+	/* the parent */
+	.slick-list {
+		margin: unset !important;
+	}
 }
 
 @media only screen and (max-width: 400px) {
-
 	.slick-custom-dots-light {
 		display: flex;
 		justify-content: center;
@@ -163,14 +186,12 @@
 		}
 	}
 
-
 	.slick-custom-dots-dark {
 		display: flex;
 		justify-content: center;
 		margin: 0;
 		padding: 1rem 0;
 		list-style-type: none;
-		margin-top: 3em;
 	
 		li {
 			margin: 0 8px;
@@ -196,9 +217,9 @@
 	}
 
 
-	.teaserbox_videos {
+	.layoutblack .layout1spaltig_buehne_slider {
 		.slick-prev, .slick-next {
-			top: calc(50% - 150px);
+			top: calc(50% - 120px);
 		}
 
 		.slick-prev {
@@ -208,6 +229,16 @@
 		.slick-next {
 			right: 5%;
 		}
+	}
 
+	// see: https://github.com/kenwheeler/slick/issues/582#issuecomment-61882540
+	// to add space between slides
+	/* the slides */
+	.slick-slide {
+		margin: unset !important;
+	}
+	/* the parent */
+	.slick-list {
+		margin: unset !important;
 	}
 }
