@@ -53,8 +53,6 @@
 
 .containerMain {
   .doctypeteaser.intermediate {
-    padding: 48px 0 96px;
-
     .boxhead .boxHeadline {
       @include interstate-condensed();
       width: column-width(6);

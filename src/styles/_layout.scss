@@ -426,3 +426,25 @@ img {
 	}
 }
 
+// full-width content separators reappearing on every page
+.layoutbuehne_1_1_white {
+	// Bspw: Der Tag auf radioeins
+	background-color: #fff;
+}
+
+.layoutbuehne_1_1_gray {
+	background-color: $lightgray;
+}
+
+.layoutbuehne_1_1_black {
+	// Bspw: "Weitere radioeins Inhalte" auf der Podcastseite
+	background-color: $darkgray;
+	color: $lightgray;
+}
+
+.layoutbuehne_1_1_white,
+.layoutbuehne_1_1_black,
+.layoutbuehne_1_1_gray,
+.layoutbuehne_1_1 {
+	padding: 48px 0 96px;
+}
