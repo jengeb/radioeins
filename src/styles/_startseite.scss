@@ -26,10 +26,6 @@ body {
 	width: 100%;
 }
 
-.pictsrc {
-	display: none;
-}
-
 .layoutgrey_wetter_short {
 	display: none;
 }
@@ -40,15 +36,104 @@ body {
 
 .layouttopteaser_textbild {
 	position: relative;
+	min-height: 360px;
+	background: $darkgray;
 
-	.manualteaserPicture:first-of-type img {
-		max-height: 360px;
-		object-fit: cover;
+	.manualteaserPicture {
+		img {
+			// TODO: See if the pictures' resolution is high enough
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(270deg, change-color($darkgray, $alpha: 0.8), transparent);
+			z-index: 2
+		}
+
+		// FIXME: Remove everything below once we changed the image; this is just so it looks more
+		// like the preview
+		overflow: hidden;
+		img {
+			transform: scale(1.2) translateX(-20px);
+		}
 	}
-}
 
-.layouttopteaser_textbild > .boxhead {
-	display: none;
+	.pictsrc {
+		position: absolute;
+		font-size: 70%;
+		bottom: 1em;
+		right: 1em;
+		color: #fff;
+		text-shadow: 0 0 2px rgba(0,0,0,.5);
+	}
+
+	.textlayer {
+		// this box should end to the right as if it has 920px (6 columns),
+		// but has space for only 4 columns of text
+		color: #fff;
+		position: absolute;
+		z-index: 3;
+		width: column-width(3);
+		left: 50%;
+		top: 50%;
+		transform: translateX(column-width(6) / 2 - column-width(3)) translateY(-50%);
+
+		font-size: 32px;
+		line-height: 40px;
+
+		h2, a, p {
+			font-size: inherit;
+			line-height: inherit;
+			display: inline;
+			margin: 0;
+		}
+
+		h2 {
+			@include interstate-condensed();
+		}
+
+		p {
+			@include interstate-light();
+		}
+
+		.mehrlink {
+			display: block; // forces line break
+			// hide previous text
+			font-size: 0;
+			width: 20px;
+			color: transparent;
+			white-space: nowrap;
+
+			&::before {
+				// Add 'Zum Beitrag' button
+				@include interstate-condensed();
+				content: 'Mehr'; // NOTE: The text is different in the invision preview but this is a compromise
+				background: $orange;
+				text-transform: uppercase;
+				display: inline-block;
+				line-height: 40px;
+				height: 40px;
+				font-size: 20px;
+				padding: 0 24px;
+				color: white;
+				border-radius: 2px;
+				margin-top: 24px;
+			}
+		}
+	}
+
+	.boxhead {
+		display: none;
+	}
 }
 
 
@@ -130,15 +215,16 @@ body {
 	}
 }
 
-// Der Tag auf radioeins
-.layoutbuehne_1_1_white {
+// Sliders
+
+.layoutbuehne_1_1_white,
+.layoutbuehne_1_1_black {
 	.moderatorenSlider > div {
 		width: 90%;
 		position: relative;
 		margin: 0 auto;
 	}
 
-	background-color: $lightgray;
 
 	// TODO move into mixin? resp. into layout file
 	padding-top: 1.5em;
@@ -176,10 +262,11 @@ body {
 	}
 }
 
-.layoutblack {
-	padding-top: 1.5em;
-	padding-bottom: 3em;
-}
+// TODO: Do we need this?
+// .layoutblack {
+// 	padding-top: 1.5em;
+// 	padding-bottom: 3em;
+// }
 
 .layout1spaltig_buehne_videoplayer, .layout1spaltig_buehne_slider {
 	img {

@@ -1,0 +1,148 @@
+.layouttopteaser_texticon {
+  background: $darkgray;
+
+  > .layouttopteaser_texticon {
+    display: grid;
+    position: relative;
+    grid-template:
+      'icon description' auto
+      / 138px auto;
+    grid-column-gap: $col-gap * 1.5;
+    width: column-width(6);
+    margin: 0 auto;
+    padding: 72px 0;
+  }
+
+  .manualteaserIcon {
+    width: 138px;
+    height: 138px;
+  }
+
+  .textlayer {
+    // this box should end to the right as if it has 920px (6 columns),
+    // but has space for only 4 columns of text
+    color: #fff;
+
+    font-size: 32px;
+    line-height: 40px;
+
+    h2, a, p {
+      font-size: inherit;
+      line-height: inherit;
+      display: inline;
+      margin: 0;
+    }
+
+    h2 {
+      @include interstate-bold();
+
+      &:after {
+        content: ':'
+      }
+    }
+
+    p {
+      @include interstate-light();
+    }
+  }
+
+  .boxhead {
+    display: none;
+  }
+}
+
+.containerMain {
+  .doctypeteaser.intermediate {
+    .boxhead .boxHeadline {
+      @include interstate-condensed();
+      width: column-width(6);
+      position: relative;
+      margin: 0 auto 36px;
+      text-transform: uppercase;
+      font-size: 36px;
+      line-height: 40px;
+    }
+  }
+}
+
+.doctypeteasermiddlegray {
+  background: $lightgray;
+}
+
+h2.manualteaserTitle {
+  @include interstate-bold();
+  margin: 12px 0;
+  font-size: 20px;
+
+  .manualteaserSubTitle {
+    @include interstate-light();
+  }
+}
+
+.columns {
+  display: flex;
+  width: column-width(6);
+  position: relative;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .layout3spaltig {
+    width: (column-width(6) - 2 * $col-gap) / 3;
+    display: grid;
+    grid-template:
+      'roofline'
+      'image'
+      'title'
+      'description';
+  }
+
+  .layout4spaltig_4_3 {
+    width: (column-width(6) - 3 * $col-gap) / 4;
+    display: grid;
+    grid-template:
+      'roofline'
+      'image'
+      'title'
+      'publicationDate';
+
+    .publicationDate {
+      grid-area: publicationDate;
+      color: #a3a3a3;
+    }
+  }
+
+  .manualteaserContent {
+    margin: 0 0 12px;
+  }
+
+  .manualteaserShortText {
+    margin: 0;
+  }
+
+  .layout3spaltig,
+  .layout4spaltig_4_3 {
+    .manualteaserRoofLine {
+      grid-area: roofline;
+      color: $orange;
+      margin: 0 0 6px;
+      font-size: inherit;
+    }
+
+    .imgIconWrap {
+      grid-area: image;
+      position: relative;
+
+      .pictsrc {
+        position: absolute;
+        font-size: 60%;
+        color: #fff;
+        text-shadow: 0 0 1px rgba(0,0,0,.2);
+        bottom: 1em;
+        right: 1em;
+      }
+    }
+
+  }
+}
+
