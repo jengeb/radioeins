@@ -267,6 +267,10 @@ img {
 	visibility: hidden;
 }
 
+.intermediate.teaserbox .boxhead .boxHeadline {
+	@include interstate-condensed();
+}
+
 .footer {
 	background-color: $gray;
 	color: white;
@@ -421,3 +425,4 @@ img {
 		}
 	}
 }
+
