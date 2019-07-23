@@ -71,6 +71,16 @@
   background: $lightgray;
 }
 
+h2.manualteaserTitle {
+  @include interstate-bold();
+  margin: 12px 0;
+  font-size: 20px;
+
+  .manualteaserSubTitle {
+    @include interstate-light();
+  }
+}
+
 .columns {
   display: flex;
   width: column-width(6);
@@ -78,6 +88,16 @@
   margin: 0 auto;
   justify-content: space-between;
   align-items: flex-start;
+
+  .layout3spaltig {
+    width: (column-width(6) - 2 * $col-gap) / 3;
+    display: grid;
+    grid-template:
+      'roofline'
+      'image'
+      'title'
+      'description';
+  }
 
   .layout4spaltig_4_3 {
     width: (column-width(6) - 3 * $col-gap) / 4;
@@ -88,21 +108,27 @@
       'title'
       'publicationDate';
 
+    .publicationDate {
+      grid-area: publicationDate;
+      color: #a3a3a3;
+    }
+  }
+
+  .manualteaserContent {
+    margin: 0 0 12px;
+  }
+
+  .manualteaserShortText {
+    margin: 0;
+  }
+
+  .layout3spaltig,
+  .layout4spaltig_4_3 {
     .manualteaserRoofLine {
       grid-area: roofline;
       color: $orange;
       margin: 0 0 6px;
       font-size: inherit;
-    }
-
-    .manualteaserTitle {
-      @include interstate-bold();
-      margin: 12px 0;
-      font-size: 20px;
-
-      .subtitle {
-        @include interstate-light();
-      }
     }
 
     .imgIconWrap {
@@ -119,9 +145,5 @@
       }
     }
 
-    .publicationDate {
-      grid-area: publicationDate;
-      color: #a3a3a3;
-    }
   }
 }
