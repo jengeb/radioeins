@@ -17,28 +17,6 @@ body {
 	display: none;
 }
 
-// TODO: check if transferable to all boxHeadlines; if yes: move to _layout.scss
-.boxHeadline {
-	@include interstate-light();
-}
-
-.manualteaserPicture {
-	position: relative;
-
-	.pictsrc {
-		position: absolute;
-		font-size: 60%;
-		color: #fff;
-		text-shadow: 0 0 1px rgba(0,0,0,.2);
-		bottom: 1em;
-		right: 1em;
-	}
-}
-
-.manualteaserPicture > img {
-	width: 100%;
-}
-
 .medienIcon {
 	display: none;
 }

@@ -86,6 +86,29 @@ img {
 	height: auto;
 }
 
+.boxHeadline {
+	@include interstate-light();
+}
+
+.manualteaserPicture {
+	position: relative;
+
+	.pictsrc {
+		// picture sources
+		position: absolute;
+		font-size: 60%;
+		color: #fff;
+		text-shadow: 0 0 1px rgba(0,0,0,.2);
+		bottom: 1em;
+		right: 1em;
+	}
+
+	& > img {
+		width: 100%;
+	}
+}
+
+
 // rbb navigation, header and top navigation
 .header {
 	background-color: $lightgray;
