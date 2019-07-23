@@ -121,6 +121,17 @@
 	}
 }
 
+// see: https://github.com/kenwheeler/slick/issues/582#issuecomment-61882540
+// to add space between slides
+/* the slides */
+.slick-slide {
+	margin: 0 20px !important;
+}
+/* the parent */
+.slick-list {
+	margin: 0 -20px !important;
+}
+
 @media only screen and (max-width: 1024px) {
 	.layoutblack .layout1spaltig_buehne_slider {
 		.slick-prev {
@@ -130,6 +141,17 @@
 		.slick-next {
 			right: 1%;
 		}
+	}
+
+	// see: https://github.com/kenwheeler/slick/issues/582#issuecomment-61882540
+	// to add space between slides
+	/* the slides */
+	.slick-slide {
+		margin: unset !important;
+	}
+	/* the parent */
+	.slick-list {
+		margin: unset !important;
 	}
 }
 
@@ -163,7 +185,6 @@
 			text-indent: -9999px;
 		}
 	}
-
 
 	.slick-custom-dots-dark {
 		display: flex;
@@ -208,6 +229,16 @@
 		.slick-next {
 			right: 5%;
 		}
+	}
 
+	// see: https://github.com/kenwheeler/slick/issues/582#issuecomment-61882540
+	// to add space between slides
+	/* the slides */
+	.slick-slide {
+		margin: unset !important;
+	}
+	/* the parent */
+	.slick-list {
+		margin: unset !important;
 	}
 }
