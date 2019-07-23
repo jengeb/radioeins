@@ -224,9 +224,8 @@ Alle radioeins podcasts | radioeins</title>
 
   <script>
     $(document).ready(function () {
-      $('.moderatorenSlider').slick({
+      var sliderConfig = {
 				dots: true,
-				dotsClass: "slick-custom-dots-dark",
 				infinite: true,
 				slidesToShow: 7,
 				responsive: [{
@@ -242,7 +241,15 @@ Alle radioeins podcasts | radioeins</title>
 						arrows: false
           }
         }]
-			})
+      } 
+
+      $('.layoutbuehne_1_1_white .moderatorenSlider').slick(Object.assign({}, sliderConfig, {
+				dotsClass: "slick-custom-dots-dark"
+      }))
+
+      $('.layoutbuehne_1_1_black .moderatorenSlider').slick(Object.assign({}, sliderConfig, {
+				dotsClass: "slick-custom-dots-light"
+      }))
     })
   </script>
 </head>
@@ -725,9 +732,12 @@ Alle radioeins podcasts | radioeins</title>
 	
 	
 		
-			
-		<div id="middleColumnList_teaserbox_1425665185" class="count6 doctypeteaser even intermediate teaserbox"><div class="boxhead"><h2 class="boxHeadline">Ganze Sendungen</h2>
+      
+<!-- neu: .layoutbuehne_1_1_white hinzugefügt als Klasse -->
+    <div id="middleColumnList_teaserbox_1425665185" class="layoutbuehne_1_1_white count6 doctypeteaser even intermediate teaserbox"><div class="boxhead"><h2 class="boxHeadline">Ganze Sendungen</h2>
+<!-- /neu -->
 </div><div class="moderatorenSlider">
+  <!-- TODO: Change preview pictures -->
 	<div id="middleColumnList_teaserbox_1425665185_teaserList_manualteaser" class="count1 doctypeuebersicht first layout6spaltig_weisse_buehne manualteaser odd"><div class="imgIconWrap"><div class="manualteaserPicture"><a href="/archiv/podcast/der_schoene_morgen.html" class="uebersicht" title="weitere Informationen"><img src="/content/dam/rbb/rad/image_bilder/podcast/podcast_der_schoene_morgen_1_1.png.png/quality=200/size=140x140.png" alt="Podcast - Der schöne Morgen" title="Podcast - Der schöne Morgen" id="middleColumnList_teaserbox_1425665185_teaserList_manualteaser_101374031"/></a><div class="pictsrc">radioeins</div></div>
 <div class="medienCounter"></div></div><h2 class="manualteaserTitle"><a href="/archiv/podcast/der_schoene_morgen.html" class="uebersicht" title="weitere Informationen">Der schöne Morgen</a></h2>
 </div>

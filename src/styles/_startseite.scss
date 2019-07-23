@@ -215,15 +215,26 @@ body {
 	}
 }
 
-// Der Tag auf radioeins
+// Sliders
 .layoutbuehne_1_1_white {
+	// Bspw: Der Tag auf radioeins
+	background-color: #fff;
+}
+
+.layoutbuehne_1_1_black {
+	// Bspw: "Weitere radioeins Inhalte" auf der Podcastseite
+	background-color: $darkgray;
+	color: $lightgray;
+}
+
+.layoutbuehne_1_1_white,
+.layoutbuehne_1_1_black {
 	.moderatorenSlider > div {
 		width: 90%;
 		position: relative;
 		margin: 0 auto;
 	}
 
-	background-color: $lightgray;
 
 	// TODO move into mixin? resp. into layout file
 	padding-top: 1.5em;

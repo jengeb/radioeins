@@ -62,7 +62,8 @@
 	}
 }
 
-.layoutblack .layout1spaltig_buehne_slider {
+.layoutblack .layout1spaltig_buehne_slider,
+.layoutbuehne_1_1_black .moderatorenSlider {
 	.slick-prev:before {
 		content: url('../assets/desktop/slider-arrow-bwd.svg');
 	}
