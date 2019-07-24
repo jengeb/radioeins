@@ -882,8 +882,9 @@
 
 
 
-
-			<div id="middleColumnList_92624" class="count3 doctypeteaser intermediate layoutgrey_wetter_short odd teaserbox">
+			<!-- neu: #middlecolumnlist_92624 entfernen  -->
+			<!--
+			<div id="middlecolumnlist_92624" class="count3 doctypeteaser intermediate layoutgrey_wetter_short odd teaserbox">
 				<div class="boxhead">
 					<h2 class="boxHeadline">Aktuell</h2>
 					<div class="wetterteaser">
@@ -1017,7 +1018,7 @@
 
 
 				<div class="killfloat"></div>
-			</div>
+			</div> -->
 
 
 
@@ -1474,11 +1475,14 @@
 
 
 
-			<!-- neu: CSS class (teaserbox_highlights) to distinguish between music and video elements -->
-			<div id="middleColumnList_teaserbox_2" class="count6 doctypeteaser even intermediate layoutstandard teaserbox teaserbox_highlights">
+			<div id="middleColumnList_teaserbox_2" class="count6 doctypeteaser even intermediate layoutstandard teaserbox">
 				<div class="boxhead">
 					<h2 class="boxHeadline">Highlights im Programm</h2>
 				</div>
+
+				<!-- neu: div einfügen -->
+				<div class="grid_2_3">
+				<!-- /neu -->
 
 				<!-- neu: new class name 'layout2erReihe' -->
 				<div id="middleColumnList_teaserbox_2_teaserList_manualteaser_661859410"
@@ -1596,7 +1600,10 @@
 						<div class="medienCounter"></div>
 					</div>
 				</div>
-
+				
+				<!-- neu: schließt neues div.grid_2_3 -->
+				</div>
+				<!-- / neu -->
 
 				<div class="killfloat"></div>
 			</div>
@@ -1612,9 +1619,8 @@
 
 			<!-- neu: CSS class (teaserbox_music) to distinguish between music and video elements -->
 			<!-- neu: CSS class (teaserbox_music_container) -->
-			<!-- neu: remove .layoutblack class -->
-		<div class="teaserbox_music_container">
 			<div id="middleColumnList_teaserbox_1" class="count7 doctypeteaser intermediate odd teaserbox teaserbox_music">
+
 				<div class="boxhead">
 					<h2 class="boxHeadline">Musik</h2>
 					<!-- neu -->
@@ -1625,6 +1631,8 @@
 					</ul> -->
 					<!-- /neu -->
 				</div>
+			<!-- neu: remove .layoutblack class and move container *into* #middleColumnList_teaserbox_1 -->
+		<div class="teaserbox_music_container columns">
 				<div id="middleColumnList_teaserbox_1_teaserList_calendarlogic"
 					class="count1 doctypesendeplatz first layout4spaltig_4_3 manualteaser odd">
 					<h3 class="manualteaserRoofLine">Interview</h3>
@@ -1717,9 +1725,11 @@
 						<div class="medienCounter"></div>
 					</div>
 				</div>
+
+
+
 				<div class="killfloat"></div>
 			</div>
-
 			<!-- neu: von oben hierhin verschieben -->
 			<ul class="boxlinklist">
 				<!-- neu: aus "Mehr Musikthemen" wird "Mehr Musik" -->
@@ -1727,6 +1737,7 @@
 					title="weitere Informationen">Mehr Musik</a></li>
 			</ul>
 			<!-- /neu -->
+
 		</div>
 
 		<!-- neu -->

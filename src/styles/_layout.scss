@@ -86,6 +86,29 @@ img {
 	height: auto;
 }
 
+.boxHeadline {
+	@include interstate-light();
+}
+
+.manualteaserPicture {
+	position: relative;
+
+	.pictsrc {
+		// picture sources
+		position: absolute;
+		font-size: 60%;
+		color: #fff;
+		text-shadow: 0 0 1px rgba(0,0,0,.2);
+		bottom: 1em;
+		right: 1em;
+	}
+
+	& > img {
+		width: 100%;
+	}
+}
+
+
 // rbb navigation, header and top navigation
 .header {
 	background-color: $lightgray;
@@ -253,12 +276,18 @@ img {
 }
 
 // main section grid
-.containerContent,
-.doctypesendeplatz.intermediate,
-.doctypeteaser.layoutstandard.intermediate {
-	max-width: column-width(6);
-	position: relative;
-	margin: 0 auto;
+.containerMain,
+.containerCenter {
+	// I'm sorry but this is not my fault
+	> .containerContent,
+	> .doctypesendeplatz.intermediate,
+	> .doctypeteaser.layoutstandard.intermediate {
+		> div {
+			max-width: column-width(6);
+			position: relative;
+			margin: 0 auto;
+		}
+	}
 }
 
 // suppresses rbb nav style
@@ -285,7 +314,9 @@ img {
 
 		.doctypeteaser.layoutstandard.teaserbox {
 			// reset width of each column
-			width: auto
+			width: auto;
+			background: $gray;
+			padding: 0;
 		}
 	}
 
@@ -427,24 +458,20 @@ img {
 }
 
 // full-width content separators reappearing on every page
-.layoutbuehne_1_1_white {
-	// Bspw: Der Tag auf radioeins
-	background-color: #fff;
-}
-
-.layoutbuehne_1_1_gray {
-	background-color: $lightgray;
-}
-
-.layoutbuehne_1_1_black {
-	// Bspw: "Weitere radioeins Inhalte" auf der Podcastseite
-	background-color: $darkgray;
-	color: $lightgray;
-}
-
-.layoutbuehne_1_1_white,
-.layoutbuehne_1_1_black,
-.layoutbuehne_1_1_gray,
-.layoutbuehne_1_1 {
+.doctypeteaser.intermediate.teaserbox {
 	padding: 48px 0 96px;
+
+	&:nth-of-type(odd) {
+		background-color: $lightgray;
+	}
+
+	&:nth-of-type(even) {
+		background-color: #fff;
+	}
+
+	&.layoutblack {
+		// Bspw: "Weitere radioeins Inhalte" auf der Podcastseite
+		background-color: $darkgray;
+		color: $lightgray;
+	}
 }
