@@ -175,23 +175,25 @@ img {
 			font-size: 32px;
 			margin-top: -7px;
 
-			&.selected {
+			&:hover,
+			&.selected,
+			&.flyout-visible {
 				position: relative;
 				color: $orange;
+			}
 
+			&.selected::after {
 				// draw the white arrow head
-				&::after {
-					position: absolute;
-					content: '';
-					display: block;
-					width: 20px;
-					height: 20px;
-					background: white;
-					margin-left: 50%;
-					margin-top: 5px;
-					transform: translateX(-50%) rotate(45deg);
-					z-index: 10;
-				}
+				position: absolute;
+				content: '';
+				display: block;
+				width: 20px;
+				height: 20px;
+				background: white;
+				margin-left: 50%;
+				margin-top: 5px;
+				transform: translateX(-50%) rotate(45deg);
+				z-index: 10;
 			}
 
 			// the last two links are special links; you could also address them with the
