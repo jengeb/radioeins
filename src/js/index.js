@@ -1,0 +1,1 @@
+console.log(`hello world, I\'m logging this from transpiled JS! 2 ** 2 = ${2 ** 2}`)

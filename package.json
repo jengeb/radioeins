@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
+  "browserslist": "> 5%, last 2 versions",
   "scripts": {
     "start": "run-p watch server",
     "server": "webpack-dev-server --mode development --progress --colors --hot --inline --open",
@@ -39,6 +40,9 @@
     "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
     "normalize.css": "^8.0.1",
     "slick-carousel": "^1.8.1"
   }
