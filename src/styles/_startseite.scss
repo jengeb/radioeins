@@ -17,19 +17,6 @@ body {
 	display: none;
 }
 
-// TODO: check if transferable to all boxHeadlines; if yes: move to _layout.scss
-.boxHeadline {
-	@include interstate-light();
-}
-
-.manualteaserPicture > img {
-	width: 100%;
-}
-
-.layoutgrey_wetter_short {
-	display: none;
-}
-
 .medienIcon {
 	display: none;
 }
@@ -327,89 +314,51 @@ body {
 
 
 .teaserbox_music_container {
-	background-color: $lightgray;
-	width: 100%;
-  position: relative;
+	position: relative;
+	
+	.manualteaserRoofLine {
+		font-size: 14px;
+		font-weight: 300;
+		margin-bottom: 12px;
+	}
 
-	padding-top: 1.5em;
-	padding-bottom: 3em;
+	.boxhead {
+		flex: 0 0 100%;
 
-	.teaserbox_music {
-		max-width: column-width(6);
-		position: relative;
-		margin: 0 auto;
-
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
-
-		> div {
-			display: flex;
-			flex-direction: column;
-			margin: unset;
-			width: 23%;
-
-			> .manualteaserTitle, .manualteaserSubTitle {
-				order: 2;
-			}
-
-			h2.manualteaserTitle {
-				margin-block-end: 0;
-				margin-block-start: 0;
-			}
-
-			h3.manualteaserSubTitle {
-				margin-block-start: 0;
-			}
-
-		}
-
-		.boxhead {
-			flex: 0 0 100%;
-
-			h2 {
-				margin-block-end: 0;
-			}
-		}
-
-		.boxHeadline {
-			font-size: 36px;
-			text-transform: uppercase;
-		}
-
-		.manualteaserTitle {
-			font-size: 18px;
-		}
-
-		.manualteaserSubTitle {
-			font-size: 18px;
-			font-weight: lighter;
-		}
-
-		.manualteaserRoofLine {
-			color: $orange;
-			font-size: 14px;
-			font-weight: lighter;
-			margin-block-end: 0.4em;
-		}
-
-		.iconContainer {
-			.timeicon {
-				font-size: 14px;
-				color: #72716e;
-
-				span + span {
-					margin-left: 5px;
-				}
-			}
-			.rubrikenicon {
-				display: none;
-			}
+		h2 {
+			margin-block-end: 0;
 		}
 	}
 
-	.boxlinklist {
+	.boxHeadline {
+		font-size: 36px;
+		text-transform: uppercase;
+	}
+
+	.iconContainer {
+		.timeicon {
+			font-size: 14px;
+			color: #72716e;
+
+			span + span {
+				margin-left: 5px;
+			}
+		}
+		.rubrikenicon {
+			display: none;
+		}
+	}
+
+	h2.manualteaserTitle {
+		margin-bottom: 6px;
+
+		& + .manualteaserSubTitle {
+			margin-top: 0
+		}
+	}
+
+
+	& + .boxlinklist {
 		padding-inline-start: 0;
 
 		// button
@@ -432,12 +381,10 @@ body {
 	}
 }
 
-.teaserbox_highlights {
+.grid_2_3 {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	padding-top: 1.5em;
-	padding-bottom: 3em;
 
 	.boxhead {
 		flex: 0 0 100%;
@@ -470,7 +417,6 @@ body {
 	}
 
 	.layout2erReihe {
-		margin-bottom: 1em;
 		width: 48%;
 
 		display: flex;

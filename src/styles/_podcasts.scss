@@ -132,15 +132,6 @@ h2.manualteaserTitle {
     .imgIconWrap {
       grid-area: image;
       position: relative;
-
-      .pictsrc {
-        position: absolute;
-        font-size: 60%;
-        color: #fff;
-        text-shadow: 0 0 1px rgba(0,0,0,.2);
-        bottom: 1em;
-        right: 1em;
-      }
     }
 
   }
