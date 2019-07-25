@@ -137,6 +137,24 @@ h2.manualteaserTitle {
   }
 }
 
+.layouttext_info {
+  width: column-width-extended(4);
+  position: relative;
+  margin: 0 auto;
+
+  .manualteaserTitle,
+  .manualteaserShortText {
+    display: inline;
+    margin: 0;
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
+.manualteaserActionButton {
+  margin-top: 40px;
+}
+
 // single podcast site as appearing for "Hörbar Rust"
 .containerCenter {
   .doctypeaudio.layoutarchiv {
@@ -185,3 +203,25 @@ h2.manualteaserTitle {
     }
   }
 }
+
+// TODO: audio player
+// .playerdownload {
+//   .player.audio {
+//     background: $darkgray;
+//     border-radius: 2px;
+//     position: relative;
+//     height: 60px;
+//     color: #fff;
+
+//     &:before {
+//       content: '?';
+//       display: block;
+//       position: absolute;
+//       height: 60px;
+//       width: 60px;
+//       left: 0;
+//       border-radius: 2px;
+//       background: $orange;
+//     }
+//   }
+// }
