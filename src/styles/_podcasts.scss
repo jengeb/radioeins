@@ -137,3 +137,91 @@ h2.manualteaserTitle {
   }
 }
 
+.layouttext_info {
+  width: column-width-extended(4);
+  position: relative;
+  margin: 0 auto;
+
+  .manualteaserTitle,
+  .manualteaserShortText {
+    display: inline;
+    margin: 0;
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
+.manualteaserActionButton {
+  margin-top: 40px;
+}
+
+// single podcast site as appearing for "Hörbar Rust"
+.containerCenter {
+  .doctypeaudio.layoutarchiv {
+    width: column-width-extended(4);
+    position: relative;
+    margin: 60px auto;
+
+    .manualteaserDateTime {
+      color: $orange;
+      font-size: 14px;
+    }
+    
+    .manualteaserTitle {
+      font-size: 32px;
+      line-height: 42px;
+      margin: 0 0 $col-gap / 3;
+    }
+
+    .manualteaserPicture {
+      width: $col-width + $col-gap;
+      float: left;
+      position: relative;
+      top: 6px;
+
+      // TODO: This might be weird; some episodes have an image and some don't and now they're not all in one line
+      + .manualteaserShortText {
+        margin-left: $col-width + 2 * $col-gap;
+      }
+    }
+
+    .manualteaserShortText {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .bulletIconContainer {
+      display: none;
+    }
+
+    .killfloat {
+      clear: both;
+    }
+
+    .playerdownload {
+      margin-top: $col-gap;
+    }
+  }
+}
+
+// TODO: audio player
+// .playerdownload {
+//   .player.audio {
+//     background: $darkgray;
+//     border-radius: 2px;
+//     position: relative;
+//     height: 60px;
+//     color: #fff;
+
+//     &:before {
+//       content: '?';
+//       display: block;
+//       position: absolute;
+//       height: 60px;
+//       width: 60px;
+//       left: 0;
+//       border-radius: 2px;
+//       background: $orange;
+//     }
+//   }
+// }
