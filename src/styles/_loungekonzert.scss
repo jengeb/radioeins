@@ -24,13 +24,23 @@
 	}
 
 	.containerIcons {
-		display: none;
+		max-width: column-width(6);
+		margin: 0 auto;
+
+		.begin, .sendeplatzRefTitle {
+			color: $orange;
+		}
+
+		#socialshareprivacy, .iconList {
+			display: none !important;
+		}
 	}
 
 	.containerContent {
 		font-size: 20px;
-
 		margin-top: 3em;
+		max-width: column-width(6);
+		margin: 0 auto;
 
 		.begin {
 			color: $orange;
@@ -53,7 +63,23 @@
 				width: 100%;
 			}
 		}
-	}	
+	}
+}
+
+.containerRight {
+	max-width: column-width(6);
+	margin: 0 auto;
+
+	.column .layouteinspaltig {
+		.boxHeadline {
+			font-weight: bold;
+			margin-top: 3em;
+		}
+	}
+}
+
+#articlesContList_text {
+	margin-top: 3em;
 }
 
 .articlesContList {
@@ -62,6 +88,14 @@
 			margin: 3em 0 4em !important;
 		}
 	}
+
+	.layoutstandard .textBlock > p > a {
+		color: $orange;
+	}
+}
+
+.ics {
+	color: $orange;
 }
 
 #teaserListCenter_teaserbox .doctypesendestrecke {
@@ -109,4 +143,14 @@
 			color: $orange;
 		}
 	}
+}
+
+.containerRight .layoutcalendar,
+.containerRight .doctypeuebersicht {
+	display: none;
+}
+
+.teaserbox .internallink .teasertext > a,
+.archiveDisclaimer {
+	color: $orange;
 }
