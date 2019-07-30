@@ -1,3 +1,112 @@
-.containerIcons .iconList {
-	display: none;
+.containerCenter {
+	.loungeContainer {
+		background-color: $darkgray;
+		color: white;	
+
+		> * {
+			max-width: column-width(6);
+			margin: 0 auto;
+		}
+
+		.roofLine {
+			padding: 1.5em 0 0.5em;
+			@include interstate-condensed;
+			text-transform: uppercase;
+		}
+
+		.playerdownload {
+			padding-bottom: 3em;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	.containerIcons {
+		display: none;
+	}
+
+	.containerContent {
+		font-size: 20px;
+
+		margin-top: 3em;
+
+		.begin {
+			color: $orange;
+		}
+
+		h2.TitleText {
+			margin-block-start: 0;
+			margin-block-end: 0;
+		}
+
+		h2.SubTitleText {
+			margin-block-start: 0;
+			font-weight: lighter;
+		}
+
+		.manualteaserpicture {
+			margin-bottom: 2em;
+					
+			img {
+				width: 100%;
+			}
+		}
+	}	
+}
+
+.articlesContList {
+	.doctypebildergalerie {
+		.slider {
+			margin: 3em 0 4em !important;
+		}
+	}
+}
+
+#teaserListCenter_teaserbox .doctypesendestrecke {
+	display: grid;
+	grid-template:
+		'sendestreckeRoofLine .'
+		'sendestreckeTitle .'
+		'sendestreckePic sendestreckeText';
+	margin-bottom: 3em;
+
+	.manualteaserRoofLine {
+		grid-area: sendestreckeRoofLine;
+		color: $orange;
+		font-size: 16px;
+		margin-block-start: unset;
+		margin-block-end: unset;
+	}
+
+	.manualteaserTitle {
+		grid-area: sendestreckeTitle;
+		margin-block-start: unset;
+		margin-block-end: unset;
+	}
+
+	.manualteaserPicture {
+		grid-area: sendestreckePic;
+
+		// TODO unify with other pic source info
+		.pictsrc {
+			color: $gray;
+			line-height: unset;
+			font-size: 16px;
+		}
+	}
+
+	.manualteaserShortText {
+		margin-block-start: unset;
+		margin-block-end: unset;
+		font-size: 18px;
+		line-height: 24px;
+		grid-area: sendestreckeText;
+		margin-left: 1.5em;
+
+		.sendestrecke.mehrlink {
+			color: $orange;
+		}
+	}
 }
