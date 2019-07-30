@@ -16,8 +16,11 @@ const URLS = [
  * @param {DOMElement} container 
  */
 function TimeTable (fragment) {
+  const currentDayColumn = (new Date().getDay() + 4) % 8 // TODO: Is this correct???
+  const currentHour = new Date().getHours()
+
   const tableHeader = Array.from(fragment.querySelectorAll('.naviflyout a'))
-    .map(node => <th><a href={node.getAttribute('href')}>{node.textContent.substr(0, 2)}</a></th>)
+    .map((node, idx) => <th className={idx === currentDayColumn && 'is-current-day'}><a href={node.getAttribute('href')}>{node.textContent.substr(0, 2)}</a></th>)
 
   const playtimes = Array.from(fragment.querySelectorAll('.timeitem'))
     .map(timeItem =>
@@ -34,15 +37,21 @@ function TimeTable (fragment) {
   // each key stands for an hour and the index of the object in the
   // containing array shows the day for which it's scheduled
   const scheduledDays = Array.from(fragment.querySelectorAll('.stundenplanflyout .sendungen'))
-    .map(ul => Object.fromEntries(
+    .map((ul, dayIdx) => Object.fromEntries(
       Array.from(ul.querySelectorAll('li'))
         .reduce((acc, li) => {
           const duration = parseDuration(li)
-          const [previousStart, previousDuration, _] = acc.length ? acc[acc.length - 1] : [5, 0, 0]
+          const [previousStart, previousDuration, _] = acc.length ? acc[acc.length - 1] : [5, 0, 0] // the day starts at 5am
+          const previousEnd = previousStart + previousDuration
+
+          const isCurrentDay = dayIdx === currentDayColumn
+          const isOnAir = isCurrentDay && currentHour >= previousEnd && currentHour <= previousEnd + duration
+          const className = [isCurrentDay ? 'is-current-day' : '', isOnAir ? 'is-on-air' : ''].join(' ')
+
           return acc.concat([[
-            previousStart + previousDuration, 
+            previousEnd,
             duration,
-            <td rowspan={duration}>
+            <td rowspan={duration} className={className}>
               <a href={li.querySelector('a').getAttribute('href')}
                 title={li.querySelector('a').getAttribute('title')}>
                 {li.textContent.trim()}
