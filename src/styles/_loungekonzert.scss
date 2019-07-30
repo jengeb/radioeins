@@ -1,21 +1,10 @@
 .containerCenter {
-
 	.containerIcons {
 		display: none;
 	}
 
-	.teaserbox {
-		margin-top: 3em;
-		margin-bottom: 2em;
-	}
-
 	.containerContent {
 		font-size: 20px;
-
-		.loungeContainerContent {
-			background-color: #2a2a2a;
-			color: white;
-		}
 
 		.begin {
 			color: $orange;
@@ -38,6 +27,60 @@
 				width: 100%;
 			}
 		}
-
 	}	
+}
+
+.articlesContList {
+	.doctypebildergalerie {
+		.slider {
+			margin: 3em 0 4em !important;
+		}
+	}
+}
+
+#teaserListCenter_teaserbox .doctypesendestrecke {
+	display: grid;
+	grid-template:
+		'sendestreckeRoofLine .'
+		'sendestreckeTitle .'
+		'sendestreckePic sendestreckeText';
+	margin-bottom: 3em;
+
+	.manualteaserRoofLine {
+		grid-area: sendestreckeRoofLine;
+		color: $orange;
+		font-size: 16px;
+		margin-block-start: unset;
+		margin-block-end: unset;
+	}
+
+	.manualteaserTitle {
+		grid-area: sendestreckeTitle;
+		margin-block-start: unset;
+		margin-block-end: unset;
+	}
+
+	.manualteaserPicture {
+		grid-area: sendestreckePic;
+
+		// TODO unify with other pic source info
+		.pictsrc {
+			color: $gray;
+			line-height: unset;
+			font-size: 16px;
+		}
+	}
+
+	.manualteaserShortText {
+		margin-block-start: unset;
+		margin-block-end: unset;
+		font-size: 18px;
+		line-height: 24px;
+		grid-area: sendestreckeText;
+		margin-left: 1.5em;
+
+		.sendestrecke.mehrlink {
+			color: $orange;
+		}
+	}
 }
