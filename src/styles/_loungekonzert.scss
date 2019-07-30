@@ -1,8 +1,7 @@
 .containerCenter {
-
 	.loungeContainer {
 		background-color: $darkgray;
-		color: white;
+		color: white;	
 
 		> * {
 			max-width: column-width(6);
@@ -11,6 +10,8 @@
 
 		.roofLine {
 			padding: 1.5em 0 0.5em;
+			@include interstate-condensed;
+			text-transform: uppercase;
 		}
 
 		.playerdownload {
