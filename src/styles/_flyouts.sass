@@ -8,8 +8,7 @@
   overflow: hidden
   transition: max-height .6s ease
 
-  &.flyout-visible,
-  &.programm
+  &.flyout-visible
     max-height: 9999px
 
   ul
@@ -54,13 +53,32 @@
         text-transform: uppercase
         background: none
 
+        &.is-current-day
+          background: $lightgray
+          color: $gray
+
     th,
     td
       vertical-align: top
       border-radius: 2px
 
     tbody
+      // TODO: Figure this out in JavaScript and hide it properly
+      tr:nth-last-child(1),
+      tr:nth-last-child(2),
+      tr:nth-last-child(3),
+      tr:nth-last-child(4)
+        display: none
+
       td
         padding: 4px
         background: $gray
         font-size: 12px
+
+        &.is-current-day
+          background: $lightgray
+          color: $gray
+
+        &.is-on-air
+          background: $orange
+          color: #fff
