@@ -2,6 +2,7 @@ const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 
 module.exports = {
   cache: false,
@@ -13,7 +14,10 @@ module.exports = {
   },
   optimization: {
     // used by the MiniCssExtractPlugin
-    minimizer: [new OptimizeCSSAssetsPlugin()]
+    minimizer: [
+      new OptimizeCSSAssetsPlugin(),
+      new TerserPlugin({ sourceMap: true }) // minify javascript
+    ]
   },
   plugins: [
     new MiniCssExtractPlugin({
@@ -33,7 +37,10 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
+            presets: [
+              '@babel/preset-env',
+              ['@babel/preset-react', {pragma: 'h'}]
+            ]
           }
         }
       },

@@ -8,7 +8,8 @@
   overflow: hidden
   transition: max-height .6s ease
 
-  &.flyout-visible
+  &.flyout-visible,
+  &.programm
     max-height: 9999px
 
   ul
@@ -35,3 +36,31 @@
     
     a:hover
       color: $orange
+  
+  .program-table
+    width: column-width(6)
+    position: relative
+    margin: 48px auto
+    border-spacing: 1px
+    empty-cells: hide
+
+    thead
+      @include interstate-condensed()
+      font-size: 24px
+      line-height: 42px
+      
+      th
+        text-align: center
+        text-transform: uppercase
+        background: none
+
+    th,
+    td
+      vertical-align: top
+      border-radius: 2px
+
+    tbody
+      td
+        padding: 4px
+        background: $gray
+        font-size: 12px
