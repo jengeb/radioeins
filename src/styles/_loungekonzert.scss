@@ -1,10 +1,35 @@
 .containerCenter {
+
+	.loungeContainer {
+		background-color: $darkgray;
+		color: white;
+
+		> * {
+			max-width: column-width(6);
+			margin: 0 auto;
+		}
+
+		.roofLine {
+			padding: 1.5em 0 0.5em;
+		}
+
+		.playerdownload {
+			padding-bottom: 3em;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+
 	.containerIcons {
 		display: none;
 	}
 
 	.containerContent {
 		font-size: 20px;
+
+		margin-top: 3em;
 
 		.begin {
 			color: $orange;
