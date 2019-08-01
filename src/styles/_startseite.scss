@@ -38,13 +38,14 @@
 	// grid container
 	.slick-slide:not(.topics) {
 		display: grid !important;
-		grid-template: 
+		grid-template-areas: 
 			'pic time'
 			'pic program'
 			'pic presenter'
 			'pic vorschau'
 			'pic .'
 			'pic .';
+		grid-template-columns: 1fr 1fr;
 		margin-right: 3em;
 		grid-column-gap: 1em;
 	}
