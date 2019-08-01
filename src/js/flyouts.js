@@ -16,7 +16,7 @@ const URLS = [
  * @param {DOMElement} container 
  */
 function TimeTable (fragment) {
-  const currentDayColumn = (new Date().getDay() + 4) % 8 // TODO: Is this correct???
+  const currentDayColumn = 1 + ((new Date().getDay() + 1) % 7) // sunday is 0, our sunday is at place 2; friday should be 7
   const currentHour = new Date().getHours()
 
   const tableHeader = Array.from(fragment.querySelectorAll('.naviflyout a'))
