@@ -82,6 +82,7 @@ html {
 }
 
 body {
+	min-width: 1020px; // make sure to always display the desktop layout
 	color: $black;
 }
 
