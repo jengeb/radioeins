@@ -42,6 +42,7 @@
     margin: 48px auto
     border-spacing: 1px
     empty-cells: hide
+    table-layout: fixed
 
     thead
       @include interstate-condensed()
@@ -54,13 +55,16 @@
         background: none
 
         &.is-current-day
-          background: $lightgray
-          color: $gray
+          color: $orange
 
     th,
     td
       vertical-align: top
       border-radius: 2px
+
+      &:first-child
+        width: 50px
+        text-align: center
 
     tbody
       // TODO: Figure this out in JavaScript and hide it properly
@@ -74,10 +78,6 @@
         padding: 4px
         background: $gray
         font-size: 12px
-
-        &.is-current-day
-          background: $lightgray
-          color: $gray
 
         &.is-on-air
           background: $orange
