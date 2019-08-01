@@ -131,13 +131,6 @@
 
 	.manualteaserPicture {
 		grid-area: sendestreckePic;
-
-		// TODO unify with other pic source info
-		.pictsrc {
-			color: $gray;
-			line-height: unset;
-			font-size: 16px;
-		}
 	}
 
 	.manualteaserShortText {
