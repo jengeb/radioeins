@@ -164,15 +164,13 @@
 
 	.boxlinklist {
 		padding-inline-start: 0;
-		padding-bottom: 4em;
-
 		margin-block-start: 0em;
     margin-block-end: 0em;
 
 		// button
 		.manualteaserTitle {
-			color: $darkgray;
-			background-color: white;
+			color: $black !important;
+			background-color: $lightgray;
 			list-style: none;
 			border: 2px solid $darkgray;
 			border-color: rgba(0, 0, 0, 0.35); // set opacity
