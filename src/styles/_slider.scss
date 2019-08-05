@@ -108,7 +108,9 @@
 }
 
 // "Der Tag auf Radioeins"
-.layoutbuehne_1_1_white, .teaserbox_videopage .layout1spaltig_buehne_slider {
+.layoutbuehne_1_1_white, 
+.teaserbox_videopage .layout1spaltig_buehne_slider,
+.layoutbuehne_1_1_black {
 	.slick-prev {
     left: 0;
 	}
@@ -126,7 +128,8 @@
 	}
 }
 
-.layoutbuehne_1_1_white {
+.layoutbuehne_1_1_white, 
+.layoutbuehne_1_1_black {
 	.slick-prev, .slick-next {
 		top: 10.5%;
 	}
