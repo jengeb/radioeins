@@ -106,7 +106,6 @@
 		margin: 0 auto;
 	}
 
-
 	// TODO move into mixin? resp. into layout file
 	padding-top: 1.5em;
 	padding-bottom: 3em;
@@ -207,27 +206,26 @@
 }
 
 
-.teaserbox_music_container {
-	position: relative;
+.doctypeteaser.intermediate.teaserbox {
+	// position: relative;
 	
 	.manualteaserRoofLine {
 		font-size: 14px;
 		font-weight: 300;
-		margin-bottom: 12px;
 	}
 
-	.boxhead {
-		flex: 0 0 100%;
+	// .boxhead {
+	// 	flex: 0 0 100%;
 
-		h2 {
-			margin-block-end: 0;
-		}
-	}
+	// 	h2 {
+	// 		margin-block-end: 0;
+	// 	}
+	// }
 
-	.boxHeadline {
-		font-size: 36px;
-		text-transform: uppercase;
-	}
+	// .boxHeadline {
+	// 	font-size: 36px;
+	// 	text-transform: uppercase;
+	// }
 
 	.iconContainer {
 		.timeicon {
@@ -251,8 +249,7 @@
 		}
 	}
 
-
-	& + .boxlinklist {
+	.boxlinklist {
 		padding-inline-start: 0;
 
 		// button
