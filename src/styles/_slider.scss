@@ -108,13 +108,15 @@
 }
 
 // "Der Tag auf Radioeins"
-.layoutbuehne_1_1_white, .teaserbox_videopage .layout1spaltig_buehne_slider {
+.layoutbuehne_1_1_white, 
+.teaserbox_videopage .layout1spaltig_buehne_slider,
+.layoutbuehne_1_1_black {
 	.slick-prev {
     left: 0;
 	}
 
 	.slick-next {
-  	right: 19px; // equals the width of the arrow element
+  	right: 18px; // equals the width of the arrow element
 	}
 
 	.slick-prev:before {
@@ -126,7 +128,8 @@
 	}
 }
 
-.layoutbuehne_1_1_white {
+.layoutbuehne_1_1_white, 
+.layoutbuehne_1_1_black {
 	.slick-prev, .slick-next {
 		top: 10.5%;
 	}
