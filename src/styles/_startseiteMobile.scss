@@ -21,10 +21,6 @@
 		position: relative;
 	}
 
-	.teaserbox_music_container .teaserbox_music{
-		flex-direction: column;
-	}
-
 	.teaserbox_highlights {
 		flex-direction: column;
 	}
@@ -44,7 +40,7 @@
 		right: unset;
 	}
 
-	.layoutbuehne_1_1_white, .teaserbox_highlights, .teaserbox_music, .layoutdein_radioeins,
+	.layoutbuehne_1_1_white, .teaserbox_highlights, .layoutdein_radioeins,
 	.doctypeteaser.layoutstandard.teaserbox {
 		padding-left: 1em;
 		padding-right: 1em;
@@ -103,14 +99,6 @@
 	.teaserbox_highlights .layout2erReihe, 
 	.teaserbox_highlights .layout3erReihe {
 		width: 100%;
-	}
-
-	.teaserbox_music_container .teaserbox_music > div {
-		width: 100%;
-
-		img {
-			width: 100%;
-		}
 	}
 
 	.layoutprogrammbuehne {

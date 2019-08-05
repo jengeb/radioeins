@@ -106,7 +106,6 @@
 		margin: 0 auto;
 	}
 
-
 	// TODO move into mixin? resp. into layout file
 	padding-top: 1.5em;
 	padding-bottom: 3em;
@@ -142,12 +141,6 @@
 		margin-bottom: 8px;
 	}
 }
-
-// TODO: Do we need this?
-// .layoutblack {
-// 	padding-top: 1.5em;
-// 	padding-bottom: 3em;
-// }
 
 .layout1spaltig_buehne_videoplayer, .layout1spaltig_buehne_slider {
 	img {
@@ -207,26 +200,10 @@
 }
 
 
-.teaserbox_music_container {
-	position: relative;
-	
+.doctypeteaser.intermediate.teaserbox:not(.layoutblack) {
 	.manualteaserRoofLine {
 		font-size: 14px;
 		font-weight: 300;
-		margin-bottom: 12px;
-	}
-
-	.boxhead {
-		flex: 0 0 100%;
-
-		h2 {
-			margin-block-end: 0;
-		}
-	}
-
-	.boxHeadline {
-		font-size: 36px;
-		text-transform: uppercase;
 	}
 
 	.iconContainer {
@@ -251,13 +228,12 @@
 		}
 	}
 
-
-	& + .boxlinklist {
+	.boxlinklist {
 		padding-inline-start: 0;
 
 		// button
 		.manualteaserTitle {
-			color: white;
+			color: white !important;
 			background-color: $orange;
 			list-style: none;
 			border: 1px solid $orange;
