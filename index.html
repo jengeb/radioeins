@@ -185,6 +185,12 @@
 			let indexMobile = 0;
 			// get the index of the div element containing the current show ('.now' element)
 			index = $('.bannerSliderSmall > div').index($('.layout3spaltig_programmbuehne').find('.now').closest('.layout3spaltig_programmbuehne'));
+
+			// TODO maybe move this to another JS resp. index.js file
+			// hide 'Zur Sendung' link on current show element ('.zursendung' can appear in other elements,
+			// but these should not have a sibling element containing the .now class)
+			$('.bannerSliderSmall > div').find('.now').closest('.layout3spaltig_programmbuehne').children('.zursendung').css('display', 'none');
+
 			indexMobile = index
 			// index starts with 0
 			// if the index is odd, the current teaser is located on the right side (assuming 2 'slidesToShow', see below)
@@ -806,15 +812,11 @@
 							<div class="iconContainer">
 								<div class="onairicon"><img src="/rad/grafik/icons/icon-liveuebertragung.png" alt="On Air" /></div>
 							</div>
-							<!-- neu -->
-							<!-- Am besten hier gar nicht mehr oder ohne content 'Zur Sendung' anzeigen und dafür in dem nächsten topics Element ausgeben. -->
-							<!-- <div class="zursendung">Zur Sendung</div> -->
-							<!-- <div class="zursendung"> -->
-								<!-- neu -->
-								<!-- <a class="zursendungLink" href="/programm/index.htm/psdoc=%21content%21rbb%21rad%21programm%21sendungen%21sendungen%2156%211905%21190523_16_00_radioeins_mo_do_5095.html" title="Zur Sendung">Zur Sendung</a> -->
+							<div class="zursendung">
+								<!-- neu: added link -->
+								<a class="zursendungLink" href="/programm/index.htm/psdoc=%21content%21rbb%21rad%21programm%21sendungen%21sendungen%2156%211905%21190523_16_00_radioeins_mo_do_5095.html" title="Zur Sendung">Zur Sendung</a>
 								<!-- /neu -->
-							<!-- </div> -->
-							<!-- neu -->
+							</div>
 							<div class="imgIconWrap">
 								<div class="medienCounter"><span class="now">Jetzt / 16:00 - 19:00</span></div>
 							</div>
@@ -1616,9 +1618,7 @@
 
 
 
-			<!-- neu: CSS class (teaserbox_music) to distinguish between music and video elements -->
-			<!-- neu: CSS class (teaserbox_music_container) -->
-			<div id="middleColumnList_teaserbox_1" class="count7 doctypeteaser intermediate odd teaserbox teaserbox_music">
+			<div id="middleColumnList_teaserbox_1" class="count7 doctypeteaser intermediate odd teaserbox">
 
 				<div class="boxhead">
 					<h2 class="boxHeadline">Musik</h2>
@@ -1630,8 +1630,9 @@
 					</ul> -->
 					<!-- /neu -->
 				</div>
+			<!-- TODO: check if the following change is needed -->
 			<!-- neu: remove .layoutblack class and move container *into* #middleColumnList_teaserbox_1 -->
-		<div class="teaserbox_music_container columns">
+		<div class="columns">
 				<div id="middleColumnList_teaserbox_1_teaserList_calendarlogic"
 					class="count1 doctypesendeplatz first layout4spaltig_4_3 manualteaser odd">
 					<h3 class="manualteaserRoofLine">Interview</h3>
