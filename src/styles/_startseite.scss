@@ -142,12 +142,6 @@
 	}
 }
 
-// TODO: Do we need this?
-// .layoutblack {
-// 	padding-top: 1.5em;
-// 	padding-bottom: 3em;
-// }
-
 .layout1spaltig_buehne_videoplayer, .layout1spaltig_buehne_slider {
 	img {
 		width: 100%;
@@ -206,26 +200,11 @@
 }
 
 
-.doctypeteaser.intermediate.teaserbox {
-	// position: relative;
-	
+.doctypeteaser.intermediate.teaserbox:not(.layoutblack) {
 	.manualteaserRoofLine {
 		font-size: 14px;
 		font-weight: 300;
 	}
-
-	// .boxhead {
-	// 	flex: 0 0 100%;
-
-	// 	h2 {
-	// 		margin-block-end: 0;
-	// 	}
-	// }
-
-	// .boxHeadline {
-	// 	font-size: 36px;
-	// 	text-transform: uppercase;
-	// }
 
 	.iconContainer {
 		.timeicon {
