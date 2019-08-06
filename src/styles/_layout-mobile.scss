@@ -23,7 +23,8 @@ $open-nav-color: $darkgray;
 		}
 
 		.mobile-nav-burger-button {
-			width: 60px;
+			width: 55px;
+			flex-shrink: 0;
 			text-align: center;
 
 			&.mobile-nav-button-open {
