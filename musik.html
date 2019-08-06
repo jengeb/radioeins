@@ -196,7 +196,46 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
  </style>
 <![endif]-->
 
+	<!-- TODO move code, remove already included jquery -->
+	<!-- same slider code as in podcasts.html -->
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<!-- TODO -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.0/slick.min.js"></script>
 
+  <script>
+    $(document).ready(function () {
+      var sliderConfig = {
+				dots: true,
+				infinite: true,
+				slidesToShow: 7,
+				responsive: [{
+					breakpoint: 1200,
+          settings: {
+            slidesToShow: 5
+          }
+        },
+				{
+					breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+						arrows: false
+          }
+        }]
+      }
+
+      $('.layoutbuehne_1_1_white .moderatorenSlider').slick(Object.assign({}, sliderConfig, {
+				dotsClass: "slick-custom-dots-dark"
+      }))
+
+			// if necessary change dotsClass to "slick-custom-dots-light", 
+			// but in this case the container with .layoutbuehne_1_1_black is colored light not black
+      $('.layoutbuehne_1_1_black .moderatorenSlider').slick(Object.assign({}, sliderConfig, {
+				dotsClass: "slick-custom-dots-dark"
+      }))
+    })
+	</script>
+	
 
 </head>
 
