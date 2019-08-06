@@ -406,9 +406,13 @@
 	}
 }
 
-
+// TODO: move to layout.scss if section will be present on every page (not only on landingpage)
 .layoutdein_radioeins.teaserbox {
 	padding-bottom: 4em;
+
+	.headerstatus {
+		display: none;
+	}
 
 	.boxHeadline {
 		text-transform: uppercase;
