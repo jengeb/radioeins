@@ -1,0 +1,10 @@
+.containerCenter {
+	.teaserbox.layoutstandard.doctypeteaser {
+
+		> * {
+			max-width: column-width(6);
+			position: relative;
+			margin: 0 auto;
+		}
+	}
+}
