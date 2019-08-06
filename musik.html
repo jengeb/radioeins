@@ -241,6 +241,25 @@ var nowonairUrl = '//www.radioeins.de/include/rad/nowonair/now_on_air.html';
 				infinite: true,
 				slidesToShow: 1
 			});
+
+			// TODO check if .layoutblack_short should have a dark or light background
+			// now it's assumed that the background is white/lightgray
+			// if necessary change the dotsClass
+			$('.layoutblack_short .layout3spaltig_buehne_slider .bannerSliderSmall').slick({
+				dots: true,
+				dotsClass: "slick-custom-dots-dark",
+				infinite: true,
+				slidesToShow: 3,
+				responsive: [{
+					breakpoint: 600,
+          settings: {
+						centerMode: true,
+            slidesToShow: 1,
+						arrows: false
+          }
+        }]
+			});
+
     });
 	</script>
 	
