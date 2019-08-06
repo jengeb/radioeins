@@ -606,3 +606,77 @@ img {
 .doctypeteaser.layoutblack.teaserbox {
 	padding: 48px 0 96px;
 }
+
+// different flex-based columns all over the page
+section.boxcontent {
+  display: flex;
+  max-width: column-width(6);
+  position: relative;
+  margin: 0 auto;
+  justify-content: space-between;
+	align-items: flex-start;
+	flex-wrap: wrap;
+
+  .layout3spaltig {
+    max-width: (column-width(6) - 2 * $col-gap) / 3;
+    display: grid;
+    grid-template:
+      'roofline'
+      'image'
+      'title'
+      'description';
+  }
+
+  .layout4spaltig_4_3 {
+    max-width: (column-width(6) - 3 * $col-gap) / 4;
+    display: grid;
+    grid-template:
+      'roofline'
+      'image'
+      'title'
+      'publicationDate';
+
+    .publicationDate {
+      grid-area: publicationDate;
+      color: #a3a3a3;
+    }
+  }
+
+  .manualteaserContent {
+    margin: 0 0 12px;
+  }
+
+  .manualteaserShortText {
+    margin: 0;
+  }
+
+  .layout3spaltig,
+  .layout4spaltig_4_3 {
+    .manualteaserRoofLine {
+      grid-area: roofline;
+      color: $orange;
+      margin: 0 0 6px;
+      font-size: inherit;
+    }
+
+    .imgIconWrap {
+      grid-area: image;
+      position: relative;
+    }
+	}
+	
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.layouttopteaser_textbild section.boxcontent {
+	// Undo horizontal centering & flex layout on full width background
+	display: block;
+	max-width: 100%;
+}
+
+div.killfloat {
+	display: none
+}
