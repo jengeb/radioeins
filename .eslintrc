@@ -1,0 +1,10 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["standard", "standard-react"],
+  "globals": {"React": true},
+  "env": {"browser": true},
+  "rules": {
+    "no-unused-vars": ["error", { "varsIgnorePattern": "h" }],
+    "react/prop-types": 0
+  }
+}

@@ -2,7 +2,7 @@
  * Fetches the flyouts and appends the HTML to the DOM;
  * The actual animation is done CSS-only
  */
-import {h, render} from 'preact'
+import { h, render } from 'preact'
 
 const URLS = [
   'https://www.radioeins.de/themen/themenflyout.htm/module=themen_flyout.html',
@@ -10,12 +10,12 @@ const URLS = [
 ]
 
 /**
- * Converts the server-sent DOM fragment into a table that's easier to manage 
- * 
- * @param {DOMElement} fragment 
- * @param {DOMElement} container 
+ * Converts the server-sent DOM fragment into a table that's easier to manage
+ *
+ * @param {DOMElement} fragment
+ * @param {DOMElement} container
  */
-function TimeTable (fragment) {
+function TimeTable ({ fragment }) {
   const currentDayColumn = 1 + ((new Date().getDay() + 1) % 7) // sunday is 0, our sunday is at place 2; friday should be 7
   const currentHour = new Date().getHours()
 
@@ -51,7 +51,7 @@ function TimeTable (fragment) {
           return acc.concat([[
             previousEnd,
             duration,
-            <td rowspan={duration} className={className}>
+            <td rowSpan={duration} className={className}>
               <a href={li.querySelector('a').getAttribute('href')}
                 title={li.querySelector('a').getAttribute('title')}>
                 {li.textContent.trim()}
@@ -60,22 +60,22 @@ function TimeTable (fragment) {
           ]])
         }, [])
         .map(([startTime, _, el]) => [startTime, el])))
-    
+
   const programForDayAtPlaytime = (dayIdx, playtime) =>
     scheduledDays[dayIdx][playtime.replace(/^0/, '').replace(/:.*$/, '')]
 
-  return <table class='program-table'>
-    <thead class='program-table--head'>
+  return <table className='program-table'>
+    <thead className='program-table--head'>
       <tr>
-        <th></th>
+        <th />
         {tableHeader}
       </tr>
     </thead>
-    <tbody class='program-table--body'>
+    <tbody className='program-table--body'>
       {playtimes.map(time =>
         <tr>
           <td>
-            <span class='program-table--playtime'>{time}</span>
+            <span className='program-table--playtime'>{time}</span>
           </td>
           {tableHeader.map((_, idx) => programForDayAtPlaytime(idx, time))}
         </tr>
@@ -100,8 +100,7 @@ export function setup () {
         const container = document.createElement('div')
 
         if (content === 'programm') {
-          const table = TimeTable(fragment)
-          render(table, container)
+          render(<TimeTable fragment={fragment} />, container)
         } else {
           container.appendChild(fragment)
         }
