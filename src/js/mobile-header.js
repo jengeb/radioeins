@@ -28,12 +28,22 @@ function ThemenFlyout ({ isVisible }) {
 }
 
 /**
+ * Helper to fetch a nested attribute's value from within a node
+ *
+ * @param {*} node
+ * @param {*} selector
+ * @param {*} attribute
+ * @returns {string}
+ */
+const attr = (node, selector, attribute) => node.querySelector(selector).getAttribute(attribute)
+
+/**
  * Builds the mobile navigation based on what the active navi looks like
  * and returns JSX that can be mounted wherever we want.
  *
  * @returns {VDom}
  */
-function Navigation ({ headerImgSrc, headerHref, naviLinks }) {
+function Navigation ({ headerImgSrc, headerHref, naviLinks, liveLink }) {
   const [visibleSection, setVisibleSection] = useState(null)
   const [themenFlyoutVisible, setThemenFlyoutVisible] = useState(false)
 
@@ -41,6 +51,11 @@ function Navigation ({ headerImgSrc, headerHref, naviLinks }) {
     e.preventDefault()
     // close on second click, if not open selected section
     setVisibleSection((visibleSection === section) ? null : section)
+  }
+
+  const openLiveLink = e => {
+    e.preventDefault()
+    window.open(liveLink, 'player', 'width=270,height=415')
   }
 
   const toggleThemenFlyout = e => {
@@ -59,7 +74,9 @@ function Navigation ({ headerImgSrc, headerHref, naviLinks }) {
           title='Navigation' />
       </a>
       <a className='mobile-nav-header-img' href={headerHref}><img src={headerImgSrc} /></a>
-      <a className={`mobile-nav-live-button ${visibleSection === 'mobile-nav-live' && 'mobile-nav-button-open'}`} href='#' onClick={openSection('mobile-nav-live')}>Live</a>
+      {/* NOTE: Live stream is implemented as a popup, this is different to the designs */}
+
+      <a className={`mobile-nav-live-button ${visibleSection === 'mobile-nav-live' && 'mobile-nav-button-open'}`} href={liveLink} onClick={openLiveLink}>Live</a>
     </div>
 
     {/* Navigation links */}
@@ -76,22 +93,13 @@ function Navigation ({ headerImgSrc, headerHref, naviLinks }) {
       </ul>
     </section>
 
-    {/* TODO: Live section */}
-    <section className={`mobile-nav-section mobile-nav-live ${visibleSection === 'mobile-nav-live' || 'mobile-nav-hidden'}`}>
+    {/* NOTE: Live stream is implemented as a popup, this is different to the designs */}
+    {/* <section className={`mobile-nav-section mobile-nav-live ${visibleSection === 'mobile-nav-live' || 'mobile-nav-hidden'}`}>
       <h1>LIVE</h1>
-    </section>
+    </section> */}
   </nav>
 }
 
-/**
- * Helper to fetch a nested attribute's value from within a node
- *
- * @param {*} node
- * @param {*} selector
- * @param {*} attribute
- * @returns {string}
- */
-const attr = (node, selector, attribute) => node.querySelector(selector).getAttribute(attribute)
 
 /**
  * Constructs the mobile navigation and mounts it after our current navigation
@@ -108,6 +116,7 @@ export function setup () {
     <Navigation
       headerImgSrc={attr(headerNode, '#headerimage', 'src')}
       headerHref={attr(headerNode, '#headerMap area', 'href')}
+      liveLink={attr(navigationNode, '#jetzt a', 'href')}
       naviLinks={[
         ['Programm', attr(navigationNode, 'a[title=Programm]', 'href')],
         ['Videos', attr(navigationNode, 'a[title=Videos]', 'href')],
