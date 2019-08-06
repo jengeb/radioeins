@@ -1,0 +1,256 @@
+$open-nav-color: $darkgray;
+
+@media only screen and (max-width: 400px) {
+	// header and navigation
+	#containerRbb_subHead,
+	#navigationmain {
+		display: none;
+	}
+
+	.mobile-nav {
+		display: block;
+	}
+
+	.mobile-nav-bar {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: $lightgray;
+
+		> * {
+			height: 60px;
+			line-height: 60px;
+		}
+
+		.mobile-nav-burger-button {
+			width: 60px;
+			text-align: center;
+
+			&.mobile-nav-button-open {
+				background: $open-nav-color;
+			}
+		}
+
+		.mobile-nav-header-img {
+			text-align: center;
+
+			img {
+				width: 60%
+			}
+		}
+
+		.mobile-nav-live-button {
+			@include interstate-condensed;
+
+			white-space: nowrap;
+			padding: 0 18px;
+			font-size: 20px;
+			text-transform: uppercase;
+			color: #fff;
+			background: $orange;
+
+			&:before {
+				content: url('../assets/mobile/ico-live-mobile.svg');
+				padding-right: .3em;
+			}
+		}
+	}
+
+	.mobile-nav-section {
+		display: block;
+
+		&.mobile-nav-hidden {
+			display: none
+		}
+	}
+
+	.mobile-nav-links {
+		list-style: none;
+
+		background: $open-nav-color;
+		color: $lightgray;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-wrap: wrap;
+
+		.mobile-nav-item {
+			@include interstate-condensed;
+			text-align: center;
+			font-size: 18px;
+			box-sizing: border-box;
+			width: 50%;
+			border: 1px solid change-color($lightgray, $alpha: 0.1);
+			border-width: 0 0 1px;
+
+			&.mobile-nav-item-link:nth-child(odd) {
+				border-right-width: 1px;
+			}
+
+			&.themen-flyout-link {
+				width: 100%;
+			}
+
+			a {
+				display: block;
+				width: 100%;
+				line-height: 75px;
+				text-transform: uppercase;
+
+				&:hover,
+				&:active,
+				&:focus {
+					color: $orange
+				}
+			}
+		}
+	}
+
+	// themen flyout
+	#ulthemenflyout,
+	#ulthemenflyout ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		a {
+			font-size: 16px;
+			line-height: 48px;
+		}
+	}
+
+	#ulthemenflyout li.last ul {
+		display: none
+	}
+
+  // startseite
+	body {
+		min-width: unset;
+	}
+
+	.nav-meta-header {
+		background: #e31818;
+		color: white;
+		display: -ms-flexbox;
+		display: flex;
+		height: 31px;
+		-ms-flex-pack: end;
+		justify-content: flex-end;
+		padding: 6px 0 8px;
+		position: relative;
+	}
+
+	.teaserbox_highlights {
+		flex-direction: column;
+	}
+
+	// footer
+	.layoutdein_radioeins .boxBody .boxRow {
+		flex-direction: column;
+	}
+
+	.footer .footer-columns {
+		columns: 1;
+	}
+
+
+	// TODO
+	.slick-next {
+		right: unset;
+	}
+
+	.layoutbuehne_1_1_white, .teaserbox_highlights, .layoutdein_radioeins,
+	.doctypeteaser.layoutstandard.teaserbox {
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+
+	// TODO: check design
+	.footer {
+		text-align: center;
+	}
+
+	.layouttopteaser_textbild .manualteaserPicture img {
+		// TODO: This distorts the image but maybe there's a reason why this is hardcoded here??
+		// height: 183px;
+	}
+
+	.boxlinklist {
+		margin-top: 2.5em;
+	}
+
+	.layoutprogrammbuehne {
+		.slick-slide:not(.topics) {
+			display: grid !important;
+			grid-template: 
+				'pic'
+				'time'
+				'program'
+				'presenter'
+				'vorschau';
+			grid-row-gap: 0.3em;
+			margin-right: 2em;
+		}
+
+		.slick-custom-dots-dark {
+			margin-top: 0em;
+		}
+	}
+
+	.layoutdein_radioeins.teaserbox {
+		.boxBody {
+			grid-template-columns: unset;
+
+			.boxItem {
+				grid-column-gap: 1em;
+			}
+
+			.socialIcon {
+				text-align: right;
+			}
+		}
+	}
+
+	.teaserbox_highlights .layout2erReihe, 
+	.teaserbox_highlights .layout3erReihe {
+		width: 100%;
+	}
+
+	.layoutprogrammbuehne {
+		.hintergrund {
+			.slick-track {
+				// hide redundant element that influeces the height of the slider
+				> div:last-child {
+					display: none !important;
+				}
+			}
+		}
+	}
+
+  // videos
+	.layout3spaltig_buehne_slider {
+		.layout3spaltig_buehne {
+			grid-template-columns: auto auto;
+			grid-column-gap: 0.5em;
+		}
+	}
+
+	.layoutblack {
+		padding-top: 1em;
+		padding-bottom: 2em;
+	}
+
+	.intermediate.teaserbox .layout2spaltig_video_playlist,
+	.last.teaserbox .layout2spaltig_video_playlist {
+		display: unset;
+
+		.videoteaser,
+		.selectteaser {
+			margin-bottom: 2em;
+		}
+
+		.selectteaser > div {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}

@@ -82,6 +82,7 @@ html {
 }
 
 body {
+	min-width: 1020px; // make sure to always display the desktop layout
 	color: $black;
 }
 
@@ -223,6 +224,10 @@ img {
 			}
 		}
 	}
+}
+
+.mobile-nav {
+	display: none
 }
 
 // information about current song in top right corner

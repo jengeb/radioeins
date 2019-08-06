@@ -1,0 +1,24 @@
+@media only screen and (max-width: 400px)
+  .layouttopteaser_textbild
+    .manualteaserPicture
+      img
+        transform: none
+      
+      &::before
+        background: linear-gradient(0deg, change-color($darkgray, $alpha: 1), transparent)
+    
+    .textlayer
+      box-sizing: border-box
+      position: static
+      left: 0
+      top: 0
+      width: 100%
+      padding: $col-gap / 2
+      transform: none
+      font-size: 24px
+      line-height: 32px
+  
+  .columns
+    // 4-column grids are too wide for mobile so we hide all columns after the third
+    .layout4spaltig_4_3:nth-child(3) + .layout4spaltig_4_3
+      display: none
