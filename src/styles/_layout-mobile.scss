@@ -1,12 +1,66 @@
 @media only screen and (max-width: 400px) {
-  // startseite
-
-	body {
-		min-width: unset;
+	// header and navigation
+	#navigationmain,
+	#header {
+		display: none;
 	}
 
-	.containerNavigationMain {
-		display: none;
+	.mobile-nav {
+		display: block;
+	}
+
+	.mobile-nav-bar {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: $lightgray;
+
+		> * {
+			height: 60px;
+			line-height: 60px;
+		}
+
+		.mobile-nav-burger-link {
+			width: 60px;
+			text-align: center;
+		};
+
+		.mobile-nav-header-img {
+			text-align: center;
+
+			img {
+				width: 60%
+			}
+		}
+
+		.mobile-nav-live-button {
+			@include interstate-condensed;
+
+			white-space: nowrap;
+			padding: 0 18px;
+			font-size: 20px;
+			text-transform: uppercase;
+			color: #fff;
+			background: $orange;
+
+			&:before {
+				content: url('../assets/mobile/ico-live-mobile.svg');
+				padding-right: .3em;
+			}
+		}
+	}
+
+	.mobile-nav-section {
+		display: block;
+
+		&.mobile-nav-hidden {
+			display: none
+		}
+	}
+
+  // startseite
+	body {
+		min-width: unset;
 	}
 
 	.nav-meta-header {
