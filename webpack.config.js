@@ -13,10 +13,11 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   optimization: {
-    // used by the MiniCssExtractPlugin
     minimizer: [
+      // used by the MiniCssExtractPlugin
       new OptimizeCSSAssetsPlugin(),
-      new TerserPlugin({ sourceMap: true }) // minify javascript
+      // minify javascript
+      new TerserPlugin({ cache: true, sourceMap: true })
     ]
   },
   plugins: [
