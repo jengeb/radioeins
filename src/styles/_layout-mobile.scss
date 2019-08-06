@@ -74,26 +74,53 @@ $open-nav-color: $darkgray;
 		display: flex;
 		flex-wrap: wrap;
 
-		.mobile-nav-link-item {
+		.mobile-nav-item {
+			@include interstate-condensed;
+			text-align: center;
+			font-size: 18px;
 			box-sizing: border-box;
 			width: 50%;
-			text-align: center;
 			border: 1px solid change-color($lightgray, $alpha: 0.1);
 			border-width: 0 0 1px;
 
-			&:nth-child(odd) {
+			&.mobile-nav-item-link:nth-child(odd) {
 				border-right-width: 1px;
 			}
 
-			a {
-				@include interstate-condensed;
+			&.themen-flyout-link {
+				width: 100%;
+			}
 
+			a {
 				display: block;
 				width: 100%;
 				line-height: 75px;
 				text-transform: uppercase;
+
+				&:hover,
+				&:active,
+				&:focus {
+					color: $orange
+				}
 			}
 		}
+	}
+
+	// themen flyout
+	#ulthemenflyout,
+	#ulthemenflyout ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		a {
+			font-size: 16px;
+			line-height: 48px;
+		}
+	}
+
+	#ulthemenflyout li.last ul {
+		display: none
 	}
 
   // startseite

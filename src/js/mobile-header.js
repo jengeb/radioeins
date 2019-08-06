@@ -1,10 +1,31 @@
 import { h, render } from 'preact'
-import { useState } from 'preact/hooks'
+import { useState, useEffect } from 'preact/hooks'
 
 import openNavLinksSvg from '../assets/mobile/ico-burger-black-mobile.svg'
 import closeNavLinksSvg from '../assets/mobile/ico-close-mobile.svg'
 
 // TODO: Livestream, Tippspiel, playlist, search
+
+/**
+ * Fetches the flyout html and creates the DOM needed to mount it
+ *
+ * @returns {VDom}
+ */
+function ThemenFlyout ({ isVisible }) {
+  const [flyoutHtml, setFlyoutHtml] = useState(null)
+
+  // fetch flyout markup on mount; we display it later
+  useEffect(() => {
+    if (flyoutHtml == null) {
+      fetch('https://www.radioeins.de/themen/themenflyout.htm/module=themen_flyout.html')
+        .then(res => res.text())
+        .then(html => new DOMParser().parseFromString(html, 'text/html').querySelector('body > :first-child'))
+        .then(node => setFlyoutHtml(node.outerHTML))
+    }
+  })
+
+  return isVisible ? <div dangerouslySetInnerHTML={{ __html: flyoutHtml }} /> : null
+}
 
 /**
  * Builds the mobile navigation based on what the active navi looks like
@@ -14,11 +35,17 @@ import closeNavLinksSvg from '../assets/mobile/ico-close-mobile.svg'
  */
 function Navigation ({ headerImgSrc, headerHref, naviLinks }) {
   const [visibleSection, setVisibleSection] = useState(null)
+  const [themenFlyoutVisible, setThemenFlyoutVisible] = useState(false)
 
   const openSection = section => e => {
     e.preventDefault()
     // close on second click, if not open selected section
     setVisibleSection((visibleSection === section) ? null : section)
+  }
+
+  const toggleThemenFlyout = e => {
+    e.preventDefault()
+    setThemenFlyoutVisible(!themenFlyoutVisible)
   }
 
   return <nav className='mobile-nav'>
@@ -40,7 +67,12 @@ function Navigation ({ headerImgSrc, headerHref, naviLinks }) {
       <ul className='mobile-nav-links'>
         {/* The reason this isn't hardcoded is so we can swap out items / links more easily */}
         {naviLinks.map(([label, href]) =>
-          <li className='mobile-nav-link-item'><a href={href}>{label}</a></li>)}
+          <li className='mobile-nav-item mobile-nav-item-link'><a href={href}>{label}</a></li>)}
+        {/* Themen flyout */}
+        <li className='mobile-nav-item themen-flyout-link'>
+          <a href='#' onClick={toggleThemenFlyout}>Themen</a>
+          <ThemenFlyout isVisible={themenFlyoutVisible} />
+        </li>
       </ul>
     </section>
 
@@ -51,6 +83,14 @@ function Navigation ({ headerImgSrc, headerHref, naviLinks }) {
   </nav>
 }
 
+/**
+ * Helper to fetch a nested attribute's value from within a node
+ *
+ * @param {*} node
+ * @param {*} selector
+ * @param {*} attribute
+ * @returns {string}
+ */
 const attr = (node, selector, attribute) => node.querySelector(selector).getAttribute(attribute)
 
 /**
