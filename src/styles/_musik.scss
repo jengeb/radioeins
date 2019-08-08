@@ -10,6 +10,13 @@
 }
 
 // TODO include again if it's clear how this section should look like ;-)
-#middleColumnList_teaserbox_0 > div:not(.boxhead) {
-	// columns: 4;
+#middleColumnList_teaserbox_0 {
+	> *:not(.boxlinklist):not(.boxhead) {
+		max-width: column-width(6);
+		position: relative;
+		margin: 0 auto;
+		.doctypeteaser.intermediate.teaserbox {
+			background-color: $darkgray;
+		}
+	}
 }
