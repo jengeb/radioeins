@@ -10,6 +10,6 @@
 }
 
 // TODO include again if it's clear how this section should look like ;-)
-#middleColumnList_teaserbox_0 {
-	display: none;
+#middleColumnList_teaserbox_0 > div:not(.boxhead) {
+	// columns: 4;
 }
