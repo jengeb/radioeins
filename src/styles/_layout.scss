@@ -623,13 +623,7 @@ section.boxcontent {
     grid-template:
       'roofline'
       'image'
-      'title'
-      'publicationDate';
-
-    .publicationDate {
-      grid-area: publicationDate;
-      color: #a3a3a3;
-    }
+      'title';
   }
 
   .manualteaserContent {
