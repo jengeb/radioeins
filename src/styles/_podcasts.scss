@@ -3,6 +3,7 @@
 
   > .layouttopteaser_texticon {
     display: grid;
+    align-items: center;
     position: relative;
     grid-template:
       'icon description' auto
@@ -13,7 +14,7 @@
     padding: 72px 0;
   }
 
-  .manualteaserIcon {
+  .manualteaserPicture {
     width: 138px;
     height: 138px;
   }
