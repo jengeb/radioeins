@@ -178,25 +178,16 @@
 
 .layoutblack {
 	.boxlinklist {
-		padding-inline-start: 0;
-		padding-top: 30px;
+		list-style: none;
+		padding: 30px 0 0;
 
 		// button
 		.manualteaserTitle {
+			@extend .button;
 			color: white;
-			list-style: none;
 			border: 2px solid #fff;
 			border-radius: 4px;
-			height: 40px;
-			width: 152px;
-			text-transform: uppercase;
-
-			display: flex;
-			justify-content: center;
-			flex-direction: column;
-			text-align: center;
-
-			margin: auto;
+			margin: 0 auto;
 		}
 	}
 }
@@ -231,24 +222,15 @@
 	}
 
 	.boxlinklist {
-		padding-inline-start: 0;
+		padding: 0;
+		list-style: none;
 
 		// button
 		.manualteaserTitle {
+			@extend .button;
 			color: white !important;
 			background-color: $orange;
-			list-style: none;
-			border: 1px solid $orange;
-			border-radius: 4px;
-			height: 40px;
-			width: 152px;
-			text-transform: uppercase;
-
-			display: flex;
-			justify-content: center;
-			flex-direction: column;
-			text-align: center;
-			margin: auto;
+			margin: 0 auto;
 		}
 	}
 }
@@ -370,11 +352,11 @@ section.boxcontent {
 	}
 
 	.radioeinsnewsletterbutton {
-		padding: 13px 20px 11px;
-		border-radius: 4px;
+		@extend .button;
+		@include interstate-light;
 		background-color: white;
 		font-size: 18px;
-		text-transform: uppercase;
+		margin: 0 auto;
 	}
 }
 

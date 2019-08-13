@@ -1,0 +1,11 @@
+.ics a {
+  @extend .button;
+  background: $orange;
+  color: #fff;
+}
+
+.doctypetermin {
+  .containerContent {
+    margin-bottom: 96px !important;
+  }
+}

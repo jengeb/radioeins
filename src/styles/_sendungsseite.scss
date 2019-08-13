@@ -135,27 +135,6 @@
       }
 
       .sendeplatz.mehrlink {
-        display: block; // forces line break
-        // hide previous text
-        font-size: 0;
-        width: 20px;
-        color: transparent;
-        white-space: nowrap;
-
-        &::before {
-          // Add 'Zum Beitrag' button
-          @include interstate-bold();
-          content: 'Zum Beitrag';
-          background: $orange;
-          display: inline-block;
-          line-height: 40px;
-          height: 40px;
-          font-size: 20px;
-          padding: 0 24px;
-          color: white;
-          border-radius: 2px;
-          margin-top: 24px;
-        }
       }
 
       .playerdownload:last-child {
