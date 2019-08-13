@@ -68,16 +68,20 @@
       width: column-width-extended(4);
       margin: 96px auto;
 
-      .containerIcons .zeit {
-        @include interstate-bold();
-        background: #000;
-        color: #fff;
-        padding: 0 1.3em;
-        line-height: 24px;
-        font-size: 14px;
-        float: left;
-        margin-right: 1.3em;
-        border-radius: 2px;
+      .containerIcons {
+        display: unset;
+
+        .zeit {
+          @include interstate-bold();
+          background: #000;
+          color: #fff;
+          padding: 0 1.3em;
+          line-height: 24px;
+          font-size: 14px;
+          float: left;
+          margin-right: 1.3em;
+          border-radius: 2px;
+        }
       }
 
       .manualteaserRoofLine {
