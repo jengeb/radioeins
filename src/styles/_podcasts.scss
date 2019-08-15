@@ -61,7 +61,7 @@ h2.manualteaserTitle {
   margin: 12px 0;
   font-size: 20px;
 
-  .manualteaserSubTitle {
+  + .manualteaserSubTitle {
     @include interstate-light();
   }
 }
