@@ -57,11 +57,6 @@ a {
 	color: inherit;
 }
 
-img {
-	max-width: 100%;
-	height: auto;
-}
-
 .boxHeadline {
 	@include interstate-light();
 }
@@ -595,7 +590,7 @@ section.boxcontent {
 	align-items: flex-start;
 	flex-wrap: wrap;
 
-  .layout3spaltig {
+	[class*="layout3spaltig"] {
     max-width: (column-width(6) - 2 * $col-gap) / 3;
     display: grid;
     grid-template:
@@ -605,8 +600,8 @@ section.boxcontent {
       'description';
   }
 
-  .layout4spaltig_4_3 {
-    max-width: (column-width(6) - 3 * $col-gap) / 4;
+	[class*="layout4spaltig"] {
+		max-width: (column-width(6) - 3 * $col-gap) / 4;
     display: grid;
     grid-template:
       'roofline'
@@ -628,8 +623,8 @@ section.boxcontent {
     margin: 0;
   }
 
-  .layout3spaltig,
-  .layout4spaltig_4_3 {
+	[class*="layout3spaltig"],
+	[class*="layout4spaltig"] {
     .manualteaserRoofLine {
       grid-area: roofline;
       color: $orange;
@@ -644,7 +639,7 @@ section.boxcontent {
 	}
 	
 	img {
-		max-width: 100%;
+		width: 100%;
 		height: auto;
 	}
 }
