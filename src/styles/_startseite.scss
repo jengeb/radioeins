@@ -131,6 +131,9 @@
 
 	.manualteaserTitle {
 		font-size: 18px;
+		// TODO check for better solution (justify-content doesn't work)
+		// but this breaks other sections on the page (see podcast headings for example)
+		max-width: 140px;
 		line-height: 26px;
 	}
 
