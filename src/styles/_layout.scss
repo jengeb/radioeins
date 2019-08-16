@@ -490,6 +490,13 @@ a {
 	position: relative;
 	min-height: 360px;
 	background: $darkgray;
+	padding: 0 !important;
+
+	section.boxcontent {
+		// Undo horizontal centering & flex layout on full width background
+		display: block;
+		max-width: 100%;
+	}
 
 	.manualteaserPicture {
 		img {
@@ -511,6 +518,7 @@ a {
 			z-index: 2
 		}
 
+		// TODO
 		// FIXME: Remove everything below once we changed the image; this is just so it looks more
 		// like the preview
 		overflow: hidden;
@@ -649,12 +657,6 @@ section.boxcontent {
 		width: 100%;
 		height: auto;
 	}
-}
-
-.layouttopteaser_textbild section.boxcontent {
-	// Undo horizontal centering & flex layout on full width background
-	display: block;
-	max-width: 100%;
 }
 
 div.killfloat {

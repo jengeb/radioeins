@@ -155,7 +155,7 @@ $open-nav-color: $darkgray;
 	}
 
 
-	// TODO
+	// TODO check again
 	.slick-next {
 		right: unset;
 	}
@@ -166,14 +166,8 @@ $open-nav-color: $darkgray;
 		padding-right: 1em;
 	}
 
-	// TODO: check design
 	.footer {
 		text-align: center;
-	}
-
-	.layouttopteaser_textbild .manualteaserPicture img {
-		// TODO: This distorts the image but maybe there's a reason why this is hardcoded here??
-		// height: 183px;
 	}
 
 	.boxlinklist {
