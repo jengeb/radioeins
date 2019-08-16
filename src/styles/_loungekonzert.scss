@@ -53,10 +53,6 @@
 	}
 }
 
-#articlesContList_text {
-	margin-top: 3em;
-}
-
 .articlesContList {
 	.doctypebildergalerie {
 		.slider {
@@ -66,6 +62,14 @@
 
 	.layoutstandard .textBlock > p > a {
 		color: $orange;
+	}
+
+	.text {
+		padding-top: 2.5em;
+
+		.begin {
+			color: $orange;
+		}
 	}
 }
 
