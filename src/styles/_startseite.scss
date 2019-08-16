@@ -126,10 +126,6 @@
 	
 		.manualteaserTitle {
 			font-size: 18px;
-			// TODO check for better solution (justify-content doesn't work)
-			// but this breaks other sections on the page (see podcast headings for example)
-			// -> still?
-			max-width: 140px;
 			line-height: 26px;
 		}
 	
@@ -190,7 +186,6 @@
 		}
 	}
 }
-
 
 .doctypeteaser.intermediate.teaserbox:not(.layoutblack) {
 	.manualteaserRoofLine {
@@ -335,7 +330,6 @@ section.boxcontent {
 	}
 }
 
-// TODO: move to layout.scss if section will be present on every page (not only on landingpage)
 .layoutdein_radioeins.teaserbox {
 	padding-bottom: 4em;
 
