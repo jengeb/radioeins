@@ -236,4 +236,12 @@ $open-nav-color: $darkgray;
 			grid-template-columns: 1fr 1fr;
 		}
 	}
+
+	.layout3spaltig_programmbuehne {
+		.moderatorenPicture {
+			img {
+				max-width: 100%;
+			}
+		}
+	}
 }
