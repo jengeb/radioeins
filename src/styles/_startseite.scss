@@ -108,40 +108,37 @@
 		margin: 0 auto;
 	}
 
-	// TODO move into mixin? resp. into layout file
-	padding-top: 1.5em;
-	padding-bottom: 3em;
-
 	.layout6spaltig_weisse_buehne {
 		display: flex !important;
 		flex-direction: column;
-	}
 
-	.boxhead {
-		max-width: column-width(6);
-		position: relative;
-		margin: 0 auto;
-
-		.boxHeadline {
-			@include interstate-light;
-			font-size: 36px;
-			text-transform: uppercase;
+		.boxhead {
+			max-width: column-width(6);
+			position: relative;
+			margin: 0 auto;
+	
+			.boxHeadline {
+				@include interstate-light;
+				font-size: 36px;
+				text-transform: uppercase;
+			}
 		}
-	}
-
-	.manualteaserTitle {
-		font-size: 18px;
-		// TODO check for better solution (justify-content doesn't work)
-		// but this breaks other sections on the page (see podcast headings for example)
-		max-width: 140px;
-		line-height: 26px;
-	}
-
-	.manualteaserDateTime {
-		order: -1;
-		color: $orange;
-		font-size: 14px;
-		margin-bottom: 8px;
+	
+		.manualteaserTitle {
+			font-size: 18px;
+			// TODO check for better solution (justify-content doesn't work)
+			// but this breaks other sections on the page (see podcast headings for example)
+			// -> still?
+			max-width: 140px;
+			line-height: 26px;
+		}
+	
+		.manualteaserDateTime {
+			order: -1;
+			color: $orange;
+			font-size: 14px;
+			margin-bottom: 8px;
+		}
 	}
 }
 
