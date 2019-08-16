@@ -169,13 +169,14 @@
 @media only screen and (max-width: 400px) {
 	.slick-custom-dots-light {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
 		margin: 0;
 		padding: 1rem 0;
 		list-style-type: none;
 	
 		li {
-			margin: 0 8px;
+			padding-bottom: 30px;
 		}
 
 		li.slick-active button {
@@ -199,13 +200,14 @@
 
 	.slick-custom-dots-dark {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
 		margin: 0;
 		padding: 1rem 0;
 		list-style-type: none;
 	
 		li {
-			margin: 0 8px;
+			padding-bottom: 30px;
 		}
 	
 		li.slick-active button {
