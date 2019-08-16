@@ -2,6 +2,10 @@
 $col-width: 120px;
 $col-gap: 40px;
 
+img {
+	max-width: 100%;
+}
+
 // some mixins that might keep things more dry
 
 @mixin interstate-light () {

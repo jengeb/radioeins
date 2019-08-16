@@ -1,8 +1,4 @@
 .containerCenter {
-	.containerIcons {
-		display: none;
-	}
-
 	.loungeContainer {
 		background-color: $darkgray;
 		color: white;	
@@ -29,7 +25,6 @@
 
 	.containerIcons {
 		max-width: column-width-extended(4);
-		margin: 0 auto;
 
 		.begin, .sendeplatzRefTitle {
 			color: $orange;
