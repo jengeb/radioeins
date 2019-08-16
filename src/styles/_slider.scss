@@ -144,7 +144,7 @@
 }
 
 @media only screen and (max-width: 1024px) {
-	.layoutblack .layout1spaltig_buehne_slider {
+	.teaserbox .layout1spaltig_buehne_slider {
 		.slick-prev {
 			left: 1%;
 		}
@@ -229,7 +229,7 @@
 		}
 	}
 
-	.layoutblack .layout1spaltig_buehne_slider {
+	.teaserbox .layout1spaltig_buehne_slider {
 		.slick-prev, .slick-next {
 			top: 90px;
 		}
@@ -240,6 +240,14 @@
 		
 		.slick-next {
 			right: 5%;
+		}
+
+		.slick-prev:before {
+			content: url('../assets/desktop/slider-arrow-bwd.svg');
+		}
+		
+		.slick-next:before {
+			content: url('../assets/desktop/slider-arrow-fwd.svg');
 		}
 	}
 }
